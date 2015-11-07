@@ -1,0 +1,44 @@
+Quartus II Archive log --	D:/github/csce230/wozniacs.qarlog
+
+Archive:	D:/github/csce230/wozniacs.qar
+Date:		Fri Nov 06 23:00:46 2015
+Quartus II 32-bit		12.0 Build 178 05/31/2012 SJ Web Edition
+
+	=========== Files Selected: ===========
+C:/Users/Matt/Desktop/Shit Ballz/bit16add.vhdl
+C:/Users/Matt/Desktop/Shit Ballz/bit16and.vhdl
+C:/Users/Matt/Desktop/Shit Ballz/bit16or.vhdl
+C:/Users/Matt/Desktop/Shit Ballz/bit16xor.vhdl
+C:/Users/Matt/Desktop/Shit Ballz/bitAdder.vhdl
+C:/Users/Matt/Desktop/Shit Ballz/multi2to1.vhdl
+C:/Users/Matt/Desktop/Shit Ballz/multi4to1.vhdl
+C:/Users/Matt/Desktop/Shit Ballz/variousLogic.vhd
+C:/Users/Matt/Downloads/lab8Files/decoder16.vhd
+C:/Users/Matt/Downloads/lab8Files/mux16.vhd
+D:/github/csce230/BuffReg16.vhd
+D:/github/csce230/IR24.vhd
+D:/github/csce230/alu.vhdl
+D:/github/csce230/bit16multi2to1.vhd
+D:/github/csce230/bit16multi4to1.vhd
+D:/github/csce230/controlUnit.vhdl
+D:/github/csce230/immediate.vhd
+D:/github/csce230/incremental_db/compiled_partitions/project.db_info
+D:/github/csce230/lpm_constant0.bsf
+D:/github/csce230/lpm_constant0.cmp
+D:/github/csce230/lpm_constant0.qip
+D:/github/csce230/lpm_constant0.vhd
+D:/github/csce230/muxy.bsf
+D:/github/csce230/muxy.cmp
+D:/github/csce230/muxy.qip
+D:/github/csce230/muxy.vhd
+D:/github/csce230/project.bdf
+D:/github/csce230/project.qpf
+D:/github/csce230/project.qsf
+D:/github/csce230/reg16.vhd
+D:/github/csce230/registerFile.vhd
+D:/github/csce230/vsimproject.do
+c:/altera/12.0/quartus/bin/assignment_defaults.qdf
+	======= Total: 33 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
