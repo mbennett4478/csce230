@@ -1,6 +1,8 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="project">
-		<CBX_INST_ENTRY INSTANCE_NAME="|ControlUnit|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_qlo.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|project|ControlUnit:inst2|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_qlo.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|project|lpm_constant0:inst5|lpm_constant:LPM_CONSTANT_component" CBX_FILE_NAME="lpm_constant_4e6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|project|muxy:inst|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_o4e.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
