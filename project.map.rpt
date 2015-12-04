@@ -1,5 +1,5 @@
 Analysis & Synthesis report for project
-Fri Nov 06 22:46:31 2015
+Thu Dec 03 19:19:34 2015
 Quartus II 32-bit Version 12.0 Build 178 05/31/2012 SJ Web Edition
 
 
@@ -13,19 +13,32 @@ Quartus II 32-bit Version 12.0 Build 178 05/31/2012 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis IP Cores Summary
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. Registers Removed During Synthesis
  11. General Register Statistics
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: lpm_constant0:inst5|lpm_constant:LPM_CONSTANT_component
- 14. Parameter Settings for User Entity Instance: muxy:inst|LPM_MUX:LPM_MUX_component
- 15. Parameter Settings for Inferred Entity Instance: ControlUnit:inst2|lpm_divide:Mod0
- 16. Port Connectivity Checks: "registerFile:inst8|mux16:mux2"
- 17. Port Connectivity Checks: "registerFile:inst8|mux16:mux1"
- 18. Port Connectivity Checks: "registerFile:inst8|decoder16:decode"
- 19. Elapsed Time Per Partition
- 20. Analysis & Synthesis Messages
+ 13. Source assignments for MemoryInterface:suckmydick|MainMemory:inst|altsyncram:altsyncram_component|altsyncram_efg1:auto_generated
+ 14. Parameter Settings for User Entity Instance: lpm_constant0:inst5|lpm_constant:LPM_CONSTANT_component
+ 15. Parameter Settings for User Entity Instance: muxy:inst|LPM_MUX:LPM_MUX_component
+ 16. Parameter Settings for User Entity Instance: MemoryInterface:suckmydick|Const:inst3|lpm_constant:lpm_constant_component
+ 17. Parameter Settings for User Entity Instance: MemoryInterface:suckmydick|MainMemory:inst|altsyncram:altsyncram_component
+ 18. Parameter Settings for User Entity Instance: mux_ma:inst6|LPM_MUX:LPM_MUX_component
+ 19. Parameter Settings for User Entity Instance: InstructionAddressGenerator:inst1|PC:inst2|lpm_ff:lpm_ff_component
+ 20. Parameter Settings for User Entity Instance: InstructionAddressGenerator:inst1|MuxPC:inst3|LPM_MUX:lpm_mux_component
+ 21. Parameter Settings for User Entity Instance: InstructionAddressGenerator:inst1|Adder:inst1|lpm_add_sub:lpm_add_sub_component
+ 22. Parameter Settings for User Entity Instance: InstructionAddressGenerator:inst1|MuxINC:inst|LPM_MUX:lpm_mux_component
+ 23. Parameter Settings for User Entity Instance: InstructionAddressGenerator:inst1|Const:inst5|lpm_constant:lpm_constant_component
+ 24. Parameter Settings for User Entity Instance: InstructionAddressGenerator:inst1|PC_Temp:inst4|lpm_ff:lpm_ff_component
+ 25. Parameter Settings for User Entity Instance: muxc:inst10|LPM_MUX:LPM_MUX_component
+ 26. Parameter Settings for User Entity Instance: const15:inst11|lpm_constant:LPM_CONSTANT_component
+ 27. Parameter Settings for Inferred Entity Instance: ControlUnit:inst2|lpm_divide:Mod0
+ 28. altsyncram Parameter Settings by Entity Instance
+ 29. Port Connectivity Checks: "registerFile:inst8|mux16:mux2"
+ 30. Port Connectivity Checks: "registerFile:inst8|mux16:mux1"
+ 31. Port Connectivity Checks: "registerFile:inst8|decoder16:decode"
+ 32. Elapsed Time Per Partition
+ 33. Analysis & Synthesis Messages
 
 
 
@@ -51,18 +64,18 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +------------------------------------+------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 06 22:46:31 2015    ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec 03 19:19:34 2015    ;
 ; Quartus II 32-bit Version          ; 12.0 Build 178 05/31/2012 SJ Web Edition ;
 ; Revision Name                      ; project                                  ;
 ; Top-level Entity Name              ; project                                  ;
 ; Family                             ; Cyclone II                               ;
-; Total logic elements               ; 2,521                                    ;
-;     Total combinational functions  ; 2,246                                    ;
-;     Dedicated logic registers      ; 360                                      ;
-; Total registers                    ; 360                                      ;
-; Total pins                         ; 115                                      ;
+; Total logic elements               ; 2,628                                    ;
+;     Total combinational functions  ; 2,332                                    ;
+;     Dedicated logic registers      ; 420                                      ;
+; Total registers                    ; 420                                      ;
+; Total pins                         ; 199                                      ;
 ; Total virtual pins                 ; 0                                        ;
-; Total memory bits                  ; 0                                        ;
+; Total memory bits                  ; 24,576                                   ;
 ; Embedded Multiplier 9-bit elements ; 0                                        ;
 ; Total PLLs                         ; 0                                        ;
 +------------------------------------+------------------------------------------+
@@ -163,50 +176,81 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
-+---------------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                  ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                       ; Library ;
-+---------------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
-; C:/Users/Matt/Downloads/lab8Files/mux16.vhd       ; yes             ; User VHDL File                     ; C:/Users/Matt/Downloads/lab8Files/mux16.vhd                        ;         ;
-; C:/Users/Matt/Downloads/lab8Files/decoder16.vhd   ; yes             ; User VHDL File                     ; C:/Users/Matt/Downloads/lab8Files/decoder16.vhd                    ;         ;
-; C:/Users/Matt/Desktop/Shit Ballz/variousLogic.vhd ; yes             ; User VHDL File                     ; C:/Users/Matt/Desktop/Shit Ballz/variousLogic.vhd                  ;         ;
-; C:/Users/Matt/Desktop/Shit Ballz/multi4to1.vhdl   ; yes             ; User VHDL File                     ; C:/Users/Matt/Desktop/Shit Ballz/multi4to1.vhdl                    ;         ;
-; C:/Users/Matt/Desktop/Shit Ballz/multi2to1.vhdl   ; yes             ; User VHDL File                     ; C:/Users/Matt/Desktop/Shit Ballz/multi2to1.vhdl                    ;         ;
-; C:/Users/Matt/Desktop/Shit Ballz/bitAdder.vhdl    ; yes             ; User VHDL File                     ; C:/Users/Matt/Desktop/Shit Ballz/bitAdder.vhdl                     ;         ;
-; C:/Users/Matt/Desktop/Shit Ballz/bit16xor.vhdl    ; yes             ; User VHDL File                     ; C:/Users/Matt/Desktop/Shit Ballz/bit16xor.vhdl                     ;         ;
-; C:/Users/Matt/Desktop/Shit Ballz/bit16or.vhdl     ; yes             ; User VHDL File                     ; C:/Users/Matt/Desktop/Shit Ballz/bit16or.vhdl                      ;         ;
-; C:/Users/Matt/Desktop/Shit Ballz/bit16and.vhdl    ; yes             ; User VHDL File                     ; C:/Users/Matt/Desktop/Shit Ballz/bit16and.vhdl                     ;         ;
-; C:/Users/Matt/Desktop/Shit Ballz/bit16add.vhdl    ; yes             ; User VHDL File                     ; C:/Users/Matt/Desktop/Shit Ballz/bit16add.vhdl                     ;         ;
-; alu.vhdl                                          ; yes             ; User VHDL File                     ; D:/github/csce230/alu.vhdl                                         ;         ;
-; IR24.vhd                                          ; yes             ; User VHDL File                     ; D:/github/csce230/IR24.vhd                                         ;         ;
-; immediate.vhd                                     ; yes             ; User VHDL File                     ; D:/github/csce230/immediate.vhd                                    ;         ;
-; BuffReg16.vhd                                     ; yes             ; User VHDL File                     ; D:/github/csce230/BuffReg16.vhd                                    ;         ;
-; registerFile.vhd                                  ; yes             ; User VHDL File                     ; D:/github/csce230/registerFile.vhd                                 ;         ;
-; reg16.vhd                                         ; yes             ; User VHDL File                     ; D:/github/csce230/reg16.vhd                                        ;         ;
-; controlUnit.vhdl                                  ; yes             ; User VHDL File                     ; D:/github/csce230/controlUnit.vhdl                                 ;         ;
-; bit16multi4to1.vhd                                ; yes             ; User VHDL File                     ; D:/github/csce230/bit16multi4to1.vhd                               ;         ;
-; bit16multi2to1.vhd                                ; yes             ; User VHDL File                     ; D:/github/csce230/bit16multi2to1.vhd                               ;         ;
-; project.bdf                                       ; yes             ; User Block Diagram/Schematic File  ; D:/github/csce230/project.bdf                                      ;         ;
-; muxy.vhd                                          ; yes             ; User Wizard-Generated File         ; D:/github/csce230/muxy.vhd                                         ;         ;
-; lpm_constant0.vhd                                 ; yes             ; User Wizard-Generated File         ; D:/github/csce230/lpm_constant0.vhd                                ;         ;
-; lpm_constant.tdf                                  ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_constant.tdf    ;         ;
-; lpm_mux.tdf                                       ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_mux.tdf         ;         ;
-; aglobal120.inc                                    ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/aglobal120.inc      ;         ;
-; muxlut.inc                                        ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/muxlut.inc          ;         ;
-; bypassff.inc                                      ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/bypassff.inc        ;         ;
-; altshift.inc                                      ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/altshift.inc        ;         ;
-; db/mux_o4e.tdf                                    ; yes             ; Auto-Generated Megafunction        ; D:/github/csce230/db/mux_o4e.tdf                                   ;         ;
-; lpm_divide.tdf                                    ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
-; abs_divider.inc                                   ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
-; sign_div_unsign.inc                               ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
-; db/lpm_divide_qlo.tdf                             ; yes             ; Auto-Generated Megafunction        ; D:/github/csce230/db/lpm_divide_qlo.tdf                            ;         ;
-; db/abs_divider_4dg.tdf                            ; yes             ; Auto-Generated Megafunction        ; D:/github/csce230/db/abs_divider_4dg.tdf                           ;         ;
-; db/alt_u_div_k5f.tdf                              ; yes             ; Auto-Generated Megafunction        ; D:/github/csce230/db/alt_u_div_k5f.tdf                             ;         ;
-; db/add_sub_lkc.tdf                                ; yes             ; Auto-Generated Megafunction        ; D:/github/csce230/db/add_sub_lkc.tdf                               ;         ;
-; db/add_sub_mkc.tdf                                ; yes             ; Auto-Generated Megafunction        ; D:/github/csce230/db/add_sub_mkc.tdf                               ;         ;
-; db/lpm_abs_0s9.tdf                                ; yes             ; Auto-Generated Megafunction        ; D:/github/csce230/db/lpm_abs_0s9.tdf                               ;         ;
-+---------------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
++---------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                  ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                           ; Library ;
++---------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
+; variousLogic.vhd                                  ; yes             ; User VHDL File                     ; D:/github/csce230/variousLogic.vhd                                     ;         ;
+; multi4to1.vhdl                                    ; yes             ; User VHDL File                     ; D:/github/csce230/multi4to1.vhdl                                       ;         ;
+; multi2to1.vhdl                                    ; yes             ; User VHDL File                     ; D:/github/csce230/multi2to1.vhdl                                       ;         ;
+; bitAdder.vhdl                                     ; yes             ; User VHDL File                     ; D:/github/csce230/bitAdder.vhdl                                        ;         ;
+; bit16xor.vhdl                                     ; yes             ; User VHDL File                     ; D:/github/csce230/bit16xor.vhdl                                        ;         ;
+; bit16or.vhdl                                      ; yes             ; User VHDL File                     ; D:/github/csce230/bit16or.vhdl                                         ;         ;
+; bit16and.vhdl                                     ; yes             ; User VHDL File                     ; D:/github/csce230/bit16and.vhdl                                        ;         ;
+; bit16add.vhdl                                     ; yes             ; User VHDL File                     ; D:/github/csce230/bit16add.vhdl                                        ;         ;
+; memFilesProcessor/MemoryInterface.bdf             ; yes             ; User Block Diagram/Schematic File  ; D:/github/csce230/memFilesProcessor/MemoryInterface.bdf                ;         ;
+; memFilesProcessor/MemoryInitialization.mif        ; yes             ; User Memory Initialization File    ; D:/github/csce230/memFilesProcessor/MemoryInitialization.mif           ;         ;
+; memFilesProcessor/MainMemory.vhd                  ; yes             ; User Wizard-Generated File         ; D:/github/csce230/memFilesProcessor/MainMemory.vhd                     ;         ;
+; memFilesProcessor/PC_Temp.vhd                     ; yes             ; User Wizard-Generated File         ; D:/github/csce230/memFilesProcessor/PC_Temp.vhd                        ;         ;
+; memFilesProcessor/PC.vhd                          ; yes             ; User Wizard-Generated File         ; D:/github/csce230/memFilesProcessor/PC.vhd                             ;         ;
+; memFilesProcessor/MuxPC.vhd                       ; yes             ; User Wizard-Generated File         ; D:/github/csce230/memFilesProcessor/MuxPC.vhd                          ;         ;
+; memFilesProcessor/MuxINC.vhd                      ; yes             ; User Wizard-Generated File         ; D:/github/csce230/memFilesProcessor/MuxINC.vhd                         ;         ;
+; memFilesProcessor/InstructionAddressGenerator.bdf ; yes             ; User Block Diagram/Schematic File  ; D:/github/csce230/memFilesProcessor/InstructionAddressGenerator.bdf    ;         ;
+; memFilesProcessor/Const.vhd                       ; yes             ; User Wizard-Generated File         ; D:/github/csce230/memFilesProcessor/Const.vhd                          ;         ;
+; memFilesProcessor/Adder.vhd                       ; yes             ; User Wizard-Generated File         ; D:/github/csce230/memFilesProcessor/Adder.vhd                          ;         ;
+; alu.vhdl                                          ; yes             ; User VHDL File                     ; D:/github/csce230/alu.vhdl                                             ;         ;
+; IR24.vhd                                          ; yes             ; User VHDL File                     ; D:/github/csce230/IR24.vhd                                             ;         ;
+; immediate.vhd                                     ; yes             ; User VHDL File                     ; D:/github/csce230/immediate.vhd                                        ;         ;
+; BuffReg16.vhd                                     ; yes             ; User VHDL File                     ; D:/github/csce230/BuffReg16.vhd                                        ;         ;
+; registerFile.vhd                                  ; yes             ; User VHDL File                     ; D:/github/csce230/registerFile.vhd                                     ;         ;
+; reg16.vhd                                         ; yes             ; User VHDL File                     ; D:/github/csce230/reg16.vhd                                            ;         ;
+; controlUnit.vhdl                                  ; yes             ; User VHDL File                     ; D:/github/csce230/controlUnit.vhdl                                     ;         ;
+; bit16multi4to1.vhd                                ; yes             ; User VHDL File                     ; D:/github/csce230/bit16multi4to1.vhd                                   ;         ;
+; bit16multi2to1.vhd                                ; yes             ; User VHDL File                     ; D:/github/csce230/bit16multi2to1.vhd                                   ;         ;
+; project.bdf                                       ; yes             ; User Block Diagram/Schematic File  ; D:/github/csce230/project.bdf                                          ;         ;
+; muxy.vhd                                          ; yes             ; User Wizard-Generated File         ; D:/github/csce230/muxy.vhd                                             ;         ;
+; lpm_constant0.vhd                                 ; yes             ; User Wizard-Generated File         ; D:/github/csce230/lpm_constant0.vhd                                    ;         ;
+; mux_ma.vhd                                        ; yes             ; User Wizard-Generated File         ; D:/github/csce230/mux_ma.vhd                                           ;         ;
+; muxc.vhd                                          ; yes             ; User Wizard-Generated File         ; D:/github/csce230/muxc.vhd                                             ;         ;
+; const15.vhd                                       ; yes             ; User Wizard-Generated File         ; D:/github/csce230/const15.vhd                                          ;         ;
+; lpm_constant.tdf                                  ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_constant.tdf        ;         ;
+; decoder16.vhd                                     ; yes             ; Auto-Found VHDL File               ; D:/github/csce230/decoder16.vhd                                        ;         ;
+; mux16.vhd                                         ; yes             ; Auto-Found VHDL File               ; D:/github/csce230/mux16.vhd                                            ;         ;
+; lpm_mux.tdf                                       ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_mux.tdf             ;         ;
+; aglobal120.inc                                    ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/aglobal120.inc          ;         ;
+; muxlut.inc                                        ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/muxlut.inc              ;         ;
+; bypassff.inc                                      ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/bypassff.inc            ;         ;
+; altshift.inc                                      ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/altshift.inc            ;         ;
+; db/mux_o4e.tdf                                    ; yes             ; Auto-Generated Megafunction        ; D:/github/csce230/db/mux_o4e.tdf                                       ;         ;
+; altsyncram.tdf                                    ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
+; stratix_ram_block.inc                             ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
+; lpm_mux.inc                                       ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
+; lpm_decode.inc                                    ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; a_rdenreg.inc                                     ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
+; altrom.inc                                        ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/altrom.inc              ;         ;
+; altram.inc                                        ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/altram.inc              ;         ;
+; altdpram.inc                                      ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/altdpram.inc            ;         ;
+; db/altsyncram_efg1.tdf                            ; yes             ; Auto-Generated Megafunction        ; D:/github/csce230/db/altsyncram_efg1.tdf                               ;         ;
+; db/mux_m4e.tdf                                    ; yes             ; Auto-Generated Megafunction        ; D:/github/csce230/db/mux_m4e.tdf                                       ;         ;
+; lpm_ff.tdf                                        ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_ff.tdf              ;         ;
+; lpm_constant.inc                                  ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
+; lpm_add_sub.tdf                                   ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
+; addcore.inc                                       ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/addcore.inc             ;         ;
+; look_add.inc                                      ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/look_add.inc            ;         ;
+; alt_stratix_add_sub.inc                           ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
+; db/add_sub_rlh.tdf                                ; yes             ; Auto-Generated Megafunction        ; D:/github/csce230/db/add_sub_rlh.tdf                                   ;         ;
+; db/mux_53e.tdf                                    ; yes             ; Auto-Generated Megafunction        ; D:/github/csce230/db/mux_53e.tdf                                       ;         ;
+; lpm_divide.tdf                                    ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_divide.tdf          ;         ;
+; abs_divider.inc                                   ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/abs_divider.inc         ;         ;
+; sign_div_unsign.inc                               ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/sign_div_unsign.inc     ;         ;
+; db/lpm_divide_qlo.tdf                             ; yes             ; Auto-Generated Megafunction        ; D:/github/csce230/db/lpm_divide_qlo.tdf                                ;         ;
+; db/abs_divider_4dg.tdf                            ; yes             ; Auto-Generated Megafunction        ; D:/github/csce230/db/abs_divider_4dg.tdf                               ;         ;
+; db/alt_u_div_k5f.tdf                              ; yes             ; Auto-Generated Megafunction        ; D:/github/csce230/db/alt_u_div_k5f.tdf                                 ;         ;
+; db/add_sub_lkc.tdf                                ; yes             ; Auto-Generated Megafunction        ; D:/github/csce230/db/add_sub_lkc.tdf                                   ;         ;
+; db/add_sub_mkc.tdf                                ; yes             ; Auto-Generated Megafunction        ; D:/github/csce230/db/add_sub_mkc.tdf                                   ;         ;
+; db/lpm_abs_0s9.tdf                                ; yes             ; Auto-Generated Megafunction        ; D:/github/csce230/db/lpm_abs_0s9.tdf                                   ;         ;
++---------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -214,111 +258,151 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 2,521 ;
+; Estimated Total logic elements              ; 2,628 ;
 ;                                             ;       ;
-; Total combinational functions               ; 2246  ;
+; Total combinational functions               ; 2332  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 844   ;
-;     -- 3 input functions                    ; 663   ;
-;     -- <=2 input functions                  ; 739   ;
+;     -- 4 input functions                    ; 877   ;
+;     -- 3 input functions                    ; 697   ;
+;     -- <=2 input functions                  ; 758   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 1567  ;
-;     -- arithmetic mode                      ; 679   ;
+;     -- normal mode                          ; 1638  ;
+;     -- arithmetic mode                      ; 694   ;
 ;                                             ;       ;
-; Total registers                             ; 360   ;
-;     -- Dedicated logic registers            ; 360   ;
+; Total registers                             ; 420   ;
+;     -- Dedicated logic registers            ; 420   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 115   ;
-; Maximum fan-out node                        ; res   ;
-; Maximum fan-out                             ; 360   ;
-; Total fan-out                               ; 8212  ;
-; Average fan-out                             ; 3.02  ;
+; I/O pins                                    ; 199   ;
+; Total memory bits                           ; 24576 ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 444   ;
+; Total fan-out                               ; 9156  ;
+; Average fan-out                             ; 3.08  ;
 +---------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                           ;
-+------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                     ; Library Name ;
-+------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+--------------+
-; |project                                 ; 2246 (0)          ; 360 (0)      ; 0           ; 0            ; 0       ; 0         ; 115  ; 0            ; |project                                                                                                                ;              ;
-;    |BuffReg16:RA|                        ; 19 (19)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|BuffReg16:RA                                                                                                   ;              ;
-;    |BuffReg16:RB_inst|                   ; 19 (19)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|BuffReg16:RB_inst                                                                                              ;              ;
-;    |BuffReg16:RY|                        ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|BuffReg16:RY                                                                                                   ;              ;
-;    |BuffReg16:RZ|                        ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|BuffReg16:RZ                                                                                                   ;              ;
-;    |ControlUnit:inst2|                   ; 1870 (168)        ; 37 (37)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|ControlUnit:inst2                                                                                              ;              ;
-;       |lpm_divide:Mod0|                  ; 1702 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|ControlUnit:inst2|lpm_divide:Mod0                                                                              ;              ;
-;          |lpm_divide_qlo:auto_generated| ; 1702 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|ControlUnit:inst2|lpm_divide:Mod0|lpm_divide_qlo:auto_generated                                                ;              ;
-;             |abs_divider_4dg:divider|    ; 1702 (64)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|ControlUnit:inst2|lpm_divide:Mod0|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider                        ;              ;
-;                |alt_u_div_k5f:divider|   ; 1605 (1605)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|ControlUnit:inst2|lpm_divide:Mod0|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider|alt_u_div_k5f:divider  ;              ;
-;                |lpm_abs_0s9:my_abs_num|  ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|ControlUnit:inst2|lpm_divide:Mod0|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider|lpm_abs_0s9:my_abs_num ;              ;
-;    |IR24:inst3|                          ; 0 (0)             ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|IR24:inst3                                                                                                     ;              ;
-;    |alu:inst9|                           ; 62 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9                                                                                                      ;              ;
-;       |bit16add:FA|                      ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA                                                                                          ;              ;
-;          |bitAdder:add0|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add0                                                                            ;              ;
-;          |bitAdder:add10|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add10                                                                           ;              ;
-;          |bitAdder:add11|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add11                                                                           ;              ;
-;          |bitAdder:add12|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add12                                                                           ;              ;
-;          |bitAdder:add13|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add13                                                                           ;              ;
-;          |bitAdder:add1|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add1                                                                            ;              ;
-;          |bitAdder:add2|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add2                                                                            ;              ;
-;          |bitAdder:add3|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add3                                                                            ;              ;
-;          |bitAdder:add4|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add4                                                                            ;              ;
-;          |bitAdder:add5|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add5                                                                            ;              ;
-;          |bitAdder:add6|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add6                                                                            ;              ;
-;          |bitAdder:add7|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add7                                                                            ;              ;
-;          |bitAdder:add8|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add8                                                                            ;              ;
-;          |bitAdder:add9|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add9                                                                            ;              ;
-;       |bit16multi4to1:multfin|           ; 48 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin                                                                               ;              ;
-;          |multi4to1:mult0|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult0                                                               ;              ;
-;          |multi4to1:mult10|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult10                                                              ;              ;
-;          |multi4to1:mult11|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult11                                                              ;              ;
-;          |multi4to1:mult12|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult12                                                              ;              ;
-;          |multi4to1:mult13|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult13                                                              ;              ;
-;          |multi4to1:mult14|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult14                                                              ;              ;
-;          |multi4to1:mult15|              ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult15                                                              ;              ;
-;          |multi4to1:mult1|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult1                                                               ;              ;
-;          |multi4to1:mult2|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult2                                                               ;              ;
-;          |multi4to1:mult3|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult3                                                               ;              ;
-;          |multi4to1:mult4|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult4                                                               ;              ;
-;          |multi4to1:mult5|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult5                                                               ;              ;
-;          |multi4to1:mult6|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult6                                                               ;              ;
-;          |multi4to1:mult7|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult7                                                               ;              ;
-;          |multi4to1:mult8|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult8                                                               ;              ;
-;          |multi4to1:mult9|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult9                                                               ;              ;
-;    |registerFile:inst8|                  ; 276 (0)           ; 240 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8                                                                                             ;              ;
-;       |Reg16:reg10|                      ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg10                                                                                 ;              ;
-;       |Reg16:reg11|                      ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg11                                                                                 ;              ;
-;       |Reg16:reg12|                      ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg12                                                                                 ;              ;
-;       |Reg16:reg13|                      ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg13                                                                                 ;              ;
-;       |Reg16:reg14|                      ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg14                                                                                 ;              ;
-;       |Reg16:reg15|                      ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg15                                                                                 ;              ;
-;       |Reg16:reg1|                       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg1                                                                                  ;              ;
-;       |Reg16:reg2|                       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg2                                                                                  ;              ;
-;       |Reg16:reg3|                       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg3                                                                                  ;              ;
-;       |Reg16:reg4|                       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg4                                                                                  ;              ;
-;       |Reg16:reg5|                       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg5                                                                                  ;              ;
-;       |Reg16:reg6|                       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg6                                                                                  ;              ;
-;       |Reg16:reg7|                       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg7                                                                                  ;              ;
-;       |Reg16:reg8|                       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg8                                                                                  ;              ;
-;       |Reg16:reg9|                       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg9                                                                                  ;              ;
-;       |decoder16:decode|                 ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|decoder16:decode                                                                            ;              ;
-;       |mux16:mux1|                       ; 128 (128)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|mux16:mux1                                                                                  ;              ;
-;       |mux16:mux2|                       ; 128 (128)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|mux16:mux2                                                                                  ;              ;
-+------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                               ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                     ; Library Name ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+--------------+
+; |project                                     ; 2332 (1)          ; 420 (0)      ; 24576       ; 0            ; 0       ; 0         ; 199  ; 0            ; |project                                                                                                                ;              ;
+;    |BuffReg16:RA|                            ; 19 (19)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|BuffReg16:RA                                                                                                   ;              ;
+;    |BuffReg16:RB_inst|                       ; 19 (19)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|BuffReg16:RB_inst                                                                                              ;              ;
+;    |BuffReg16:RM|                            ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|BuffReg16:RM                                                                                                   ;              ;
+;    |BuffReg16:RY|                            ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|BuffReg16:RY                                                                                                   ;              ;
+;    |BuffReg16:RZ|                            ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|BuffReg16:RZ                                                                                                   ;              ;
+;    |ControlUnit:inst2|                       ; 1892 (190)        ; 44 (44)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|ControlUnit:inst2                                                                                              ;              ;
+;       |lpm_divide:Mod0|                      ; 1702 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|ControlUnit:inst2|lpm_divide:Mod0                                                                              ;              ;
+;          |lpm_divide_qlo:auto_generated|     ; 1702 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|ControlUnit:inst2|lpm_divide:Mod0|lpm_divide_qlo:auto_generated                                                ;              ;
+;             |abs_divider_4dg:divider|        ; 1702 (64)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|ControlUnit:inst2|lpm_divide:Mod0|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider                        ;              ;
+;                |alt_u_div_k5f:divider|       ; 1605 (1605)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|ControlUnit:inst2|lpm_divide:Mod0|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider|alt_u_div_k5f:divider  ;              ;
+;                |lpm_abs_0s9:my_abs_num|      ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|ControlUnit:inst2|lpm_divide:Mod0|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider|lpm_abs_0s9:my_abs_num ;              ;
+;    |IR24:inst3|                              ; 0 (0)             ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|IR24:inst3                                                                                                     ;              ;
+;    |InstructionAddressGenerator:inst1|       ; 32 (0)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|InstructionAddressGenerator:inst1                                                                              ;              ;
+;       |MuxINC:inst|                          ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|InstructionAddressGenerator:inst1|MuxINC:inst                                                                  ;              ;
+;          |lpm_mux:lpm_mux_component|         ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|InstructionAddressGenerator:inst1|MuxINC:inst|lpm_mux:lpm_mux_component                                        ;              ;
+;             |mux_m4e:auto_generated|         ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|InstructionAddressGenerator:inst1|MuxINC:inst|lpm_mux:lpm_mux_component|mux_m4e:auto_generated                 ;              ;
+;       |PC:inst2|                             ; 16 (0)            ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|InstructionAddressGenerator:inst1|PC:inst2                                                                     ;              ;
+;          |lpm_ff:lpm_ff_component|           ; 16 (16)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|InstructionAddressGenerator:inst1|PC:inst2|lpm_ff:lpm_ff_component                                             ;              ;
+;       |PC_Temp:inst4|                        ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|InstructionAddressGenerator:inst1|PC_Temp:inst4                                                                ;              ;
+;          |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|InstructionAddressGenerator:inst1|PC_Temp:inst4|lpm_ff:lpm_ff_component                                        ;              ;
+;    |MemoryInterface:suckmydick|              ; 0 (0)             ; 0 (0)        ; 24576       ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|MemoryInterface:suckmydick                                                                                     ;              ;
+;       |MainMemory:inst|                      ; 0 (0)             ; 0 (0)        ; 24576       ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|MemoryInterface:suckmydick|MainMemory:inst                                                                     ;              ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 24576       ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|MemoryInterface:suckmydick|MainMemory:inst|altsyncram:altsyncram_component                                     ;              ;
+;             |altsyncram_efg1:auto_generated| ; 0 (0)             ; 0 (0)        ; 24576       ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|MemoryInterface:suckmydick|MainMemory:inst|altsyncram:altsyncram_component|altsyncram_efg1:auto_generated      ;              ;
+;    |alu:inst9|                               ; 62 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9                                                                                                      ;              ;
+;       |bit16add:FA|                          ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA                                                                                          ;              ;
+;          |bitAdder:add0|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add0                                                                            ;              ;
+;          |bitAdder:add10|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add10                                                                           ;              ;
+;          |bitAdder:add11|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add11                                                                           ;              ;
+;          |bitAdder:add12|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add12                                                                           ;              ;
+;          |bitAdder:add13|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add13                                                                           ;              ;
+;          |bitAdder:add1|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add1                                                                            ;              ;
+;          |bitAdder:add2|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add2                                                                            ;              ;
+;          |bitAdder:add3|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add3                                                                            ;              ;
+;          |bitAdder:add4|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add4                                                                            ;              ;
+;          |bitAdder:add5|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add5                                                                            ;              ;
+;          |bitAdder:add6|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add6                                                                            ;              ;
+;          |bitAdder:add7|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add7                                                                            ;              ;
+;          |bitAdder:add8|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add8                                                                            ;              ;
+;          |bitAdder:add9|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add9                                                                            ;              ;
+;       |bit16multi4to1:multfin|               ; 48 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin                                                                               ;              ;
+;          |multi4to1:mult0|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult0                                                               ;              ;
+;          |multi4to1:mult10|                  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult10                                                              ;              ;
+;          |multi4to1:mult11|                  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult11                                                              ;              ;
+;          |multi4to1:mult12|                  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult12                                                              ;              ;
+;          |multi4to1:mult13|                  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult13                                                              ;              ;
+;          |multi4to1:mult14|                  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult14                                                              ;              ;
+;          |multi4to1:mult15|                  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult15                                                              ;              ;
+;          |multi4to1:mult1|                   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult1                                                               ;              ;
+;          |multi4to1:mult2|                   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult2                                                               ;              ;
+;          |multi4to1:mult3|                   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult3                                                               ;              ;
+;          |multi4to1:mult4|                   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult4                                                               ;              ;
+;          |multi4to1:mult5|                   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult5                                                               ;              ;
+;          |multi4to1:mult6|                   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult6                                                               ;              ;
+;          |multi4to1:mult7|                   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult7                                                               ;              ;
+;          |multi4to1:mult8|                   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult8                                                               ;              ;
+;          |multi4to1:mult9|                   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult9                                                               ;              ;
+;    |mux_ma:inst6|                            ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|mux_ma:inst6                                                                                                   ;              ;
+;       |lpm_mux:LPM_MUX_component|            ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|mux_ma:inst6|lpm_mux:LPM_MUX_component                                                                         ;              ;
+;          |mux_m4e:auto_generated|            ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|mux_ma:inst6|lpm_mux:LPM_MUX_component|mux_m4e:auto_generated                                                  ;              ;
+;    |muxy:inst|                               ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|muxy:inst                                                                                                      ;              ;
+;       |lpm_mux:LPM_MUX_component|            ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|muxy:inst|lpm_mux:LPM_MUX_component                                                                            ;              ;
+;          |mux_o4e:auto_generated|            ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|muxy:inst|lpm_mux:LPM_MUX_component|mux_o4e:auto_generated                                                     ;              ;
+;    |registerFile:inst8|                      ; 275 (0)           ; 240 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8                                                                                             ;              ;
+;       |Reg16:reg10|                          ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg10                                                                                 ;              ;
+;       |Reg16:reg11|                          ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg11                                                                                 ;              ;
+;       |Reg16:reg12|                          ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg12                                                                                 ;              ;
+;       |Reg16:reg13|                          ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg13                                                                                 ;              ;
+;       |Reg16:reg14|                          ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg14                                                                                 ;              ;
+;       |Reg16:reg15|                          ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg15                                                                                 ;              ;
+;       |Reg16:reg1|                           ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg1                                                                                  ;              ;
+;       |Reg16:reg2|                           ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg2                                                                                  ;              ;
+;       |Reg16:reg3|                           ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg3                                                                                  ;              ;
+;       |Reg16:reg4|                           ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg4                                                                                  ;              ;
+;       |Reg16:reg5|                           ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg5                                                                                  ;              ;
+;       |Reg16:reg6|                           ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg6                                                                                  ;              ;
+;       |Reg16:reg7|                           ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg7                                                                                  ;              ;
+;       |Reg16:reg8|                           ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg8                                                                                  ;              ;
+;       |Reg16:reg9|                           ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg9                                                                                  ;              ;
+;       |decoder16:decode|                     ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|decoder16:decode                                                                            ;              ;
+;       |mux16:mux1|                           ; 128 (128)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|mux16:mux1                                                                                  ;              ;
+;       |mux16:mux2|                           ; 128 (128)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|mux16:mux2                                                                                  ;              ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                              ;
-+--------+--------------+---------+--------------+--------------+------------------------------+-------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance              ; IP Include File                     ;
-+--------+--------------+---------+--------------+--------------+------------------------------+-------------------------------------+
-; Altera ; LPM_CONSTANT ; 12.0    ; N/A          ; N/A          ; |project|lpm_constant0:inst5 ; D:/github/csce230/lpm_constant0.vhd ;
-; Altera ; LPM_MUX      ; 12.0    ; N/A          ; N/A          ; |project|muxy:inst           ; D:/github/csce230/muxy.vhd          ;
-+--------+--------------+---------+--------------+--------------+------------------------------+-------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                             ;
++----------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+----------------------------------------------+
+; Name                                                                                                                 ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                                          ;
++----------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+----------------------------------------------+
+; MemoryInterface:suckmydick|MainMemory:inst|altsyncram:altsyncram_component|altsyncram_efg1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 1024         ; 24           ; --           ; --           ; 24576 ; ./memFilesProcessor/MemoryInitialization.mif ;
++----------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+----------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                         ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------------------+----------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                          ; IP Include File                                    ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------------------+----------------------------------------------------+
+; Altera ; LPM_ADD_SUB  ; N/A     ; N/A          ; N/A          ; |project|InstructionAddressGenerator:inst1|Adder:inst1   ; D:/github/csce230/memFilesProcessor/Adder.vhd      ;
+; Altera ; LPM_CONSTANT ; N/A     ; N/A          ; N/A          ; |project|InstructionAddressGenerator:inst1|Const:inst5   ; D:/github/csce230/memFilesProcessor/Const.vhd      ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |project|InstructionAddressGenerator:inst1|MuxINC:inst   ; D:/github/csce230/memFilesProcessor/MuxINC.vhd     ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |project|InstructionAddressGenerator:inst1|MuxPC:inst3   ; D:/github/csce230/memFilesProcessor/MuxPC.vhd      ;
+; Altera ; LPM_FF       ; N/A     ; N/A          ; N/A          ; |project|InstructionAddressGenerator:inst1|PC:inst2      ; D:/github/csce230/memFilesProcessor/PC.vhd         ;
+; Altera ; LPM_FF       ; N/A     ; N/A          ; N/A          ; |project|InstructionAddressGenerator:inst1|PC_Temp:inst4 ; D:/github/csce230/memFilesProcessor/PC_Temp.vhd    ;
+; Altera ; LPM_CONSTANT ; N/A     ; N/A          ; N/A          ; |project|MemoryInterface:suckmydick|Const:inst3          ; D:/github/csce230/memFilesProcessor/Const.vhd      ;
+; Altera ; RAM: 1-PORT  ; 12.0    ; N/A          ; N/A          ; |project|MemoryInterface:suckmydick|MainMemory:inst      ; D:/github/csce230/memFilesProcessor/MainMemory.vhd ;
+; Altera ; LPM_CONSTANT ; 12.0    ; N/A          ; N/A          ; |project|const15:inst11                                  ; D:/github/csce230/const15.vhd                      ;
+; Altera ; LPM_CONSTANT ; 12.0    ; N/A          ; N/A          ; |project|lpm_constant0:inst5                             ; D:/github/csce230/lpm_constant0.vhd                ;
+; Altera ; LPM_MUX      ; 12.0    ; N/A          ; N/A          ; |project|mux_ma:inst6                                    ; D:/github/csce230/mux_ma.vhd                       ;
+; Altera ; LPM_MUX      ; 12.0    ; N/A          ; N/A          ; |project|muxc:inst10                                     ; D:/github/csce230/muxc.vhd                         ;
+; Altera ; LPM_MUX      ; 12.0    ; N/A          ; N/A          ; |project|muxy:inst                                       ; D:/github/csce230/muxy.vhd                         ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------------------+----------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------+
@@ -329,20 +413,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ControlUnit:inst2|extend[0,1]         ; Stuck at GND due to stuck port data_in ;
 ; ControlUnit:inst2|a_inv               ; Stuck at GND due to stuck port data_in ;
 ; ControlUnit:inst2|b_select            ; Stuck at GND due to stuck port data_in ;
-; ControlUnit:inst2|y_select[0,1]       ; Stuck at GND due to stuck port data_in ;
 ; ControlUnit:inst2|wmfc                ; Lost fanout                            ;
-; Total Number of Removed Registers = 7 ;                                        ;
+; ControlUnit:inst2|ir_enable           ; Merged with ControlUnit:inst2|mem_read ;
+; Total Number of Removed Registers = 6 ;                                        ;
 +---------------------------------------+----------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                      ;
-+-----------------------------+---------------------------+----------------------------------------+
-; Register name               ; Reason for Removal        ; Registers Removed due to This Register ;
-+-----------------------------+---------------------------+----------------------------------------+
-; ControlUnit:inst2|extend[1] ; Stuck at GND              ; ControlUnit:inst2|wmfc                 ;
-;                             ; due to stuck port data_in ;                                        ;
-+-----------------------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -350,12 +424,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 360   ;
+; Total registers                              ; 420   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 32    ;
-; Number of registers using Asynchronous Clear ; 323   ;
+; Number of registers using Synchronous Load   ; 64    ;
+; Number of registers using Asynchronous Clear ; 376   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 261   ;
+; Number of registers using Clock Enable       ; 284   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -365,11 +439,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+----------------------------------------------------------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                                     ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+----------------------------------------------------------------+----------------------------+
-; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; |project|BuffReg16:RB_inst|output[14]                          ;                            ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; |project|BuffReg16:RY|output[2]                                ;                            ;
 ; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; |project|BuffReg16:RA|output[12]                               ;                            ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; |project|BuffReg16:RB_inst|output[0]                           ;                            ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; |project|ControlUnit:inst2|y_select[1]                         ;                            ;
 ; 14:1               ; 2 bits    ; 18 LEs        ; 8 LEs                ; 10 LEs                 ; |project|ControlUnit:inst2|alu_op[1]                           ;                            ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult3|Mux0 ;                            ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult0|Mux0 ;                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+----------------------------------------------------------------+----------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for MemoryInterface:suckmydick|MainMemory:inst|altsyncram:altsyncram_component|altsyncram_efg1:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                 ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                  ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------+
@@ -404,6 +489,248 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MemoryInterface:suckmydick|Const:inst3|lpm_constant:lpm_constant_component ;
++--------------------+------------------+---------------------------------------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                                            ;
++--------------------+------------------+---------------------------------------------------------------------------------+
+; LPM_WIDTH          ; 16               ; Signed Integer                                                                  ;
+; LPM_CVALUE         ; 1                ; Signed Integer                                                                  ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                                         ;
+; CBXI_PARAMETER     ; lpm_constant_ak6 ; Untyped                                                                         ;
++--------------------+------------------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MemoryInterface:suckmydick|MainMemory:inst|altsyncram:altsyncram_component ;
++------------------------------------+----------------------------------------------+-------------------------------------+
+; Parameter Name                     ; Value                                        ; Type                                ;
++------------------------------------+----------------------------------------------+-------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                                            ; Untyped                             ;
+; AUTO_CARRY_CHAINS                  ; ON                                           ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                          ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS                ; ON                                           ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                          ; IGNORE_CASCADE                      ;
+; WIDTH_BYTEENA                      ; 1                                            ; Untyped                             ;
+; OPERATION_MODE                     ; SINGLE_PORT                                  ; Untyped                             ;
+; WIDTH_A                            ; 24                                           ; Signed Integer                      ;
+; WIDTHAD_A                          ; 10                                           ; Signed Integer                      ;
+; NUMWORDS_A                         ; 1024                                         ; Signed Integer                      ;
+; OUTDATA_REG_A                      ; UNREGISTERED                                 ; Untyped                             ;
+; ADDRESS_ACLR_A                     ; NONE                                         ; Untyped                             ;
+; OUTDATA_ACLR_A                     ; NONE                                         ; Untyped                             ;
+; WRCONTROL_ACLR_A                   ; NONE                                         ; Untyped                             ;
+; INDATA_ACLR_A                      ; NONE                                         ; Untyped                             ;
+; BYTEENA_ACLR_A                     ; NONE                                         ; Untyped                             ;
+; WIDTH_B                            ; 1                                            ; Untyped                             ;
+; WIDTHAD_B                          ; 1                                            ; Untyped                             ;
+; NUMWORDS_B                         ; 1                                            ; Untyped                             ;
+; INDATA_REG_B                       ; CLOCK1                                       ; Untyped                             ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                       ; Untyped                             ;
+; RDCONTROL_REG_B                    ; CLOCK1                                       ; Untyped                             ;
+; ADDRESS_REG_B                      ; CLOCK1                                       ; Untyped                             ;
+; OUTDATA_REG_B                      ; UNREGISTERED                                 ; Untyped                             ;
+; BYTEENA_REG_B                      ; CLOCK1                                       ; Untyped                             ;
+; INDATA_ACLR_B                      ; NONE                                         ; Untyped                             ;
+; WRCONTROL_ACLR_B                   ; NONE                                         ; Untyped                             ;
+; ADDRESS_ACLR_B                     ; NONE                                         ; Untyped                             ;
+; OUTDATA_ACLR_B                     ; NONE                                         ; Untyped                             ;
+; RDCONTROL_ACLR_B                   ; NONE                                         ; Untyped                             ;
+; BYTEENA_ACLR_B                     ; NONE                                         ; Untyped                             ;
+; WIDTH_BYTEENA_A                    ; 1                                            ; Signed Integer                      ;
+; WIDTH_BYTEENA_B                    ; 1                                            ; Untyped                             ;
+; RAM_BLOCK_TYPE                     ; AUTO                                         ; Untyped                             ;
+; BYTE_SIZE                          ; 8                                            ; Untyped                             ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                    ; Untyped                             ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                         ; Untyped                             ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                         ; Untyped                             ;
+; INIT_FILE                          ; ./memFilesProcessor/MemoryInitialization.mif ; Untyped                             ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                       ; Untyped                             ;
+; MAXIMUM_DEPTH                      ; 0                                            ; Untyped                             ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                                       ; Untyped                             ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                       ; Untyped                             ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                                       ; Untyped                             ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                       ; Untyped                             ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                              ; Untyped                             ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                              ; Untyped                             ;
+; ENABLE_ECC                         ; FALSE                                        ; Untyped                             ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                        ; Untyped                             ;
+; WIDTH_ECCSTATUS                    ; 3                                            ; Untyped                             ;
+; DEVICE_FAMILY                      ; Cyclone II                                   ; Untyped                             ;
+; CBXI_PARAMETER                     ; altsyncram_efg1                              ; Untyped                             ;
++------------------------------------+----------------------------------------------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux_ma:inst6|LPM_MUX:LPM_MUX_component ;
++------------------------+------------+-----------------------------------------------+
+; Parameter Name         ; Value      ; Type                                          ;
++------------------------+------------+-----------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                ;
+; LPM_WIDTH              ; 16         ; Signed Integer                                ;
+; LPM_SIZE               ; 2          ; Signed Integer                                ;
+; LPM_WIDTHS             ; 1          ; Signed Integer                                ;
+; LPM_PIPELINE           ; 0          ; Signed Integer                                ;
+; CBXI_PARAMETER         ; mux_m4e    ; Untyped                                       ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                       ;
++------------------------+------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: InstructionAddressGenerator:inst1|PC:inst2|lpm_ff:lpm_ff_component ;
++------------------------+------------+---------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                      ;
++------------------------+------------+---------------------------------------------------------------------------+
+; LPM_WIDTH              ; 16         ; Signed Integer                                                            ;
+; LPM_AVALUE             ; UNUSED     ; Untyped                                                                   ;
+; LPM_SVALUE             ; UNUSED     ; Untyped                                                                   ;
+; LPM_FFTYPE             ; DFF        ; Untyped                                                                   ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                   ;
+; CBXI_PARAMETER         ; NOTHING    ; Untyped                                                                   ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                              ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                            ;
++------------------------+------------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: InstructionAddressGenerator:inst1|MuxPC:inst3|LPM_MUX:lpm_mux_component ;
++------------------------+------------+--------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                           ;
++------------------------+------------+--------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                 ;
+; LPM_WIDTH              ; 16         ; Signed Integer                                                                 ;
+; LPM_SIZE               ; 2          ; Signed Integer                                                                 ;
+; LPM_WIDTHS             ; 1          ; Signed Integer                                                                 ;
+; LPM_PIPELINE           ; 0          ; Signed Integer                                                                 ;
+; CBXI_PARAMETER         ; mux_m4e    ; Untyped                                                                        ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                        ;
++------------------------+------------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: InstructionAddressGenerator:inst1|Adder:inst1|lpm_add_sub:lpm_add_sub_component ;
++------------------------+-------------+---------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                  ;
++------------------------+-------------+---------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 16          ; Signed Integer                                                                        ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                                               ;
+; LPM_DIRECTION          ; ADD         ; Untyped                                                                               ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                               ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                                               ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                               ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                               ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                               ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                               ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                    ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                               ;
+; USE_WYS                ; OFF         ; Untyped                                                                               ;
+; STYLE                  ; FAST        ; Untyped                                                                               ;
+; CBXI_PARAMETER         ; add_sub_rlh ; Untyped                                                                               ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                          ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                        ;
++------------------------+-------------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: InstructionAddressGenerator:inst1|MuxINC:inst|LPM_MUX:lpm_mux_component ;
++------------------------+------------+--------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                           ;
++------------------------+------------+--------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                 ;
+; LPM_WIDTH              ; 16         ; Signed Integer                                                                 ;
+; LPM_SIZE               ; 2          ; Signed Integer                                                                 ;
+; LPM_WIDTHS             ; 1          ; Signed Integer                                                                 ;
+; LPM_PIPELINE           ; 0          ; Signed Integer                                                                 ;
+; CBXI_PARAMETER         ; mux_m4e    ; Untyped                                                                        ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                        ;
++------------------------+------------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: InstructionAddressGenerator:inst1|Const:inst5|lpm_constant:lpm_constant_component ;
++--------------------+------------------+----------------------------------------------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                                                   ;
++--------------------+------------------+----------------------------------------------------------------------------------------+
+; LPM_WIDTH          ; 16               ; Signed Integer                                                                         ;
+; LPM_CVALUE         ; 1                ; Signed Integer                                                                         ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                                                ;
+; CBXI_PARAMETER     ; lpm_constant_ak6 ; Untyped                                                                                ;
++--------------------+------------------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: InstructionAddressGenerator:inst1|PC_Temp:inst4|lpm_ff:lpm_ff_component ;
++------------------------+------------+--------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                           ;
++------------------------+------------+--------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 16         ; Signed Integer                                                                 ;
+; LPM_AVALUE             ; UNUSED     ; Untyped                                                                        ;
+; LPM_SVALUE             ; UNUSED     ; Untyped                                                                        ;
+; LPM_FFTYPE             ; DFF        ; Untyped                                                                        ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                        ;
+; CBXI_PARAMETER         ; NOTHING    ; Untyped                                                                        ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                 ;
++------------------------+------------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxc:inst10|LPM_MUX:LPM_MUX_component ;
++------------------------+------------+----------------------------------------------+
+; Parameter Name         ; Value      ; Type                                         ;
++------------------------+------------+----------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                 ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                               ;
+; LPM_WIDTH              ; 4          ; Signed Integer                               ;
+; LPM_SIZE               ; 3          ; Signed Integer                               ;
+; LPM_WIDTHS             ; 2          ; Signed Integer                               ;
+; LPM_PIPELINE           ; 0          ; Signed Integer                               ;
+; CBXI_PARAMETER         ; mux_53e    ; Untyped                                      ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                      ;
++------------------------+------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: const15:inst11|lpm_constant:LPM_CONSTANT_component ;
++--------------------+------------------+---------------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                    ;
++--------------------+------------------+---------------------------------------------------------+
+; LPM_WIDTH          ; 4                ; Signed Integer                                          ;
+; LPM_CVALUE         ; 15               ; Signed Integer                                          ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                 ;
+; CBXI_PARAMETER     ; lpm_constant_sf6 ; Untyped                                                 ;
++--------------------+------------------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: ControlUnit:inst2|lpm_divide:Mod0 ;
 +------------------------+----------------+------------------------------------------+
@@ -425,6 +752,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
 +------------------------+----------------+------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                       ;
++-------------------------------------------+----------------------------------------------------------------------------+
+; Name                                      ; Value                                                                      ;
++-------------------------------------------+----------------------------------------------------------------------------+
+; Number of entity instances                ; 1                                                                          ;
+; Entity Instance                           ; MemoryInterface:suckmydick|MainMemory:inst|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                                                ;
+;     -- WIDTH_A                            ; 24                                                                         ;
+;     -- NUMWORDS_A                         ; 1024                                                                       ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                               ;
+;     -- WIDTH_B                            ; 1                                                                          ;
+;     -- NUMWORDS_B                         ; 1                                                                          ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                     ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                               ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                       ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                  ;
++-------------------------------------------+----------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------+
@@ -461,7 +808,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -471,39 +818,58 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.0 Build 178 05/31/2012 SJ Web Edition
-    Info: Processing started: Fri Nov 06 22:46:24 2015
+    Info: Processing started: Thu Dec 03 19:19:26 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off project -c project
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file c:/users/matt/downloads/lab8files/mux16.vhd
-    Info (12022): Found design unit 1: mux16-behavior
-    Info (12023): Found entity 1: mux16
-Info (12021): Found 2 design units, including 1 entities, in source file c:/users/matt/downloads/lab8files/decoder16.vhd
-    Info (12022): Found design unit 1: decoder16-behavior
-    Info (12023): Found entity 1: decoder16
-Info (12021): Found 2 design units, including 1 entities, in source file c:/users/matt/desktop/shit ballz/variouslogic.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file variouslogic.vhd
     Info (12022): Found design unit 1: variousLogic-Behavioral
     Info (12023): Found entity 1: variousLogic
-Info (12021): Found 2 design units, including 1 entities, in source file c:/users/matt/desktop/shit ballz/multi4to1.vhdl
+Info (12021): Found 2 design units, including 1 entities, in source file multi4to1.vhdl
     Info (12022): Found design unit 1: multi4to1-behavior
     Info (12023): Found entity 1: multi4to1
-Info (12021): Found 2 design units, including 1 entities, in source file c:/users/matt/desktop/shit ballz/multi2to1.vhdl
+Info (12021): Found 2 design units, including 1 entities, in source file multi2to1.vhdl
     Info (12022): Found design unit 1: multi2to1-behavior
     Info (12023): Found entity 1: multi2to1
-Info (12021): Found 2 design units, including 1 entities, in source file c:/users/matt/desktop/shit ballz/bitadder.vhdl
+Info (12021): Found 2 design units, including 1 entities, in source file bitadder.vhdl
     Info (12022): Found design unit 1: bitAdder-behavior
     Info (12023): Found entity 1: bitAdder
-Info (12021): Found 2 design units, including 1 entities, in source file c:/users/matt/desktop/shit ballz/bit16xor.vhdl
+Info (12021): Found 2 design units, including 1 entities, in source file bit16xor.vhdl
     Info (12022): Found design unit 1: bit16xor-Behavioral
     Info (12023): Found entity 1: bit16xor
-Info (12021): Found 2 design units, including 1 entities, in source file c:/users/matt/desktop/shit ballz/bit16or.vhdl
+Info (12021): Found 2 design units, including 1 entities, in source file bit16or.vhdl
     Info (12022): Found design unit 1: bit16or-Behavioral
     Info (12023): Found entity 1: bit16or
-Info (12021): Found 2 design units, including 1 entities, in source file c:/users/matt/desktop/shit ballz/bit16and.vhdl
+Info (12021): Found 2 design units, including 1 entities, in source file bit16and.vhdl
     Info (12022): Found design unit 1: bit16and-Behavioral
     Info (12023): Found entity 1: bit16and
-Info (12021): Found 2 design units, including 1 entities, in source file c:/users/matt/desktop/shit ballz/bit16add.vhdl
+Info (12021): Found 2 design units, including 1 entities, in source file bit16add.vhdl
     Info (12022): Found design unit 1: bit16add-behavior
     Info (12023): Found entity 1: bit16add
+Info (12021): Found 1 design units, including 1 entities, in source file memfilesprocessor/memoryinterface.bdf
+    Info (12023): Found entity 1: MemoryInterface
+Info (12021): Found 2 design units, including 1 entities, in source file memfilesprocessor/mainmemory.vhd
+    Info (12022): Found design unit 1: mainmemory-SYN
+    Info (12023): Found entity 1: MainMemory
+Info (12021): Found 2 design units, including 1 entities, in source file memfilesprocessor/pc_temp.vhd
+    Info (12022): Found design unit 1: pc_temp-SYN
+    Info (12023): Found entity 1: PC_Temp
+Info (12021): Found 2 design units, including 1 entities, in source file memfilesprocessor/pc.vhd
+    Info (12022): Found design unit 1: pc-SYN
+    Info (12023): Found entity 1: PC
+Info (12021): Found 2 design units, including 1 entities, in source file memfilesprocessor/muxpc.vhd
+    Info (12022): Found design unit 1: muxpc-SYN
+    Info (12023): Found entity 1: MuxPC
+Info (12021): Found 2 design units, including 1 entities, in source file memfilesprocessor/muxinc.vhd
+    Info (12022): Found design unit 1: muxinc-SYN
+    Info (12023): Found entity 1: MuxINC
+Info (12021): Found 1 design units, including 1 entities, in source file memfilesprocessor/instructionaddressgenerator.bdf
+    Info (12023): Found entity 1: InstructionAddressGenerator
+Info (12021): Found 2 design units, including 1 entities, in source file memfilesprocessor/const.vhd
+    Info (12022): Found design unit 1: const-SYN
+    Info (12023): Found entity 1: Const
+Info (12021): Found 2 design units, including 1 entities, in source file memfilesprocessor/adder.vhd
+    Info (12022): Found design unit 1: adder-SYN
+    Info (12023): Found entity 1: Adder
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhdl
     Info (12022): Found design unit 1: alu-behavior
     Info (12023): Found entity 1: alu
@@ -539,18 +905,28 @@ Info (12021): Found 2 design units, including 1 entities, in source file muxy.vh
 Info (12021): Found 2 design units, including 1 entities, in source file lpm_constant0.vhd
     Info (12022): Found design unit 1: lpm_constant0-SYN
     Info (12023): Found entity 1: lpm_constant0
+Info (12021): Found 2 design units, including 1 entities, in source file mux_ma.vhd
+    Info (12022): Found design unit 1: mux_ma-SYN
+    Info (12023): Found entity 1: mux_ma
+Info (12021): Found 2 design units, including 1 entities, in source file lpm_constant1.vhd
+    Info (12022): Found design unit 1: lpm_constant1-SYN
+    Info (12023): Found entity 1: lpm_constant1
+Info (12021): Found 2 design units, including 1 entities, in source file muxc.vhd
+    Info (12022): Found design unit 1: muxc-SYN
+    Info (12023): Found entity 1: muxc
+Info (12021): Found 2 design units, including 1 entities, in source file const15.vhd
+    Info (12022): Found design unit 1: const15-SYN
+    Info (12023): Found entity 1: const15
 Info (12127): Elaborating entity "project" for the top level hierarchy
 Warning (275085): Found inconsistent dimensions for element "ncvz"
 Warning (275080): Converted elements in bus name "ncvz" using legacy naming rules. Make any assignments on the new names, not on the original names.
     Warning (275081): Converted element name(s) from "ncvz[15..0]" to "ncvz15..0"
     Warning (275081): Converted element name(s) from "ncvz[3]" to "ncvz3"
-    Warning (275081): Converted element name(s) from "ncvz[1]" to "ncvz1"
     Warning (275081): Converted element name(s) from "ncvz[2]" to "ncvz2"
     Warning (275081): Converted element name(s) from "ncvz[0]" to "ncvz0"
+    Warning (275081): Converted element name(s) from "ncvz[1]" to "ncvz1"
 Warning (275043): Pin "pin_name1" is missing source
-Warning (275043): Pin "pin_name2" is missing source
 Warning (275043): Pin "pin_name7" is missing source
-Warning (275043): Pin "pin_name8" is missing source
 Warning (275043): Pin "ncvz" is missing source
 Warning (275043): Pin "raout[15..0]" is missing source
 Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:inst2"
@@ -575,8 +951,14 @@ Info (12128): Elaborating entity "bit16xor" for hierarchy "alu:inst9|bit16xor:xo
 Info (12128): Elaborating entity "bit16multi4to1" for hierarchy "alu:inst9|bit16multi4to1:multfin"
 Info (12128): Elaborating entity "multi4to1" for hierarchy "alu:inst9|bit16multi4to1:multfin|multi4to1:mult0"
 Info (12128): Elaborating entity "registerFile" for hierarchy "registerFile:inst8"
+Warning (12125): Using design file decoder16.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: decoder16-behavior
+    Info (12023): Found entity 1: decoder16
 Info (12128): Elaborating entity "decoder16" for hierarchy "registerFile:inst8|decoder16:decode"
 Info (12128): Elaborating entity "Reg16" for hierarchy "registerFile:inst8|Reg16:reg1"
+Warning (12125): Using design file mux16.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: mux16-behavior
+    Info (12023): Found entity 1: mux16
 Info (12128): Elaborating entity "mux16" for hierarchy "registerFile:inst8|mux16:mux1"
 Info (12128): Elaborating entity "muxy" for hierarchy "muxy:inst"
 Info (12128): Elaborating entity "LPM_MUX" for hierarchy "muxy:inst|LPM_MUX:LPM_MUX_component"
@@ -591,7 +973,101 @@ Info (12133): Instantiated megafunction "muxy:inst|LPM_MUX:LPM_MUX_component" wi
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_o4e.tdf
     Info (12023): Found entity 1: mux_o4e
 Info (12128): Elaborating entity "mux_o4e" for hierarchy "muxy:inst|LPM_MUX:LPM_MUX_component|mux_o4e:auto_generated"
+Info (12128): Elaborating entity "MemoryInterface" for hierarchy "MemoryInterface:suckmydick"
+Warning (275009): Pin "MEM_read" not connected
+Info (12128): Elaborating entity "Const" for hierarchy "MemoryInterface:suckmydick|Const:inst3"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "MemoryInterface:suckmydick|Const:inst3|lpm_constant:lpm_constant_component"
+Info (12130): Elaborated megafunction instantiation "MemoryInterface:suckmydick|Const:inst3|lpm_constant:lpm_constant_component"
+Info (12133): Instantiated megafunction "MemoryInterface:suckmydick|Const:inst3|lpm_constant:lpm_constant_component" with the following parameter:
+    Info (12134): Parameter "lpm_cvalue" = "1"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
+    Info (12134): Parameter "lpm_width" = "16"
+Info (12128): Elaborating entity "MainMemory" for hierarchy "MemoryInterface:suckmydick|MainMemory:inst"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "MemoryInterface:suckmydick|MainMemory:inst|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "MemoryInterface:suckmydick|MainMemory:inst|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "MemoryInterface:suckmydick|MainMemory:inst|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "./memFilesProcessor/MemoryInitialization.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "1024"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "widthad_a" = "10"
+    Info (12134): Parameter "width_a" = "24"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_efg1.tdf
+    Info (12023): Found entity 1: altsyncram_efg1
+Info (12128): Elaborating entity "altsyncram_efg1" for hierarchy "MemoryInterface:suckmydick|MainMemory:inst|altsyncram:altsyncram_component|altsyncram_efg1:auto_generated"
+Info (12128): Elaborating entity "mux_ma" for hierarchy "mux_ma:inst6"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "mux_ma:inst6|LPM_MUX:LPM_MUX_component"
+Info (12130): Elaborated megafunction instantiation "mux_ma:inst6|LPM_MUX:LPM_MUX_component"
+Info (12133): Instantiated megafunction "mux_ma:inst6|LPM_MUX:LPM_MUX_component" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "16"
+    Info (12134): Parameter "LPM_SIZE" = "2"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_m4e.tdf
+    Info (12023): Found entity 1: mux_m4e
+Info (12128): Elaborating entity "mux_m4e" for hierarchy "mux_ma:inst6|LPM_MUX:LPM_MUX_component|mux_m4e:auto_generated"
+Info (12128): Elaborating entity "InstructionAddressGenerator" for hierarchy "InstructionAddressGenerator:inst1"
+Info (12128): Elaborating entity "PC" for hierarchy "InstructionAddressGenerator:inst1|PC:inst2"
+Info (12128): Elaborating entity "lpm_ff" for hierarchy "InstructionAddressGenerator:inst1|PC:inst2|lpm_ff:lpm_ff_component"
+Info (12130): Elaborated megafunction instantiation "InstructionAddressGenerator:inst1|PC:inst2|lpm_ff:lpm_ff_component"
+Info (12133): Instantiated megafunction "InstructionAddressGenerator:inst1|PC:inst2|lpm_ff:lpm_ff_component" with the following parameter:
+    Info (12134): Parameter "lpm_fftype" = "DFF"
+    Info (12134): Parameter "lpm_type" = "LPM_FF"
+    Info (12134): Parameter "lpm_width" = "16"
+Info (12128): Elaborating entity "MuxPC" for hierarchy "InstructionAddressGenerator:inst1|MuxPC:inst3"
+Info (12128): Elaborating entity "Adder" for hierarchy "InstructionAddressGenerator:inst1|Adder:inst1"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "InstructionAddressGenerator:inst1|Adder:inst1|lpm_add_sub:lpm_add_sub_component"
+Info (12130): Elaborated megafunction instantiation "InstructionAddressGenerator:inst1|Adder:inst1|lpm_add_sub:lpm_add_sub_component"
+Info (12133): Instantiated megafunction "InstructionAddressGenerator:inst1|Adder:inst1|lpm_add_sub:lpm_add_sub_component" with the following parameter:
+    Info (12134): Parameter "lpm_direction" = "ADD"
+    Info (12134): Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=NO,CIN_USED=NO"
+    Info (12134): Parameter "lpm_representation" = "UNSIGNED"
+    Info (12134): Parameter "lpm_type" = "LPM_ADD_SUB"
+    Info (12134): Parameter "lpm_width" = "16"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_rlh.tdf
+    Info (12023): Found entity 1: add_sub_rlh
+Info (12128): Elaborating entity "add_sub_rlh" for hierarchy "InstructionAddressGenerator:inst1|Adder:inst1|lpm_add_sub:lpm_add_sub_component|add_sub_rlh:auto_generated"
+Info (12128): Elaborating entity "MuxINC" for hierarchy "InstructionAddressGenerator:inst1|MuxINC:inst"
+Info (12128): Elaborating entity "PC_Temp" for hierarchy "InstructionAddressGenerator:inst1|PC_Temp:inst4"
+Info (12128): Elaborating entity "lpm_ff" for hierarchy "InstructionAddressGenerator:inst1|PC_Temp:inst4|lpm_ff:lpm_ff_component"
+Info (12130): Elaborated megafunction instantiation "InstructionAddressGenerator:inst1|PC_Temp:inst4|lpm_ff:lpm_ff_component"
+Info (12133): Instantiated megafunction "InstructionAddressGenerator:inst1|PC_Temp:inst4|lpm_ff:lpm_ff_component" with the following parameter:
+    Info (12134): Parameter "lpm_fftype" = "DFF"
+    Info (12134): Parameter "lpm_type" = "LPM_FF"
+    Info (12134): Parameter "lpm_width" = "16"
 Info (12128): Elaborating entity "IR24" for hierarchy "IR24:inst3"
+Info (12128): Elaborating entity "muxc" for hierarchy "muxc:inst10"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "muxc:inst10|LPM_MUX:LPM_MUX_component"
+Info (12130): Elaborated megafunction instantiation "muxc:inst10|LPM_MUX:LPM_MUX_component"
+Info (12133): Instantiated megafunction "muxc:inst10|LPM_MUX:LPM_MUX_component" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "4"
+    Info (12134): Parameter "LPM_SIZE" = "3"
+    Info (12134): Parameter "LPM_WIDTHS" = "2"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_53e.tdf
+    Info (12023): Found entity 1: mux_53e
+Info (12128): Elaborating entity "mux_53e" for hierarchy "muxc:inst10|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated"
+Info (12128): Elaborating entity "const15" for hierarchy "const15:inst11"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "const15:inst11|lpm_constant:LPM_CONSTANT_component"
+Info (12130): Elaborated megafunction instantiation "const15:inst11|lpm_constant:LPM_CONSTANT_component"
+Info (12133): Instantiated megafunction "const15:inst11|lpm_constant:LPM_CONSTANT_component" with the following parameter:
+    Info (12134): Parameter "lpm_cvalue" = "15"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
+    Info (12134): Parameter "lpm_width" = "4"
 Info (12128): Elaborating entity "bit16multi2to1" for hierarchy "bit16multi2to1:MuxB"
 Info (12128): Elaborating entity "immediate" for hierarchy "immediate:inst7"
 Info (12128): Elaborating entity "Reg16" for hierarchy "Reg16:inst4"
@@ -618,10 +1094,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_
     Info (12023): Found entity 1: lpm_abs_0s9
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "pin_name1" is stuck at GND
-    Warning (13410): Pin "pin_name2" is stuck at GND
     Warning (13410): Pin "pin_name7" is stuck at GND
-    Warning (13410): Pin "pin_name8" is stuck at GND
     Warning (13410): Pin "ncvz" is stuck at GND
+    Warning (13410): Pin "RM_out[23]" is stuck at GND
+    Warning (13410): Pin "RM_out[22]" is stuck at GND
+    Warning (13410): Pin "RM_out[21]" is stuck at GND
+    Warning (13410): Pin "RM_out[20]" is stuck at GND
+    Warning (13410): Pin "RM_out[19]" is stuck at GND
+    Warning (13410): Pin "RM_out[18]" is stuck at GND
+    Warning (13410): Pin "RM_out[17]" is stuck at GND
+    Warning (13410): Pin "RM_out[16]" is stuck at GND
     Warning (13410): Pin "b_select" is stuck at GND
     Warning (13410): Pin "raout[15]" is stuck at GND
     Warning (13410): Pin "raout[14]" is stuck at GND
@@ -642,20 +1124,15 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 5 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "irin[19]"
-    Warning (15610): No output dependent on input pin "irin[18]"
-    Warning (15610): No output dependent on input pin "irin[17]"
-    Warning (15610): No output dependent on input pin "irin[16]"
-    Warning (15610): No output dependent on input pin "irin[15]"
-Info (21057): Implemented 2684 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 26 input pins
-    Info (21059): Implemented 89 output pins
-    Info (21061): Implemented 2569 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 43 warnings
-    Info: Peak virtual memory: 403 megabytes
-    Info: Processing ended: Fri Nov 06 22:46:31 2015
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:07
+Info (21057): Implemented 2899 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 197 output pins
+    Info (21061): Implemented 2676 logic cells
+    Info (21064): Implemented 24 RAM segments
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 44 warnings
+    Info: Peak virtual memory: 419 megabytes
+    Info: Processing ended: Thu Dec 03 19:19:34 2015
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:08
 
 
