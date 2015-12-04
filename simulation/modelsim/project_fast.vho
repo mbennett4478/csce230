@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 32-bit"
 -- VERSION "Version 12.0 Build 178 05/31/2012 SJ Web Edition"
 
--- DATE "11/21/2015 14:51:26"
+-- DATE "12/03/2015 19:19:58"
 
 -- 
 -- Device: Altera EP2C20F484C7 Package FBGA484

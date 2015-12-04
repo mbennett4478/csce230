@@ -51,6 +51,17 @@ set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS COMMAND_MACRO_MODE -section_id eda_simulation
 set_global_assignment -name EDA_SIMULATION_RUN_SCRIPT vsimproject.do -section_id eda_simulation
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE variousLogic.vhd
+set_global_assignment -name VHDL_FILE multi4to1.vhdl
+set_global_assignment -name VHDL_FILE multi2to1.vhdl
+set_global_assignment -name VHDL_FILE bitAdder.vhdl
+set_global_assignment -name VHDL_FILE bit16xor.vhdl
+set_global_assignment -name VHDL_FILE bit16or.vhdl
+set_global_assignment -name VHDL_FILE bit16and.vhdl
+set_global_assignment -name VHDL_FILE bit16add.vhdl
 set_global_assignment -name BSF_FILE memFilesProcessor/MemoryInterface.bsf
 set_global_assignment -name BDF_FILE memFilesProcessor/MemoryInterface.bdf
 set_global_assignment -name MIF_FILE memFilesProcessor/MemoryInitialization.mif
@@ -66,16 +77,6 @@ set_global_assignment -name VHDL_FILE memFilesProcessor/MuxINC.vhd
 set_global_assignment -name BDF_FILE memFilesProcessor/InstructionAddressGenerator.bdf
 set_global_assignment -name VHDL_FILE memFilesProcessor/Const.vhd
 set_global_assignment -name VHDL_FILE memFilesProcessor/Adder.vhd
-set_global_assignment -name VHDL_FILE "C:/Users/Matt/Downloads/lab8Files/mux16.vhd"
-set_global_assignment -name VHDL_FILE "C:/Users/Matt/Downloads/lab8Files/decoder16.vhd"
-set_global_assignment -name VHDL_FILE "C:/Users/Matt/Desktop/Shit Ballz/variousLogic.vhd"
-set_global_assignment -name VHDL_FILE "C:/Users/Matt/Desktop/Shit Ballz/multi4to1.vhdl"
-set_global_assignment -name VHDL_FILE "C:/Users/Matt/Desktop/Shit Ballz/multi2to1.vhdl"
-set_global_assignment -name VHDL_FILE "C:/Users/Matt/Desktop/Shit Ballz/bitAdder.vhdl"
-set_global_assignment -name VHDL_FILE "C:/Users/Matt/Desktop/Shit Ballz/bit16xor.vhdl"
-set_global_assignment -name VHDL_FILE "C:/Users/Matt/Desktop/Shit Ballz/bit16or.vhdl"
-set_global_assignment -name VHDL_FILE "C:/Users/Matt/Desktop/Shit Ballz/bit16and.vhdl"
-set_global_assignment -name VHDL_FILE "C:/Users/Matt/Desktop/Shit Ballz/bit16add.vhdl"
 set_global_assignment -name COMMAND_MACRO_FILE vsimproject.do
 set_global_assignment -name VHDL_FILE alu.vhdl
 set_global_assignment -name VHDL_FILE IR24.vhd
@@ -91,9 +92,6 @@ set_global_assignment -name QIP_FILE muxy.qip
 set_global_assignment -name QIP_FILE lpm_constant0.qip
 set_global_assignment -name QIP_FILE mux_ma.qip
 set_global_assignment -name QIP_FILE lpm_constant1.qip
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name QIP_FILE muxc.qip
 set_global_assignment -name QIP_FILE const15.qip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
