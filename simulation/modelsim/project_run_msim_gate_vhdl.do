@@ -7,4 +7,4 @@ vmap work gate_work
 
 vcom -93 -work work {project.vho}
 
-do "D:/github/csce230/vsimproject.do"
+do "C:/Users/John/OneDrive/Documents/CSCE230/project/csce230/vsimproject.do"

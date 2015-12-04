@@ -28,20 +28,39 @@ ENTITY ControlUnit IS
 		   mem_write     :OUT std_logic;
 		   pc_select     :OUT std_logic;
 		   pc_enable     :OUT std_logic;
-		   inc_select     :OUT std_logic
-
-	   
+		   inc_select    :OUT std_logic;
+			s_out			  :OUT std_logic
+			
 		   );
 END ControlUnit;
 
 ARCHITECTURE behavior OF ControlUnit IS 
-			   
+		signal cond_enable:  std_logic;	   
 	   signal wmfc: std_logic;
 	   shared variable stage: integer:= 0;
 BEGIN
    
 	   PROCESS(clock, reset)BEGIN
-   
+		
+		IF(falling_edge(clock))THEN
+			if((Cond(3)='0' and Cond(2)='0' and Cond(1)='0' and Cond(0)='0'))then
+				cond_enable <= '1';
+			elsif((Cond(3)='0' and Cond(2)='0' and Cond(1)='0' and Cond(0)='1'))then
+				cond_enable <= '0';
+			elsif((Cond(3)='0' and Cond(2)='0' and Cond(1)='1' and Cond(0)='0'))then
+				if(z='1')then
+					cond_enable <= '1';
+				end if;
+			elsif((Cond(3)='0' and Cond(2)='0' and Cond(1)='1' and Cond(0)='1'))then
+				if(z='0')then
+					cond_enable <= '1';
+				end if;
+			elsif((Cond(3)='0' and Cond(2)='1' and Cond(1)='0' and Cond(0)='0'))then
+				if(v='1')then
+					cond_enable <= '1';
+				end if;	
+			end if;
+		end if;
 	   IF(rising_edge(clock))THEN
 		   IF(reset = '1')THEN
 				stage := 0;
@@ -71,62 +90,95 @@ BEGIN
 				ir_enable <= '0';
 				mem_read <= '0';
 				pc_enable <= '0';
-			ELSIF(stage = 3)THEN
-				IF((opCode(3) = '0' AND opCode(2) = '0'))THEN
-			   		IF((opCode(1) = '0') AND (opCode(0) = '1'))THEN
-							pc_select <= '0';
-							pc_enable <= '1';
-						ELSIF(( opCode(1) = '0' AND opCode (0) = '0'))THEN
-							IF(opx = "111" ) THEN
-								alu_op <= "00";
-							ELSIF( opx = "110") THEN
-								alu_op <= "01";
-							ELSIF( opx = "101") then
-								alu_op <= "10";
-							ELSIF( opx = "100") then
-								alu_op <= "11";
-							ELSIF( opx = "011") then
-								alu_op <= "11";
-								b_inv <= '1';
+			elsif(cond_enable <= '1')then
+				IF(stage = 3)THEN
+					IF((opCode(3) = '0' AND opCode(2) = '0'))THEN
+							IF((opCode(1) = '0') AND (opCode(0) = '1'))THEN
+								pc_select <= '0';
+								pc_enable <= '1';
+							ELSIF(( opCode(1) = '0' AND opCode (0) = '0'))THEN
+								s_out <= s;
+								IF(opx = "111" ) THEN
+									alu_op <= "00";
+								ELSIF( opx = "110") THEN
+									alu_op <= "01";
+								ELSIF( opx = "101") then
+									alu_op <= "10";
+								ELSIF( opx = "100") then
+									alu_op <= "11";
+								ELSIF( opx = "011") then
+									alu_op <= "11";
+									b_inv <= '1';
+								end if;
 							end if;
+					elsif((opCode(3) = '0' AND opCode(2) = '1'))then		
+						if((opCode(1) = '1') AND (opCode(0) = '0'))THEN
+							s_out <= s;
+							alu_op <= "11";
+							b_inv <= '0';
+							b_select <= '1';
+						elsIF((opCode(1) = '0') AND (opCode(0) = '0'))THEN
+							s_out <= s;
+							alu_op <= "11";
+							b_inv <= '0';
+							b_select <= '1';
+							extend <= "01";
+						elsIF((opCode(1) = '0') AND (opCode(0) = '1'))THEN
+							s_out <= s;
+							alu_op <= "11";
+							b_inv <= '0';
+							b_select <= '1';
+							extend <= "01";
 						end if;
-				elsif(( opCode(3)='1' and opCode(2)='0'))then
-					if((opCode(1)='0' and opCode(0)='0'))then
-						inc_select <= '1';
-						pc_enable <= '1';
-					elsif((opCode(1)='0' and opCode(0)='1'))then
-						inc_select <= '1';
-						pc_enable <= '1';
+					elsif(( opCode(3)='1' and opCode(2)='0'))then
+						if((opCode(1)='0' and opCode(0)='0'))then
+							inc_select <= '1';
+							pc_enable <= '1';
+						elsif((opCode(1)='0' and opCode(0)='1'))then
+							inc_select <= '1';
+							pc_enable <= '1';
+						end if;
 					end if;
-				end if;
-			elsif(stage = 4)then
-				if((opCode(3)='0' and opCode(2)='1' and opCode(1)='1' and opCode(0)='0'))then
-					y_select <= "00";
-				elsif((opCode(3)='0' and opCode(2)='1' and opCode(1)='0' and opCode(0)='0'))then
-					ma_select <= '0';
-					y_select <= "01";
-				elsif((opCode(3)='0' and opCode(2)='1' and opCode(1)='0' and opCode(0)='1'))then
-					ma_select <= '0';
-					mem_write <= '1';
-				elsif((opCode(3)='1' and opCode(2)='0' and opCode(1)='0' and opCode(0)='0'))then
-					pc_enable <= '0';
-				elsif((opCode(3)='1' and opCode(2)='0' and opCode(1)='0' and opCode(0)='1'))then
-					pc_enable <= '0';
-					y_select <= "10";
-				end if;
-			elsif(stage = 5)then
-				if((opCode(3)='1' and opCode(2)='0' and opCode(1)='1' and opCode(0)='0'))then
-					c_select <= "01";
-				elsif((opCode(3)='0' and opCode(2)='1' and opCode(1)='0' and opCode(0)='0'))then
-					c_select <= "01";
-					rf_write <= '1';
-				elsif((opCode(3)='0' and opCode(2)='1' and opCode(1)='0' and opCode(0)='1'))then
-					mem_write <= '0';
-					c_select <= "01";
-					rf_write <= '1';
-				elsif((opCode(3)='1' and opCode(2)='0' and opCode(1)='0' and opCode(0)='1'))then
-					c_select <= "10";
-					rf_write <= '1';
+				elsif(stage = 4)then
+					if((opCode(3)='0' and opCode(2)='1' and opCode(1)='1' and opCode(0)='0'))then
+						s_out <='0';
+						y_select <= "00";
+					elsif((opCode(3)='0' and opCode(2)='0' and opCode(1)='0' and opCode(0)='0'))then
+						s_out <= '0';
+					elsif((opCode(3)='0' and opCode(2)='1' and opCode(1)='0' and opCode(0)='0'))then
+						s_out <= '0';
+						ma_select <= '0';
+						y_select <= "01";
+					elsif((opCode(3)='0' and opCode(2)='1' and opCode(1)='0' and opCode(0)='1'))then
+						s_out <= '0';
+						ma_select <= '0';
+						mem_write <= '1';
+					elsif((opCode(3)='1' and opCode(2)='0' and opCode(1)='0' and opCode(0)='0'))then
+						pc_enable <= '0';
+					elsif((opCode(3)='1' and opCode(2)='0' and opCode(1)='0' and opCode(0)='1'))then
+						pc_enable <= '0';
+						y_select <= "10";
+					elsif((opCode(3)='0' and opCode(2)='0' and opCode(1)='0' and opCode(0)='1'))then
+						s_out <= '0';
+						pc_enable <= '0';
+					end if;
+				elsif(stage = 5)then				
+					if((opCode(3)='1' and opCode(2)='0' and opCode(1)='1' and opCode(0)='0'))then
+						c_select <= "01";
+					elsif((opCode(3)='0' and opCode(2)='1' and opCode(1)='0' and opCode(0)='0'))then
+						c_select <= "01";
+						rf_write <= '1';
+					elsif((opCode(3)='0' and opCode(2)='1' and opCode(1)='1' and opCode(0)='0'))then
+						rf_write <='1';
+						c_select <="01";
+					elsif((opCode(3)='0' and opCode(2)='1' and opCode(1)='0' and opCode(0)='1'))then
+						mem_write <= '0';
+						c_select <= "01";
+						rf_write <= '1';
+					elsif((opCode(3)='1' and opCode(2)='0' and opCode(1)='0' and opCode(0)='1'))then
+						c_select <= "10";
+						rf_write <= '1';
+					end if;
 				end if;
 			end if;
 		end if;

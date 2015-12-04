@@ -1,6 +1,6 @@
 Assembler report for project
-Thu Dec 03 19:19:53 2015
-Quartus II 32-bit Version 12.0 Build 178 05/31/2012 SJ Web Edition
+Fri Dec 04 00:10:20 2015
+Quartus II 32-bit Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
 
 
 ---------------------
@@ -10,8 +10,8 @@ Quartus II 32-bit Version 12.0 Build 178 05/31/2012 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: D:/github/csce230/project.sof
-  6. Assembler Device Options: D:/github/csce230/project.pof
+  5. Assembler Device Options: C:/Users/John/OneDrive/Documents/CSCE230/project/csce230/project.sof
+  6. Assembler Device Options: C:/Users/John/OneDrive/Documents/CSCE230/project/csce230/project.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Dec 03 19:19:53 2015 ;
+; Assembler Status      ; Successful - Fri Dec 04 00:10:20 2015 ;
 ; Revision Name         ; project                               ;
 ; Top-level Entity Name ; project                               ;
 ; Family                ; Cyclone II                            ;
@@ -78,37 +78,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+-------------------------------+
-; Assembler Generated Files     ;
-+-------------------------------+
-; File Name                     ;
-+-------------------------------+
-; D:/github/csce230/project.sof ;
-; D:/github/csce230/project.pof ;
-+-------------------------------+
++----------------------------------------------------------------------+
+; Assembler Generated Files                                            ;
++----------------------------------------------------------------------+
+; File Name                                                            ;
++----------------------------------------------------------------------+
+; C:/Users/John/OneDrive/Documents/CSCE230/project/csce230/project.sof ;
+; C:/Users/John/OneDrive/Documents/CSCE230/project/csce230/project.pof ;
++----------------------------------------------------------------------+
 
 
-+---------------------------------------------------------+
-; Assembler Device Options: D:/github/csce230/project.sof ;
-+----------------+----------------------------------------+
-; Option         ; Setting                                ;
-+----------------+----------------------------------------+
-; Device         ; EP2C20F484C7                           ;
-; JTAG usercode  ; 0xFFFFFFFF                             ;
-; Checksum       ; 0x00382DD3                             ;
-+----------------+----------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/John/OneDrive/Documents/CSCE230/project/csce230/project.sof ;
++----------------+-------------------------------------------------------------------------------+
+; Option         ; Setting                                                                       ;
++----------------+-------------------------------------------------------------------------------+
+; Device         ; EP2C20F484C7                                                                  ;
+; JTAG usercode  ; 0xFFFFFFFF                                                                    ;
+; Checksum       ; 0x003962A8                                                                    ;
++----------------+-------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------+
-; Assembler Device Options: D:/github/csce230/project.pof ;
-+--------------------+------------------------------------+
-; Option             ; Setting                            ;
-+--------------------+------------------------------------+
-; Device             ; EPCS16                             ;
-; JTAG usercode      ; 0x00000000                         ;
-; Checksum           ; 0x1DAF21A7                         ;
-; Compression Ratio  ; 2                                  ;
-+--------------------+------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/John/OneDrive/Documents/CSCE230/project/csce230/project.pof ;
++--------------------+---------------------------------------------------------------------------+
+; Option             ; Setting                                                                   ;
++--------------------+---------------------------------------------------------------------------+
+; Device             ; EPCS16                                                                    ;
+; JTAG usercode      ; 0x00000000                                                                ;
+; Checksum           ; 0x1DA4BC74                                                                ;
+; Compression Ratio  ; 2                                                                         ;
++--------------------+---------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -116,15 +116,15 @@ applicable agreement for further details.
 +--------------------+
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Assembler
-    Info: Version 12.0 Build 178 05/31/2012 SJ Web Edition
-    Info: Processing started: Thu Dec 03 19:19:52 2015
+    Info: Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Dec 04 00:10:18 2015
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off project -c project
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 32-bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 372 megabytes
-    Info: Processing ended: Thu Dec 03 19:19:53 2015
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 338 megabytes
+    Info: Processing ended: Fri Dec 04 00:10:20 2015
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
