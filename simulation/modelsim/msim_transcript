@@ -1,17 +1,17 @@
-# Reading C:/altera/12.0/modelsim_ase/tcl/vsim/pref.tcl 
+# Reading C:/altera/11.1/modelsim_ase/tcl/vsim/pref.tcl 
 # do project_run_msim_gate_vhdl.do 
 # if {[file exists gate_work]} {
 # 	vdel -lib gate_work -all
 # }
 # vlib gate_work
 # vmap work gate_work
-# Copying c:\altera\12.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Copying c:\altera\11.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
-# ** Warning: Copied c:\altera\12.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+# ** Warning: Copied c:\altera\11.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {project.vho}
-# Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+# vcom -93 -work work {project_fast.vho}
+# Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -22,7 +22,7 @@
 # -- Compiling entity project
 # -- Compiling architecture structure of project
 # 
-# do "C:/Users/John/OneDrive/Documents/CSCE230/project/csce230/vsimproject.do"
+# do "//cse-redirect/Redirect/mbennett/My Documents/GitHub/csce230/vsimproject.do"
 # vsim project
 # vsim project 
 # Loading std.standard
@@ -33,9 +33,9 @@
 # Loading cycloneii.cycloneii_atom_pack(body)
 # Loading cycloneii.cycloneii_components
 # Loading work.project(structure)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
 # Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
 # Loading cycloneii.cycloneii_and1(altvital)
-# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneii.cycloneii_io(structure)
 # Loading cycloneii.cycloneii_mux21(altvital)
@@ -54,32 +54,34 @@
 # 
 # add wave ir
 # add wave clk
-# add wave aluout
-# add wave raout
-# add wave b_select
-# add wave rfwrite
-# add wave ncvz
-# add wave aluop
+# add wave dataS
+# add wave dataT
+# add wave inA
 # add wave rbout
-# add wave rzout
+# add wave aluout
+# add wave ncvz
 # add wave dataD
+# add wave rfwrite
+# add wave aluop
 # add wave MI_out 
 # add wave maRS
 # add wave memRead
 # add wave memWrite
 # add wave RM_out
-# add wave inA
-# add wave pcSelect
-# add wave pcEnable
 # add wave res
-# add wave incSelect
-# add wave ma_select
 # add wave muxyout
+# add wave ledG
+# add wave muxMA
+# add wave key
+# add wave mux2_out
+# add wave dat_out
 # 
-# force clk 0 0, 1 1000 -repeat 2000
+# 
 # force res 0 0
+# force clk 0 0, 1 1000 -repeat 2000
+# force key 0100 0
 # 
-# run 120000
+# run 240000
 #  
 do project_run_msim_gate_vhdl.do
 # if {[file exists gate_work]} {
@@ -89,8 +91,8 @@ do project_run_msim_gate_vhdl.do
 # vmap work gate_work
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {project.vho}
-# Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+# vcom -93 -work work {project_fast.vho}
+# Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -101,7 +103,7 @@ do project_run_msim_gate_vhdl.do
 # -- Compiling entity project
 # -- Compiling architecture structure of project
 # 
-# do "C:/Users/John/OneDrive/Documents/CSCE230/project/csce230/vsimproject.do"
+# do "//cse-redirect/Redirect/mbennett/My Documents/GitHub/csce230/vsimproject.do"
 # vsim project
 # vsim project 
 # Loading std.standard
@@ -112,9 +114,9 @@ do project_run_msim_gate_vhdl.do
 # Loading cycloneii.cycloneii_atom_pack(body)
 # Loading cycloneii.cycloneii_components
 # Loading work.project(structure)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
 # Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
 # Loading cycloneii.cycloneii_and1(altvital)
-# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneii.cycloneii_io(structure)
 # Loading cycloneii.cycloneii_mux21(altvital)
@@ -133,33 +135,34 @@ do project_run_msim_gate_vhdl.do
 # 
 # add wave ir
 # add wave clk
-# add wave aluout
-# add wave raout
-# add wave b_select
-# add wave rfwrite
-# add wave ncvz
-# add wave aluop
+# add wave dataS
+# add wave dataT
+# add wave inA
 # add wave rbout
-# add wave rzout
+# add wave aluout
+# add wave ncvz
 # add wave dataD
+# add wave rfwrite
+# add wave aluop
 # add wave MI_out 
 # add wave maRS
 # add wave memRead
 # add wave memWrite
 # add wave RM_out
-# add wave inA
-# add wave pcSelect
-# add wave pcEnable
 # add wave res
-# add wave incSelect
-# add wave ma_select
 # add wave muxyout
 # add wave ledG
+# add wave muxMA
+# add wave key
+# add wave mux2_out
+# add wave dat_out
 # 
+# 
+# force res 0 0
 # force clk 0 0, 1 1000 -repeat 2000
-# force res 0 0
+# force key 0100 0
 # 
-# run 120000
+# run 240000
 do project_run_msim_gate_vhdl.do
 # if {[file exists gate_work]} {
 # 	vdel -lib gate_work -all
@@ -168,8 +171,8 @@ do project_run_msim_gate_vhdl.do
 # vmap work gate_work
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {project.vho}
-# Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+# vcom -93 -work work {project_fast.vho}
+# Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -180,7 +183,7 @@ do project_run_msim_gate_vhdl.do
 # -- Compiling entity project
 # -- Compiling architecture structure of project
 # 
-# do "C:/Users/John/OneDrive/Documents/CSCE230/project/csce230/vsimproject.do"
+# do "//cse-redirect/Redirect/mbennett/My Documents/GitHub/csce230/vsimproject.do"
 # vsim project
 # vsim project 
 # Loading std.standard
@@ -191,9 +194,9 @@ do project_run_msim_gate_vhdl.do
 # Loading cycloneii.cycloneii_atom_pack(body)
 # Loading cycloneii.cycloneii_components
 # Loading work.project(structure)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
 # Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
 # Loading cycloneii.cycloneii_and1(altvital)
-# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneii.cycloneii_io(structure)
 # Loading cycloneii.cycloneii_mux21(altvital)
@@ -212,33 +215,34 @@ do project_run_msim_gate_vhdl.do
 # 
 # add wave ir
 # add wave clk
-# add wave aluout
-# add wave raout
-# add wave b_select
-# add wave rfwrite
-# add wave ncvz
-# add wave aluop
+# add wave dataS
+# add wave dataT
+# add wave inA
 # add wave rbout
-# add wave rzout
+# add wave aluout
+# add wave ncvz
 # add wave dataD
+# add wave rfwrite
+# add wave aluop
 # add wave MI_out 
 # add wave maRS
 # add wave memRead
 # add wave memWrite
 # add wave RM_out
-# add wave inA
-# add wave pcSelect
-# add wave pcEnable
 # add wave res
-# add wave incSelect
-# add wave ma_select
 # add wave muxyout
 # add wave ledG
+# add wave muxMA
+# add wave key
+# add wave mux2_out
+# add wave dat_out
 # 
+# 
+# force res 0 0
 # force clk 0 0, 1 1000 -repeat 2000
-# force res 0 0
+# force key 0100 0
 # 
-# run 120000
+# run 240000
 do project_run_msim_gate_vhdl.do
 # if {[file exists gate_work]} {
 # 	vdel -lib gate_work -all
@@ -247,8 +251,8 @@ do project_run_msim_gate_vhdl.do
 # vmap work gate_work
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {project.vho}
-# Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+# vcom -93 -work work {project_fast.vho}
+# Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -259,7 +263,7 @@ do project_run_msim_gate_vhdl.do
 # -- Compiling entity project
 # -- Compiling architecture structure of project
 # 
-# do "C:/Users/John/OneDrive/Documents/CSCE230/project/csce230/vsimproject.do"
+# do "//cse-redirect/Redirect/mbennett/My Documents/GitHub/csce230/vsimproject.do"
 # vsim project
 # vsim project 
 # Loading std.standard
@@ -270,9 +274,9 @@ do project_run_msim_gate_vhdl.do
 # Loading cycloneii.cycloneii_atom_pack(body)
 # Loading cycloneii.cycloneii_components
 # Loading work.project(structure)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
 # Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
 # Loading cycloneii.cycloneii_and1(altvital)
-# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneii.cycloneii_io(structure)
 # Loading cycloneii.cycloneii_mux21(altvital)
@@ -291,33 +295,34 @@ do project_run_msim_gate_vhdl.do
 # 
 # add wave ir
 # add wave clk
-# add wave aluout
-# add wave raout
-# add wave b_select
-# add wave rfwrite
-# add wave ncvz
-# add wave aluop
+# add wave dataS
+# add wave dataT
+# add wave inA
 # add wave rbout
-# add wave rzout
+# add wave aluout
+# add wave ncvz
 # add wave dataD
+# add wave rfwrite
+# add wave aluop
 # add wave MI_out 
 # add wave maRS
 # add wave memRead
 # add wave memWrite
 # add wave RM_out
-# add wave inA
-# add wave pcSelect
-# add wave pcEnable
 # add wave res
-# add wave incSelect
-# add wave ma_select
 # add wave muxyout
 # add wave ledG
+# add wave muxMA
+# add wave key
+# add wave mux2_out
+# add wave dat_out
 # 
+# 
+# force res 0 0
 # force clk 0 0, 1 1000 -repeat 2000
-# force res 0 0
+# force key 0100 0
 # 
-# run 120000
+# run 240000
 do project_run_msim_gate_vhdl.do
 # if {[file exists gate_work]} {
 # 	vdel -lib gate_work -all
@@ -326,8 +331,8 @@ do project_run_msim_gate_vhdl.do
 # vmap work gate_work
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {project.vho}
-# Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+# vcom -93 -work work {project_fast.vho}
+# Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -338,7 +343,7 @@ do project_run_msim_gate_vhdl.do
 # -- Compiling entity project
 # -- Compiling architecture structure of project
 # 
-# do "C:/Users/John/OneDrive/Documents/CSCE230/project/csce230/vsimproject.do"
+# do "//cse-redirect/Redirect/mbennett/My Documents/GitHub/csce230/vsimproject.do"
 # vsim project
 # vsim project 
 # Loading std.standard
@@ -349,9 +354,9 @@ do project_run_msim_gate_vhdl.do
 # Loading cycloneii.cycloneii_atom_pack(body)
 # Loading cycloneii.cycloneii_components
 # Loading work.project(structure)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
 # Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
 # Loading cycloneii.cycloneii_and1(altvital)
-# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneii.cycloneii_io(structure)
 # Loading cycloneii.cycloneii_mux21(altvital)
@@ -370,822 +375,31 @@ do project_run_msim_gate_vhdl.do
 # 
 # add wave ir
 # add wave clk
-# add wave aluout
-# add wave raout
-# add wave b_select
-# add wave rfwrite
-# add wave ncvz
-# add wave aluop
+# add wave dataS
+# add wave dataT
+# add wave inA
 # add wave rbout
-# add wave rzout
+# add wave aluout
+# add wave ncvz
 # add wave dataD
+# add wave rfwrite
+# add wave aluop
 # add wave MI_out 
 # add wave maRS
 # add wave memRead
 # add wave memWrite
 # add wave RM_out
-# add wave inA
-# add wave pcSelect
-# add wave pcEnable
 # add wave res
-# add wave incSelect
-# add wave ma_select
 # add wave muxyout
 # add wave ledG
+# add wave muxMA
+# add wave key
+# add wave mux2_out
+# add wave dat_out
 # 
+# 
+# force res 0 0
 # force clk 0 0, 1 1000 -repeat 2000
-# force res 0 0
+# force key 1011 0
 # 
-# run 120000
-do project_run_msim_gate_vhdl.do
-# if {[file exists gate_work]} {
-# 	vdel -lib gate_work -all
-# }
-# vlib gate_work
-# vmap work gate_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {project.vho}
-# Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package cycloneii_atom_pack
-# -- Loading package cycloneii_components
-# -- Compiling entity project
-# -- Compiling architecture structure of project
-# 
-# do "C:/Users/John/OneDrive/Documents/CSCE230/project/csce230/vsimproject.do"
-# vsim project
-# vsim project 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.vital_timing(body)
-# Loading ieee.vital_primitives(body)
-# Loading cycloneii.cycloneii_atom_pack(body)
-# Loading cycloneii.cycloneii_components
-# Loading work.project(structure)
-# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
-# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
-# Loading cycloneii.cycloneii_and1(altvital)
-# Loading ieee.std_logic_arith(body)
-# Loading cycloneii.cycloneii_io(structure)
-# Loading cycloneii.cycloneii_mux21(altvital)
-# Loading cycloneii.cycloneii_dffe(behave)
-# Loading cycloneii.cycloneii_asynch_io(behave)
-# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
-# Loading cycloneii.cycloneii_ena_reg(behave)
-# Loading cycloneii.cycloneii_ram_block(block_arch)
-# Loading cycloneii.cycloneii_ram_register(reg_arch)
-# Loading cycloneii.cycloneii_ram_pulse_generator(pgen_arch)
-# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
-# view wave
-# .main_pane.wave.interior.cs.body.pw.wf
-# 
-# add wave ir
-# add wave clk
-# add wave aluout
-# add wave raout
-# add wave b_select
-# add wave rfwrite
-# add wave ncvz
-# add wave aluop
-# add wave rbout
-# add wave rzout
-# add wave dataD
-# add wave MI_out 
-# add wave maRS
-# add wave memRead
-# add wave memWrite
-# add wave RM_out
-# add wave inA
-# add wave pcSelect
-# add wave pcEnable
-# add wave res
-# add wave incSelect
-# add wave ma_select
-# add wave muxyout
-# add wave ledG
-# add wave muxMA
-# 
-# force res 0 0
-# 
-# run 120000
-do project_run_msim_gate_vhdl.do
-# if {[file exists gate_work]} {
-# 	vdel -lib gate_work -all
-# }
-# vlib gate_work
-# vmap work gate_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {project.vho}
-# Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package cycloneii_atom_pack
-# -- Loading package cycloneii_components
-# -- Compiling entity project
-# -- Compiling architecture structure of project
-# 
-# do "C:/Users/John/OneDrive/Documents/CSCE230/project/csce230/vsimproject.do"
-# vsim project
-# vsim project 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.vital_timing(body)
-# Loading ieee.vital_primitives(body)
-# Loading cycloneii.cycloneii_atom_pack(body)
-# Loading cycloneii.cycloneii_components
-# Loading work.project(structure)
-# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
-# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
-# Loading cycloneii.cycloneii_and1(altvital)
-# Loading ieee.std_logic_arith(body)
-# Loading cycloneii.cycloneii_io(structure)
-# Loading cycloneii.cycloneii_mux21(altvital)
-# Loading cycloneii.cycloneii_dffe(behave)
-# Loading cycloneii.cycloneii_asynch_io(behave)
-# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
-# Loading cycloneii.cycloneii_ena_reg(behave)
-# Loading cycloneii.cycloneii_ram_block(block_arch)
-# Loading cycloneii.cycloneii_ram_register(reg_arch)
-# Loading cycloneii.cycloneii_ram_pulse_generator(pgen_arch)
-# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
-# view wave
-# .main_pane.wave.interior.cs.body.pw.wf
-# 
-# add wave ir
-# add wave clk
-# add wave aluout
-# add wave raout
-# add wave b_select
-# add wave rfwrite
-# add wave ncvz
-# add wave aluop
-# add wave rbout
-# add wave rzout
-# add wave dataD
-# add wave MI_out 
-# add wave maRS
-# add wave memRead
-# add wave memWrite
-# add wave RM_out
-# add wave inA
-# add wave pcSelect
-# add wave pcEnable
-# add wave res
-# add wave incSelect
-# add wave ma_select
-# add wave muxyout
-# add wave ledG
-# add wave muxMA
-# 
-# force res 0 0
-# 
-# run 120000
-do project_run_msim_gate_vhdl.do
-# if {[file exists gate_work]} {
-# 	vdel -lib gate_work -all
-# }
-# vlib gate_work
-# vmap work gate_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {project.vho}
-# Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package cycloneii_atom_pack
-# -- Loading package cycloneii_components
-# -- Compiling entity project
-# -- Compiling architecture structure of project
-# 
-# do "C:/Users/John/OneDrive/Documents/CSCE230/project/csce230/vsimproject.do"
-# vsim project
-# vsim project 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.vital_timing(body)
-# Loading ieee.vital_primitives(body)
-# Loading cycloneii.cycloneii_atom_pack(body)
-# Loading cycloneii.cycloneii_components
-# Loading work.project(structure)
-# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
-# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
-# Loading cycloneii.cycloneii_and1(altvital)
-# Loading ieee.std_logic_arith(body)
-# Loading cycloneii.cycloneii_io(structure)
-# Loading cycloneii.cycloneii_mux21(altvital)
-# Loading cycloneii.cycloneii_dffe(behave)
-# Loading cycloneii.cycloneii_asynch_io(behave)
-# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
-# Loading cycloneii.cycloneii_ena_reg(behave)
-# Loading cycloneii.cycloneii_ram_block(block_arch)
-# Loading cycloneii.cycloneii_ram_register(reg_arch)
-# Loading cycloneii.cycloneii_ram_pulse_generator(pgen_arch)
-# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
-# view wave
-# .main_pane.wave.interior.cs.body.pw.wf
-# 
-# add wave ir
-# add wave clk
-# add wave aluout
-# add wave raout
-# add wave b_select
-# add wave rfwrite
-# add wave ncvz
-# add wave aluop
-# add wave rbout
-# add wave rzout
-# add wave dataD
-# add wave MI_out 
-# add wave maRS
-# add wave memRead
-# add wave memWrite
-# add wave RM_out
-# add wave inA
-# add wave pcSelect
-# add wave pcEnable
-# add wave res
-# add wave incSelect
-# add wave ma_select
-# add wave muxyout
-# add wave ledG
-# add wave muxMA
-# 
-# force res 0 0
-# 
-# run 120000
-do project_run_msim_gate_vhdl.do
-# if {[file exists gate_work]} {
-# 	vdel -lib gate_work -all
-# }
-# vlib gate_work
-# vmap work gate_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {project.vho}
-# Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package cycloneii_atom_pack
-# -- Loading package cycloneii_components
-# -- Compiling entity project
-# -- Compiling architecture structure of project
-# 
-# do "C:/Users/John/OneDrive/Documents/CSCE230/project/csce230/vsimproject.do"
-# vsim project
-# vsim project 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.vital_timing(body)
-# Loading ieee.vital_primitives(body)
-# Loading cycloneii.cycloneii_atom_pack(body)
-# Loading cycloneii.cycloneii_components
-# Loading work.project(structure)
-# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
-# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
-# Loading cycloneii.cycloneii_and1(altvital)
-# Loading ieee.std_logic_arith(body)
-# Loading cycloneii.cycloneii_io(structure)
-# Loading cycloneii.cycloneii_mux21(altvital)
-# Loading cycloneii.cycloneii_dffe(behave)
-# Loading cycloneii.cycloneii_asynch_io(behave)
-# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
-# Loading cycloneii.cycloneii_ena_reg(behave)
-# Loading cycloneii.cycloneii_ram_block(block_arch)
-# Loading cycloneii.cycloneii_ram_register(reg_arch)
-# Loading cycloneii.cycloneii_ram_pulse_generator(pgen_arch)
-# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
-# view wave
-# .main_pane.wave.interior.cs.body.pw.wf
-# 
-# add wave ir
-# add wave clk
-# add wave aluout
-# add wave raout
-# add wave b_select
-# add wave rfwrite
-# add wave ncvz
-# add wave aluop
-# add wave rbout
-# add wave rzout
-# add wave dataD
-# add wave MI_out 
-# add wave maRS
-# add wave memRead
-# add wave memWrite
-# add wave RM_out
-# add wave inA
-# add wave pcSelect
-# add wave pcEnable
-# add wave res
-# add wave incSelect
-# add wave ma_select
-# add wave muxyout
-# add wave ledG
-# add wave muxMA
-# 
-# force res 0 0
-# 
-# run 120000
-do project_run_msim_gate_vhdl.do
-# if {[file exists gate_work]} {
-# 	vdel -lib gate_work -all
-# }
-# vlib gate_work
-# vmap work gate_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {project.vho}
-# Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package cycloneii_atom_pack
-# -- Loading package cycloneii_components
-# -- Compiling entity project
-# -- Compiling architecture structure of project
-# 
-# do "C:/Users/John/OneDrive/Documents/CSCE230/project/csce230/vsimproject.do"
-# vsim project
-# vsim project 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.vital_timing(body)
-# Loading ieee.vital_primitives(body)
-# Loading cycloneii.cycloneii_atom_pack(body)
-# Loading cycloneii.cycloneii_components
-# Loading work.project(structure)
-# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
-# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
-# Loading cycloneii.cycloneii_and1(altvital)
-# Loading ieee.std_logic_arith(body)
-# Loading cycloneii.cycloneii_io(structure)
-# Loading cycloneii.cycloneii_mux21(altvital)
-# Loading cycloneii.cycloneii_dffe(behave)
-# Loading cycloneii.cycloneii_asynch_io(behave)
-# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
-# Loading cycloneii.cycloneii_ena_reg(behave)
-# Loading cycloneii.cycloneii_ram_block(block_arch)
-# Loading cycloneii.cycloneii_ram_register(reg_arch)
-# Loading cycloneii.cycloneii_ram_pulse_generator(pgen_arch)
-# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
-# view wave
-# .main_pane.wave.interior.cs.body.pw.wf
-# 
-# add wave ir
-# add wave clk
-# add wave aluout
-# add wave raout
-# add wave b_select
-# add wave rfwrite
-# add wave ncvz
-# add wave aluop
-# add wave rbout
-# add wave rzout
-# add wave dataD
-# add wave MI_out 
-# add wave maRS
-# add wave memRead
-# add wave memWrite
-# add wave RM_out
-# add wave inA
-# add wave pcSelect
-# add wave pcEnable
-# add wave res
-# add wave incSelect
-# add wave ma_select
-# add wave muxyout
-# add wave ledG
-# add wave muxMA
-# 
-# force res 0 0
-# 
-# run 120000
-do project_run_msim_gate_vhdl.do
-# if {[file exists gate_work]} {
-# 	vdel -lib gate_work -all
-# }
-# vlib gate_work
-# vmap work gate_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {project.vho}
-# Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package cycloneii_atom_pack
-# -- Loading package cycloneii_components
-# -- Compiling entity project
-# -- Compiling architecture structure of project
-# 
-# do "C:/Users/John/OneDrive/Documents/CSCE230/project/csce230/vsimproject.do"
-# vsim project
-# vsim project 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.vital_timing(body)
-# Loading ieee.vital_primitives(body)
-# Loading cycloneii.cycloneii_atom_pack(body)
-# Loading cycloneii.cycloneii_components
-# Loading work.project(structure)
-# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
-# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
-# Loading cycloneii.cycloneii_and1(altvital)
-# Loading ieee.std_logic_arith(body)
-# Loading cycloneii.cycloneii_io(structure)
-# Loading cycloneii.cycloneii_mux21(altvital)
-# Loading cycloneii.cycloneii_dffe(behave)
-# Loading cycloneii.cycloneii_asynch_io(behave)
-# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
-# Loading cycloneii.cycloneii_ena_reg(behave)
-# Loading cycloneii.cycloneii_ram_block(block_arch)
-# Loading cycloneii.cycloneii_ram_register(reg_arch)
-# Loading cycloneii.cycloneii_ram_pulse_generator(pgen_arch)
-# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
-# view wave
-# .main_pane.wave.interior.cs.body.pw.wf
-# 
-# add wave ir
-# add wave clk
-# add wave aluout
-# add wave raout
-# add wave b_select
-# add wave rfwrite
-# add wave ncvz
-# add wave aluop
-# add wave rbout
-# add wave rzout
-# add wave dataD
-# add wave MI_out 
-# add wave maRS
-# add wave memRead
-# add wave memWrite
-# add wave RM_out
-# add wave inA
-# add wave pcSelect
-# add wave pcEnable
-# add wave res
-# add wave incSelect
-# add wave ma_select
-# add wave muxyout
-# add wave ledG
-# 
-# 
-# force res 0 0
-# 
-# run 120000
-do project_run_msim_gate_vhdl.do
-# if {[file exists gate_work]} {
-# 	vdel -lib gate_work -all
-# }
-# vlib gate_work
-# vmap work gate_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {project.vho}
-# Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package cycloneii_atom_pack
-# -- Loading package cycloneii_components
-# -- Compiling entity project
-# -- Compiling architecture structure of project
-# 
-# do "C:/Users/John/OneDrive/Documents/CSCE230/project/csce230/vsimproject.do"
-# vsim project
-# vsim project 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.vital_timing(body)
-# Loading ieee.vital_primitives(body)
-# Loading cycloneii.cycloneii_atom_pack(body)
-# Loading cycloneii.cycloneii_components
-# Loading work.project(structure)
-# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
-# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
-# Loading cycloneii.cycloneii_and1(altvital)
-# Loading ieee.std_logic_arith(body)
-# Loading cycloneii.cycloneii_io(structure)
-# Loading cycloneii.cycloneii_mux21(altvital)
-# Loading cycloneii.cycloneii_dffe(behave)
-# Loading cycloneii.cycloneii_asynch_io(behave)
-# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
-# Loading cycloneii.cycloneii_ena_reg(behave)
-# Loading cycloneii.cycloneii_ram_block(block_arch)
-# Loading cycloneii.cycloneii_ram_register(reg_arch)
-# Loading cycloneii.cycloneii_ram_pulse_generator(pgen_arch)
-# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
-# view wave
-# .main_pane.wave.interior.cs.body.pw.wf
-# 
-# add wave ir
-# add wave clk
-# add wave aluout
-# add wave raout
-# add wave b_select
-# add wave rfwrite
-# add wave ncvz
-# add wave aluop
-# add wave rbout
-# add wave rzout
-# add wave dataD
-# add wave MI_out 
-# add wave maRS
-# add wave memRead
-# add wave memWrite
-# add wave RM_out
-# add wave inA
-# add wave pcSelect
-# add wave pcEnable
-# add wave res
-# add wave incSelect
-# add wave ma_select
-# add wave muxyout
-# add wave ledG
-# add wave muxMA
-# ** Error: (vish-4014) No objects found matching 'muxMA'.
-# Error in macro C:\Users\John\OneDrive\Documents\CSCE230\project\csce230\vsimproject.do line 28
-# (vish-4014) No objects found matching 'muxMA'.
-#     while executing
-# "add wave muxMA"
-
-do project_run_msim_gate_vhdl.do
-# if {[file exists gate_work]} {
-# 	vdel -lib gate_work -all
-# }
-# vlib gate_work
-# vmap work gate_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {project.vho}
-# Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package cycloneii_atom_pack
-# -- Loading package cycloneii_components
-# -- Compiling entity project
-# -- Compiling architecture structure of project
-# 
-# do "C:/Users/John/OneDrive/Documents/CSCE230/project/csce230/vsimproject.do"
-# vsim project
-# vsim project 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.vital_timing(body)
-# Loading ieee.vital_primitives(body)
-# Loading cycloneii.cycloneii_atom_pack(body)
-# Loading cycloneii.cycloneii_components
-# Loading work.project(structure)
-# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
-# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
-# Loading cycloneii.cycloneii_and1(altvital)
-# Loading ieee.std_logic_arith(body)
-# Loading cycloneii.cycloneii_io(structure)
-# Loading cycloneii.cycloneii_mux21(altvital)
-# Loading cycloneii.cycloneii_dffe(behave)
-# Loading cycloneii.cycloneii_asynch_io(behave)
-# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
-# Loading cycloneii.cycloneii_ena_reg(behave)
-# Loading cycloneii.cycloneii_ram_block(block_arch)
-# Loading cycloneii.cycloneii_ram_register(reg_arch)
-# Loading cycloneii.cycloneii_ram_pulse_generator(pgen_arch)
-# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
-# view wave
-# .main_pane.wave.interior.cs.body.pw.wf
-# 
-# add wave ir
-# add wave clk
-# add wave aluout
-# add wave raout
-# add wave b_select
-# add wave rfwrite
-# add wave ncvz
-# add wave aluop
-# add wave rbout
-# add wave rzout
-# add wave dataD
-# add wave MI_out 
-# add wave maRS
-# add wave memRead
-# add wave memWrite
-# add wave RM_out
-# add wave inA
-# add wave pcSelect
-# add wave pcEnable
-# add wave res
-# add wave incSelect
-# add wave ma_select
-# add wave muxyout
-# add wave ledG
-# add wave muxMA
-# 
-# force res 0 0
-# 
-# run 120000
-do project_run_msim_gate_vhdl.do
-# if {[file exists gate_work]} {
-# 	vdel -lib gate_work -all
-# }
-# vlib gate_work
-# vmap work gate_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {project.vho}
-# Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package cycloneii_atom_pack
-# -- Loading package cycloneii_components
-# -- Compiling entity project
-# -- Compiling architecture structure of project
-# 
-# do "C:/Users/John/OneDrive/Documents/CSCE230/project/csce230/vsimproject.do"
-# vsim project
-# vsim project 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.vital_timing(body)
-# Loading ieee.vital_primitives(body)
-# Loading cycloneii.cycloneii_atom_pack(body)
-# Loading cycloneii.cycloneii_components
-# Loading work.project(structure)
-# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
-# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
-# Loading cycloneii.cycloneii_and1(altvital)
-# Loading ieee.std_logic_arith(body)
-# Loading cycloneii.cycloneii_io(structure)
-# Loading cycloneii.cycloneii_mux21(altvital)
-# Loading cycloneii.cycloneii_dffe(behave)
-# Loading cycloneii.cycloneii_asynch_io(behave)
-# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
-# Loading cycloneii.cycloneii_ena_reg(behave)
-# Loading cycloneii.cycloneii_ram_block(block_arch)
-# Loading cycloneii.cycloneii_ram_register(reg_arch)
-# Loading cycloneii.cycloneii_ram_pulse_generator(pgen_arch)
-# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
-# view wave
-# .main_pane.wave.interior.cs.body.pw.wf
-# 
-# add wave ir
-# add wave clk
-# add wave aluout
-# add wave raout
-# add wave b_select
-# add wave rfwrite
-# add wave ncvz
-# add wave aluop
-# add wave rbout
-# add wave rzout
-# add wave dataD
-# add wave MI_out 
-# add wave maRS
-# add wave memRead
-# add wave memWrite
-# add wave RM_out
-# add wave inA
-# add wave pcSelect
-# add wave pcEnable
-# add wave res
-# add wave incSelect
-# add wave ma_select
-# add wave muxyout
-# add wave ledG
-# add wave muxMA
-# 
-# force res 0 0
-# 
-# run 120000
-do project_run_msim_gate_vhdl.do
-# if {[file exists gate_work]} {
-# 	vdel -lib gate_work -all
-# }
-# vlib gate_work
-# vmap work gate_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {project.vho}
-# Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package cycloneii_atom_pack
-# -- Loading package cycloneii_components
-# -- Compiling entity project
-# -- Compiling architecture structure of project
-# 
-# do "C:/Users/John/OneDrive/Documents/CSCE230/project/csce230/vsimproject.do"
-# vsim project
-# vsim project 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.vital_timing(body)
-# Loading ieee.vital_primitives(body)
-# Loading cycloneii.cycloneii_atom_pack(body)
-# Loading cycloneii.cycloneii_components
-# Loading work.project(structure)
-# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
-# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
-# Loading cycloneii.cycloneii_and1(altvital)
-# Loading ieee.std_logic_arith(body)
-# Loading cycloneii.cycloneii_io(structure)
-# Loading cycloneii.cycloneii_mux21(altvital)
-# Loading cycloneii.cycloneii_dffe(behave)
-# Loading cycloneii.cycloneii_asynch_io(behave)
-# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
-# Loading cycloneii.cycloneii_ena_reg(behave)
-# Loading cycloneii.cycloneii_ram_block(block_arch)
-# Loading cycloneii.cycloneii_ram_register(reg_arch)
-# Loading cycloneii.cycloneii_ram_pulse_generator(pgen_arch)
-# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
-# view wave
-# .main_pane.wave.interior.cs.body.pw.wf
-# 
-# add wave ir
-# add wave clk
-# add wave aluout
-# add wave raout
-# add wave b_select
-# add wave rfwrite
-# add wave ncvz
-# add wave aluop
-# add wave rbout
-# add wave rzout
-# add wave dataD
-# add wave MI_out 
-# add wave maRS
-# add wave memRead
-# add wave memWrite
-# add wave RM_out
-# add wave inA
-# add wave pcSelect
-# add wave pcEnable
-# add wave res
-# add wave incSelect
-# add wave ma_select
-# add wave muxyout
-# add wave ledG
-# add wave muxMA
-# 
-# force res 0 0
-# 
-# run 120000
+# run 240000

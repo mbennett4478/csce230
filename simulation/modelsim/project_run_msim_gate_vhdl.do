@@ -5,6 +5,6 @@ if {[file exists gate_work]} {
 vlib gate_work
 vmap work gate_work
 
-vcom -93 -work work {project.vho}
+vcom -93 -work work {project_fast.vho}
 
-do "C:/Users/John/OneDrive/Documents/CSCE230/project/csce230/vsimproject.do"
+do "//cse-redirect/Redirect/mbennett/My Documents/GitHub/csce230/vsimproject.do"

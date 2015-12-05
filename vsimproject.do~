@@ -1,0 +1,32 @@
+vsim project
+view wave
+
+add wave ir
+add wave clk
+add wave aluout
+add wave rfwrite
+add wave ncvz
+add wave aluop
+add wave rbout
+add wave dataD
+add wave MI_out 
+add wave maRS
+add wave memRead
+add wave memWrite
+add wave RM_out
+add wave inA
+add wave res
+add wave muxyout
+add wave ledG
+add wave muxMA
+add wave key
+add wave mux2_out
+add wave dat_out
+add wave dataS
+add wave dataT
+
+force res 0 0
+force clk 0 0, 1 1000 -repeat 2000
+force key 0100 0
+
+run 240000

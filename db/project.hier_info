@@ -1,29 +1,4 @@
 |project
-rfwrite <= ControlUnit:inst2.rf_write
-ir[0] <= IR24:inst3.output[0]
-ir[1] <= IR24:inst3.output[1]
-ir[2] <= IR24:inst3.output[2]
-ir[3] <= IR24:inst3.output[3]
-ir[4] <= IR24:inst3.output[4]
-ir[5] <= IR24:inst3.output[5]
-ir[6] <= IR24:inst3.output[6]
-ir[7] <= IR24:inst3.output[7]
-ir[8] <= IR24:inst3.output[8]
-ir[9] <= IR24:inst3.output[9]
-ir[10] <= IR24:inst3.output[10]
-ir[11] <= IR24:inst3.output[11]
-ir[12] <= IR24:inst3.output[12]
-ir[13] <= IR24:inst3.output[13]
-ir[14] <= IR24:inst3.output[14]
-ir[15] <= IR24:inst3.output[15]
-ir[16] <= IR24:inst3.output[16]
-ir[17] <= IR24:inst3.output[17]
-ir[18] <= IR24:inst3.output[18]
-ir[19] <= IR24:inst3.output[19]
-ir[20] <= IR24:inst3.output[20]
-ir[21] <= IR24:inst3.output[21]
-ir[22] <= IR24:inst3.output[22]
-ir[23] <= IR24:inst3.output[23]
 res => IR24:inst3.reset
 res => BuffReg16:RZ.reset
 res => BuffReg16:RA.reset
@@ -48,173 +23,10 @@ clk => InstructionAddressGenerator:inst1.clock
 clk => Reg16:PS.Clock
 clk => ControlUnit:inst2.clock
 clk => Reg16:inst4.Clock
-MI_out[0] <= MemoryInterface:no.DataOut[0]
-MI_out[1] <= MemoryInterface:no.DataOut[1]
-MI_out[2] <= MemoryInterface:no.DataOut[2]
-MI_out[3] <= MemoryInterface:no.DataOut[3]
-MI_out[4] <= MemoryInterface:no.DataOut[4]
-MI_out[5] <= MemoryInterface:no.DataOut[5]
-MI_out[6] <= MemoryInterface:no.DataOut[6]
-MI_out[7] <= MemoryInterface:no.DataOut[7]
-MI_out[8] <= MemoryInterface:no.DataOut[8]
-MI_out[9] <= MemoryInterface:no.DataOut[9]
-MI_out[10] <= MemoryInterface:no.DataOut[10]
-MI_out[11] <= MemoryInterface:no.DataOut[11]
-MI_out[12] <= MemoryInterface:no.DataOut[12]
-MI_out[13] <= MemoryInterface:no.DataOut[13]
-MI_out[14] <= MemoryInterface:no.DataOut[14]
-MI_out[15] <= MemoryInterface:no.DataOut[15]
-MI_out[16] <= MemoryInterface:no.DataOut[16]
-MI_out[17] <= MemoryInterface:no.DataOut[17]
-MI_out[18] <= MemoryInterface:no.DataOut[18]
-MI_out[19] <= MemoryInterface:no.DataOut[19]
-MI_out[20] <= MemoryInterface:no.DataOut[20]
-MI_out[21] <= MemoryInterface:no.DataOut[21]
-MI_out[22] <= MemoryInterface:no.DataOut[22]
-MI_out[23] <= MemoryInterface:no.DataOut[23]
-memRead <= ControlUnit:inst2.mem_read
-memWrite <= ControlUnit:inst2.mem_write
-maRS[0] <= mux_ma:inst6.result[0]
-maRS[1] <= mux_ma:inst6.result[1]
-maRS[2] <= mux_ma:inst6.result[2]
-maRS[3] <= mux_ma:inst6.result[3]
-maRS[4] <= mux_ma:inst6.result[4]
-maRS[5] <= mux_ma:inst6.result[5]
-maRS[6] <= mux_ma:inst6.result[6]
-maRS[7] <= mux_ma:inst6.result[7]
-maRS[8] <= mux_ma:inst6.result[8]
-maRS[9] <= mux_ma:inst6.result[9]
-maRS[10] <= mux_ma:inst6.result[10]
-maRS[11] <= mux_ma:inst6.result[11]
-maRS[12] <= mux_ma:inst6.result[12]
-maRS[13] <= mux_ma:inst6.result[13]
-maRS[14] <= mux_ma:inst6.result[14]
-maRS[15] <= mux_ma:inst6.result[15]
-ma_select <= ControlUnit:inst2.ma_select
-rzout[0] <= BuffReg16:RZ.output[0]
-rzout[1] <= BuffReg16:RZ.output[1]
-rzout[2] <= BuffReg16:RZ.output[2]
-rzout[3] <= BuffReg16:RZ.output[3]
-rzout[4] <= BuffReg16:RZ.output[4]
-rzout[5] <= BuffReg16:RZ.output[5]
-rzout[6] <= BuffReg16:RZ.output[6]
-rzout[7] <= BuffReg16:RZ.output[7]
-rzout[8] <= BuffReg16:RZ.output[8]
-rzout[9] <= BuffReg16:RZ.output[9]
-rzout[10] <= BuffReg16:RZ.output[10]
-rzout[11] <= BuffReg16:RZ.output[11]
-rzout[12] <= BuffReg16:RZ.output[12]
-rzout[13] <= BuffReg16:RZ.output[13]
-rzout[14] <= BuffReg16:RZ.output[14]
-rzout[15] <= BuffReg16:RZ.output[15]
-aluout[0] <= alu:inst9.alu_out[0]
-aluout[1] <= alu:inst9.alu_out[1]
-aluout[2] <= alu:inst9.alu_out[2]
-aluout[3] <= alu:inst9.alu_out[3]
-aluout[4] <= alu:inst9.alu_out[4]
-aluout[5] <= alu:inst9.alu_out[5]
-aluout[6] <= alu:inst9.alu_out[6]
-aluout[7] <= alu:inst9.alu_out[7]
-aluout[8] <= alu:inst9.alu_out[8]
-aluout[9] <= alu:inst9.alu_out[9]
-aluout[10] <= alu:inst9.alu_out[10]
-aluout[11] <= alu:inst9.alu_out[11]
-aluout[12] <= alu:inst9.alu_out[12]
-aluout[13] <= alu:inst9.alu_out[13]
-aluout[14] <= alu:inst9.alu_out[14]
-aluout[15] <= alu:inst9.alu_out[15]
-inA[0] <= BuffReg16:RA.output[0]
-inA[1] <= BuffReg16:RA.output[1]
-inA[2] <= BuffReg16:RA.output[2]
-inA[3] <= BuffReg16:RA.output[3]
-inA[4] <= BuffReg16:RA.output[4]
-inA[5] <= BuffReg16:RA.output[5]
-inA[6] <= BuffReg16:RA.output[6]
-inA[7] <= BuffReg16:RA.output[7]
-inA[8] <= BuffReg16:RA.output[8]
-inA[9] <= BuffReg16:RA.output[9]
-inA[10] <= BuffReg16:RA.output[10]
-inA[11] <= BuffReg16:RA.output[11]
-inA[12] <= BuffReg16:RA.output[12]
-inA[13] <= BuffReg16:RA.output[13]
-inA[14] <= BuffReg16:RA.output[14]
-inA[15] <= BuffReg16:RA.output[15]
-dataD[0] <= BuffReg16:RY.output[0]
-dataD[1] <= BuffReg16:RY.output[1]
-dataD[2] <= BuffReg16:RY.output[2]
-dataD[3] <= BuffReg16:RY.output[3]
-dataD[4] <= BuffReg16:RY.output[4]
-dataD[5] <= BuffReg16:RY.output[5]
-dataD[6] <= BuffReg16:RY.output[6]
-dataD[7] <= BuffReg16:RY.output[7]
-dataD[8] <= BuffReg16:RY.output[8]
-dataD[9] <= BuffReg16:RY.output[9]
-dataD[10] <= BuffReg16:RY.output[10]
-dataD[11] <= BuffReg16:RY.output[11]
-dataD[12] <= BuffReg16:RY.output[12]
-dataD[13] <= BuffReg16:RY.output[13]
-dataD[14] <= BuffReg16:RY.output[14]
-dataD[15] <= BuffReg16:RY.output[15]
-muxyout[0] <= muxy:inst.result[0]
-muxyout[1] <= muxy:inst.result[1]
-muxyout[2] <= muxy:inst.result[2]
-muxyout[3] <= muxy:inst.result[3]
-muxyout[4] <= muxy:inst.result[4]
-muxyout[5] <= muxy:inst.result[5]
-muxyout[6] <= muxy:inst.result[6]
-muxyout[7] <= muxy:inst.result[7]
-muxyout[8] <= muxy:inst.result[8]
-muxyout[9] <= muxy:inst.result[9]
-muxyout[10] <= muxy:inst.result[10]
-muxyout[11] <= muxy:inst.result[11]
-muxyout[12] <= muxy:inst.result[12]
-muxyout[13] <= muxy:inst.result[13]
-muxyout[14] <= muxy:inst.result[14]
-muxyout[15] <= muxy:inst.result[15]
-key[0] => IO_MemoryInterface:inst12.KEY[0]
-key[1] => IO_MemoryInterface:inst12.KEY[1]
-key[2] => IO_MemoryInterface:inst12.KEY[2]
-key[3] => IO_MemoryInterface:inst12.KEY[3]
-RM_out[0] <= BuffReg16:RM.output[0]
-RM_out[1] <= BuffReg16:RM.output[1]
-RM_out[2] <= BuffReg16:RM.output[2]
-RM_out[3] <= BuffReg16:RM.output[3]
-RM_out[4] <= BuffReg16:RM.output[4]
-RM_out[5] <= BuffReg16:RM.output[5]
-RM_out[6] <= BuffReg16:RM.output[6]
-RM_out[7] <= BuffReg16:RM.output[7]
-RM_out[8] <= BuffReg16:RM.output[8]
-RM_out[9] <= BuffReg16:RM.output[9]
-RM_out[10] <= BuffReg16:RM.output[10]
-RM_out[11] <= BuffReg16:RM.output[11]
-RM_out[12] <= BuffReg16:RM.output[12]
-RM_out[13] <= BuffReg16:RM.output[13]
-RM_out[14] <= BuffReg16:RM.output[14]
-RM_out[15] <= BuffReg16:RM.output[15]
-RM_out[16] <= <GND>
-RM_out[17] <= <GND>
-RM_out[18] <= <GND>
-RM_out[19] <= <GND>
-RM_out[20] <= <GND>
-RM_out[21] <= <GND>
-RM_out[22] <= <GND>
-RM_out[23] <= <GND>
-rbout[0] <= BuffReg16:RB_inst.output[0]
-rbout[1] <= BuffReg16:RB_inst.output[1]
-rbout[2] <= BuffReg16:RB_inst.output[2]
-rbout[3] <= BuffReg16:RB_inst.output[3]
-rbout[4] <= BuffReg16:RB_inst.output[4]
-rbout[5] <= BuffReg16:RB_inst.output[5]
-rbout[6] <= BuffReg16:RB_inst.output[6]
-rbout[7] <= BuffReg16:RB_inst.output[7]
-rbout[8] <= BuffReg16:RB_inst.output[8]
-rbout[9] <= BuffReg16:RB_inst.output[9]
-rbout[10] <= BuffReg16:RB_inst.output[10]
-rbout[11] <= BuffReg16:RB_inst.output[11]
-rbout[12] <= BuffReg16:RB_inst.output[12]
-rbout[13] <= BuffReg16:RB_inst.output[13]
-rbout[14] <= BuffReg16:RB_inst.output[14]
-rbout[15] <= BuffReg16:RB_inst.output[15]
+key[0] => inst17[0].IN0
+key[1] => inst17[1].IN0
+key[2] => inst17[2].IN0
+key[3] => inst17[3].IN0
 sw[0] => IO_MemoryInterface:inst12.SW[0]
 sw[1] => IO_MemoryInterface:inst12.SW[1]
 sw[2] => IO_MemoryInterface:inst12.SW[2]
@@ -225,63 +37,6 @@ sw[6] => IO_MemoryInterface:inst12.SW[6]
 sw[7] => IO_MemoryInterface:inst12.SW[7]
 sw[8] => IO_MemoryInterface:inst12.SW[8]
 sw[9] => IO_MemoryInterface:inst12.SW[9]
-pcSelect <= ControlUnit:inst2.pc_select
-pcEnable <= ControlUnit:inst2.pc_enable
-incSelect <= ControlUnit:inst2.inc_select
-aluop[0] <= ControlUnit:inst2.alu_op[0]
-aluop[1] <= ControlUnit:inst2.alu_op[1]
-b_select <= ControlUnit:inst2.b_select
-muxMA[0] <= InstructionAddressGenerator:inst1.Address[0]
-muxMA[1] <= InstructionAddressGenerator:inst1.Address[1]
-muxMA[2] <= InstructionAddressGenerator:inst1.Address[2]
-muxMA[3] <= InstructionAddressGenerator:inst1.Address[3]
-muxMA[4] <= InstructionAddressGenerator:inst1.Address[4]
-muxMA[5] <= InstructionAddressGenerator:inst1.Address[5]
-muxMA[6] <= InstructionAddressGenerator:inst1.Address[6]
-muxMA[7] <= InstructionAddressGenerator:inst1.Address[7]
-muxMA[8] <= InstructionAddressGenerator:inst1.Address[8]
-muxMA[9] <= InstructionAddressGenerator:inst1.Address[9]
-muxMA[10] <= InstructionAddressGenerator:inst1.Address[10]
-muxMA[11] <= InstructionAddressGenerator:inst1.Address[11]
-muxMA[12] <= InstructionAddressGenerator:inst1.Address[12]
-muxMA[13] <= InstructionAddressGenerator:inst1.Address[13]
-muxMA[14] <= InstructionAddressGenerator:inst1.Address[14]
-muxMA[15] <= InstructionAddressGenerator:inst1.Address[15]
-ncvz[0] <= alu:inst9.c
-ncvz[1] <= alu:inst9.v
-ncvz[2] <= alu:inst9.z
-ncvz[3] <= alu:inst9.n
-hex0[0] <= IO_MemoryInterface:inst12.HEX0[0]
-hex0[1] <= IO_MemoryInterface:inst12.HEX0[1]
-hex0[2] <= IO_MemoryInterface:inst12.HEX0[2]
-hex0[3] <= IO_MemoryInterface:inst12.HEX0[3]
-hex0[4] <= IO_MemoryInterface:inst12.HEX0[4]
-hex0[5] <= IO_MemoryInterface:inst12.HEX0[5]
-hex0[6] <= IO_MemoryInterface:inst12.HEX0[6]
-ledG[0] <= IO_MemoryInterface:inst12.LEDG[0]
-ledG[1] <= IO_MemoryInterface:inst12.LEDG[1]
-ledG[2] <= IO_MemoryInterface:inst12.LEDG[2]
-ledG[3] <= IO_MemoryInterface:inst12.LEDG[3]
-ledG[4] <= IO_MemoryInterface:inst12.LEDG[4]
-ledG[5] <= IO_MemoryInterface:inst12.LEDG[5]
-ledG[6] <= IO_MemoryInterface:inst12.LEDG[6]
-ledG[7] <= IO_MemoryInterface:inst12.LEDG[7]
-raout[0] <= <GND>
-raout[1] <= <GND>
-raout[2] <= <GND>
-raout[3] <= <GND>
-raout[4] <= <GND>
-raout[5] <= <GND>
-raout[6] <= <GND>
-raout[7] <= <GND>
-raout[8] <= <GND>
-raout[9] <= <GND>
-raout[10] <= <GND>
-raout[11] <= <GND>
-raout[12] <= <GND>
-raout[13] <= <GND>
-raout[14] <= <GND>
-raout[15] <= <GND>
 
 
 |project|ControlUnit:inst2
@@ -296,6 +51,8 @@ opCode[0] => process_0.IN1
 opCode[0] => process_0.IN1
 opCode[0] => process_0.IN1
 opCode[0] => process_0.IN1
+opCode[0] => process_0.IN1
+opCode[1] => process_0.IN1
 opCode[1] => process_0.IN1
 opCode[1] => process_0.IN1
 opCode[1] => process_0.IN1
@@ -310,10 +67,38 @@ opCode[2] => process_0.IN0
 opCode[3] => process_0.IN1
 opCode[3] => process_0.IN1
 opCode[3] => process_0.IN1
-Cond[0] => ~NO_FANOUT~
-Cond[1] => ~NO_FANOUT~
-Cond[2] => ~NO_FANOUT~
-Cond[3] => ~NO_FANOUT~
+Cond[0] => process_0.IN1
+Cond[0] => process_0.IN1
+Cond[0] => process_0.IN1
+Cond[0] => process_0.IN1
+Cond[0] => process_0.IN1
+Cond[0] => process_0.IN1
+Cond[0] => process_0.IN1
+Cond[0] => process_0.IN1
+Cond[0] => process_0.IN1
+Cond[0] => process_0.IN1
+Cond[0] => process_0.IN1
+Cond[0] => process_0.IN1
+Cond[0] => process_0.IN1
+Cond[0] => process_0.IN1
+Cond[0] => process_0.IN1
+Cond[0] => process_0.IN1
+Cond[1] => process_0.IN1
+Cond[1] => process_0.IN1
+Cond[1] => process_0.IN1
+Cond[1] => process_0.IN1
+Cond[1] => process_0.IN1
+Cond[1] => process_0.IN1
+Cond[1] => process_0.IN1
+Cond[1] => process_0.IN1
+Cond[2] => process_0.IN0
+Cond[2] => process_0.IN0
+Cond[2] => process_0.IN0
+Cond[2] => process_0.IN0
+Cond[3] => process_0.IN1
+Cond[3] => process_0.IN1
+Cond[3] => process_0.IN1
+Cond[3] => process_0.IN1
 opx[0] => Equal4.IN2
 opx[0] => Equal5.IN0
 opx[0] => Equal6.IN2
@@ -333,10 +118,31 @@ s => s_out.DATAB
 s => s_out.DATAB
 s => s_out.DATAB
 s => s_out.DATAB
-n => ~NO_FANOUT~
-c => ~NO_FANOUT~
-v => ~NO_FANOUT~
-z => ~NO_FANOUT~
+s => s_out.DATAB
+n => cond_enable.OUTPUTSELECT
+n => process_0.IN0
+n => process_0.IN0
+n => cond_enable.OUTPUTSELECT
+n => process_0.IN0
+c => cond_enable.OUTPUTSELECT
+c => process_0.IN0
+c => cond_enable.OUTPUTSELECT
+c => process_0.IN0
+v => cond_enable.OUTPUTSELECT
+v => process_0.IN1
+v => process_0.IN0
+v => cond_enable.OUTPUTSELECT
+v => process_0.IN1
+v => process_0.IN1
+v => process_0.IN0
+z => process_0.IN1
+z => process_0.IN1
+z => cond_enable.DATAB
+z => cond_enable.OUTPUTSELECT
+z => process_0.IN1
+z => process_0.IN1
+z => process_0.IN1
+z => process_0.IN1
 mfc => process_0.IN1
 mfc => pc_enable.DATAB
 clock => s_out~reg0.CLK
@@ -392,6 +198,7 @@ clock => stage[28].CLK
 clock => stage[29].CLK
 clock => stage[30].CLK
 clock => stage[31].CLK
+clock => cond_enable.CLK
 reset => stage.OUTPUTSELECT
 reset => stage.OUTPUTSELECT
 reset => stage.OUTPUTSELECT
@@ -424,26 +231,6 @@ reset => stage.OUTPUTSELECT
 reset => stage.OUTPUTSELECT
 reset => stage.OUTPUTSELECT
 reset => stage.OUTPUTSELECT
-alu_op[0] <= alu_op[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-alu_op[1] <= alu_op[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-c_select[0] <= c_select[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-c_select[1] <= c_select[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-y_select[0] <= y_select[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-y_select[1] <= y_select[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rf_write <= rf_write~reg0.DB_MAX_OUTPUT_PORT_TYPE
-b_select <= b_select~reg0.DB_MAX_OUTPUT_PORT_TYPE
-a_inv <= a_inv~reg0.DB_MAX_OUTPUT_PORT_TYPE
-b_inv <= b_inv~reg0.DB_MAX_OUTPUT_PORT_TYPE
-extend[0] <= extend[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-extend[1] <= extend[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ir_enable <= ir_enable~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ma_select <= ma_select~reg0.DB_MAX_OUTPUT_PORT_TYPE
-mem_read <= mem_read~reg0.DB_MAX_OUTPUT_PORT_TYPE
-mem_write <= mem_write~reg0.DB_MAX_OUTPUT_PORT_TYPE
-pc_select <= pc_select~reg0.DB_MAX_OUTPUT_PORT_TYPE
-pc_enable <= pc_enable~reg0.DB_MAX_OUTPUT_PORT_TYPE
-inc_select <= inc_select~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s_out <= s_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|IR24:inst3
@@ -543,58 +330,9 @@ Clock => output[20]~reg0.CLK
 Clock => output[21]~reg0.CLK
 Clock => output[22]~reg0.CLK
 Clock => output[23]~reg0.CLK
-output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[7] <= output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[8] <= output[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[9] <= output[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[10] <= output[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[11] <= output[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[12] <= output[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[13] <= output[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[14] <= output[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[15] <= output[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[16] <= output[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[17] <= output[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[18] <= output[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[19] <= output[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[20] <= output[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[21] <= output[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[22] <= output[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[23] <= output[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|MemoryInterface:no
-MFC <= Const:inst3.result[0]
-DataOut[0] <= MainMemory:inst.q[0]
-DataOut[1] <= MainMemory:inst.q[1]
-DataOut[2] <= MainMemory:inst.q[2]
-DataOut[3] <= MainMemory:inst.q[3]
-DataOut[4] <= MainMemory:inst.q[4]
-DataOut[5] <= MainMemory:inst.q[5]
-DataOut[6] <= MainMemory:inst.q[6]
-DataOut[7] <= MainMemory:inst.q[7]
-DataOut[8] <= MainMemory:inst.q[8]
-DataOut[9] <= MainMemory:inst.q[9]
-DataOut[10] <= MainMemory:inst.q[10]
-DataOut[11] <= MainMemory:inst.q[11]
-DataOut[12] <= MainMemory:inst.q[12]
-DataOut[13] <= MainMemory:inst.q[13]
-DataOut[14] <= MainMemory:inst.q[14]
-DataOut[15] <= MainMemory:inst.q[15]
-DataOut[16] <= MainMemory:inst.q[16]
-DataOut[17] <= MainMemory:inst.q[17]
-DataOut[18] <= MainMemory:inst.q[18]
-DataOut[19] <= MainMemory:inst.q[19]
-DataOut[20] <= MainMemory:inst.q[20]
-DataOut[21] <= MainMemory:inst.q[21]
-DataOut[22] <= MainMemory:inst.q[22]
-DataOut[23] <= MainMemory:inst.q[23]
 MEM_write => MainMemory:inst.wren
 clock => inst1.IN0
 Address[0] => MainMemory:inst.address[0]
@@ -641,41 +379,9 @@ MEM_read => ~NO_FANOUT~
 
 
 |project|MemoryInterface:no|Const:inst3
-result[0] <= lpm_constant:lpm_constant_component.result[0]
-result[1] <= lpm_constant:lpm_constant_component.result[1]
-result[2] <= lpm_constant:lpm_constant_component.result[2]
-result[3] <= lpm_constant:lpm_constant_component.result[3]
-result[4] <= lpm_constant:lpm_constant_component.result[4]
-result[5] <= lpm_constant:lpm_constant_component.result[5]
-result[6] <= lpm_constant:lpm_constant_component.result[6]
-result[7] <= lpm_constant:lpm_constant_component.result[7]
-result[8] <= lpm_constant:lpm_constant_component.result[8]
-result[9] <= lpm_constant:lpm_constant_component.result[9]
-result[10] <= lpm_constant:lpm_constant_component.result[10]
-result[11] <= lpm_constant:lpm_constant_component.result[11]
-result[12] <= lpm_constant:lpm_constant_component.result[12]
-result[13] <= lpm_constant:lpm_constant_component.result[13]
-result[14] <= lpm_constant:lpm_constant_component.result[14]
-result[15] <= lpm_constant:lpm_constant_component.result[15]
 
 
 |project|MemoryInterface:no|Const:inst3|lpm_constant:lpm_constant_component
-result[0] <= <VCC>
-result[1] <= <GND>
-result[2] <= <GND>
-result[3] <= <GND>
-result[4] <= <GND>
-result[5] <= <GND>
-result[6] <= <GND>
-result[7] <= <GND>
-result[8] <= <GND>
-result[9] <= <GND>
-result[10] <= <GND>
-result[11] <= <GND>
-result[12] <= <GND>
-result[13] <= <GND>
-result[14] <= <GND>
-result[15] <= <GND>
 
 
 |project|MemoryInterface:no|MainMemory:inst
@@ -715,30 +421,6 @@ data[21] => altsyncram:altsyncram_component.data_a[21]
 data[22] => altsyncram:altsyncram_component.data_a[22]
 data[23] => altsyncram:altsyncram_component.data_a[23]
 wren => altsyncram:altsyncram_component.wren_a
-q[0] <= altsyncram:altsyncram_component.q_a[0]
-q[1] <= altsyncram:altsyncram_component.q_a[1]
-q[2] <= altsyncram:altsyncram_component.q_a[2]
-q[3] <= altsyncram:altsyncram_component.q_a[3]
-q[4] <= altsyncram:altsyncram_component.q_a[4]
-q[5] <= altsyncram:altsyncram_component.q_a[5]
-q[6] <= altsyncram:altsyncram_component.q_a[6]
-q[7] <= altsyncram:altsyncram_component.q_a[7]
-q[8] <= altsyncram:altsyncram_component.q_a[8]
-q[9] <= altsyncram:altsyncram_component.q_a[9]
-q[10] <= altsyncram:altsyncram_component.q_a[10]
-q[11] <= altsyncram:altsyncram_component.q_a[11]
-q[12] <= altsyncram:altsyncram_component.q_a[12]
-q[13] <= altsyncram:altsyncram_component.q_a[13]
-q[14] <= altsyncram:altsyncram_component.q_a[14]
-q[15] <= altsyncram:altsyncram_component.q_a[15]
-q[16] <= altsyncram:altsyncram_component.q_a[16]
-q[17] <= altsyncram:altsyncram_component.q_a[17]
-q[18] <= altsyncram:altsyncram_component.q_a[18]
-q[19] <= altsyncram:altsyncram_component.q_a[19]
-q[20] <= altsyncram:altsyncram_component.q_a[20]
-q[21] <= altsyncram:altsyncram_component.q_a[21]
-q[22] <= altsyncram:altsyncram_component.q_a[22]
-q[23] <= altsyncram:altsyncram_component.q_a[23]
 
 
 |project|MemoryInterface:no|MainMemory:inst|altsyncram:altsyncram_component
@@ -794,34 +476,6 @@ aclr0 => ~NO_FANOUT~
 aclr1 => ~NO_FANOUT~
 byteena_a[0] => ~NO_FANOUT~
 byteena_b[0] => ~NO_FANOUT~
-q_a[0] <= altsyncram_efg1:auto_generated.q_a[0]
-q_a[1] <= altsyncram_efg1:auto_generated.q_a[1]
-q_a[2] <= altsyncram_efg1:auto_generated.q_a[2]
-q_a[3] <= altsyncram_efg1:auto_generated.q_a[3]
-q_a[4] <= altsyncram_efg1:auto_generated.q_a[4]
-q_a[5] <= altsyncram_efg1:auto_generated.q_a[5]
-q_a[6] <= altsyncram_efg1:auto_generated.q_a[6]
-q_a[7] <= altsyncram_efg1:auto_generated.q_a[7]
-q_a[8] <= altsyncram_efg1:auto_generated.q_a[8]
-q_a[9] <= altsyncram_efg1:auto_generated.q_a[9]
-q_a[10] <= altsyncram_efg1:auto_generated.q_a[10]
-q_a[11] <= altsyncram_efg1:auto_generated.q_a[11]
-q_a[12] <= altsyncram_efg1:auto_generated.q_a[12]
-q_a[13] <= altsyncram_efg1:auto_generated.q_a[13]
-q_a[14] <= altsyncram_efg1:auto_generated.q_a[14]
-q_a[15] <= altsyncram_efg1:auto_generated.q_a[15]
-q_a[16] <= altsyncram_efg1:auto_generated.q_a[16]
-q_a[17] <= altsyncram_efg1:auto_generated.q_a[17]
-q_a[18] <= altsyncram_efg1:auto_generated.q_a[18]
-q_a[19] <= altsyncram_efg1:auto_generated.q_a[19]
-q_a[20] <= altsyncram_efg1:auto_generated.q_a[20]
-q_a[21] <= altsyncram_efg1:auto_generated.q_a[21]
-q_a[22] <= altsyncram_efg1:auto_generated.q_a[22]
-q_a[23] <= altsyncram_efg1:auto_generated.q_a[23]
-q_b[0] <= <GND>
-eccstatus[0] <= <GND>
-eccstatus[1] <= <GND>
-eccstatus[2] <= <GND>
 
 
 |project|MemoryInterface:no|MainMemory:inst|altsyncram:altsyncram_component|altsyncram_efg1:auto_generated
@@ -1113,30 +767,6 @@ data_a[20] => ram_block1a20.PORTADATAIN
 data_a[21] => ram_block1a21.PORTADATAIN
 data_a[22] => ram_block1a22.PORTADATAIN
 data_a[23] => ram_block1a23.PORTADATAIN
-q_a[0] <= ram_block1a0.PORTADATAOUT
-q_a[1] <= ram_block1a1.PORTADATAOUT
-q_a[2] <= ram_block1a2.PORTADATAOUT
-q_a[3] <= ram_block1a3.PORTADATAOUT
-q_a[4] <= ram_block1a4.PORTADATAOUT
-q_a[5] <= ram_block1a5.PORTADATAOUT
-q_a[6] <= ram_block1a6.PORTADATAOUT
-q_a[7] <= ram_block1a7.PORTADATAOUT
-q_a[8] <= ram_block1a8.PORTADATAOUT
-q_a[9] <= ram_block1a9.PORTADATAOUT
-q_a[10] <= ram_block1a10.PORTADATAOUT
-q_a[11] <= ram_block1a11.PORTADATAOUT
-q_a[12] <= ram_block1a12.PORTADATAOUT
-q_a[13] <= ram_block1a13.PORTADATAOUT
-q_a[14] <= ram_block1a14.PORTADATAOUT
-q_a[15] <= ram_block1a15.PORTADATAOUT
-q_a[16] <= ram_block1a16.PORTADATAOUT
-q_a[17] <= ram_block1a17.PORTADATAOUT
-q_a[18] <= ram_block1a18.PORTADATAOUT
-q_a[19] <= ram_block1a19.PORTADATAOUT
-q_a[20] <= ram_block1a20.PORTADATAOUT
-q_a[21] <= ram_block1a21.PORTADATAOUT
-q_a[22] <= ram_block1a22.PORTADATAOUT
-q_a[23] <= ram_block1a23.PORTADATAOUT
 wren_a => ram_block1a0.PORTAWE
 wren_a => ram_block1a1.PORTAWE
 wren_a => ram_block1a2.PORTAWE
@@ -1197,22 +827,6 @@ data1x[13] => LPM_MUX:LPM_MUX_component.DATA[1][13]
 data1x[14] => LPM_MUX:LPM_MUX_component.DATA[1][14]
 data1x[15] => LPM_MUX:LPM_MUX_component.DATA[1][15]
 sel => LPM_MUX:LPM_MUX_component.SEL[0]
-result[0] <= LPM_MUX:LPM_MUX_component.RESULT[0]
-result[1] <= LPM_MUX:LPM_MUX_component.RESULT[1]
-result[2] <= LPM_MUX:LPM_MUX_component.RESULT[2]
-result[3] <= LPM_MUX:LPM_MUX_component.RESULT[3]
-result[4] <= LPM_MUX:LPM_MUX_component.RESULT[4]
-result[5] <= LPM_MUX:LPM_MUX_component.RESULT[5]
-result[6] <= LPM_MUX:LPM_MUX_component.RESULT[6]
-result[7] <= LPM_MUX:LPM_MUX_component.RESULT[7]
-result[8] <= LPM_MUX:LPM_MUX_component.RESULT[8]
-result[9] <= LPM_MUX:LPM_MUX_component.RESULT[9]
-result[10] <= LPM_MUX:LPM_MUX_component.RESULT[10]
-result[11] <= LPM_MUX:LPM_MUX_component.RESULT[11]
-result[12] <= LPM_MUX:LPM_MUX_component.RESULT[12]
-result[13] <= LPM_MUX:LPM_MUX_component.RESULT[13]
-result[14] <= LPM_MUX:LPM_MUX_component.RESULT[14]
-result[15] <= LPM_MUX:LPM_MUX_component.RESULT[15]
 
 
 |project|mux_ma:inst6|LPM_MUX:LPM_MUX_component
@@ -1252,22 +866,6 @@ sel[0] => mux_m4e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_m4e:auto_generated.result[0]
-result[1] <= mux_m4e:auto_generated.result[1]
-result[2] <= mux_m4e:auto_generated.result[2]
-result[3] <= mux_m4e:auto_generated.result[3]
-result[4] <= mux_m4e:auto_generated.result[4]
-result[5] <= mux_m4e:auto_generated.result[5]
-result[6] <= mux_m4e:auto_generated.result[6]
-result[7] <= mux_m4e:auto_generated.result[7]
-result[8] <= mux_m4e:auto_generated.result[8]
-result[9] <= mux_m4e:auto_generated.result[9]
-result[10] <= mux_m4e:auto_generated.result[10]
-result[11] <= mux_m4e:auto_generated.result[11]
-result[12] <= mux_m4e:auto_generated.result[12]
-result[13] <= mux_m4e:auto_generated.result[13]
-result[14] <= mux_m4e:auto_generated.result[14]
-result[15] <= mux_m4e:auto_generated.result[15]
 
 
 |project|mux_ma:inst6|LPM_MUX:LPM_MUX_component|mux_m4e:auto_generated
@@ -1303,22 +901,6 @@ data[28] => result_node[12].IN1
 data[29] => result_node[13].IN1
 data[30] => result_node[14].IN1
 data[31] => result_node[15].IN1
-result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
-result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
-result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
-result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
-result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
-result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
-result[8] <= result_node[8].DB_MAX_OUTPUT_PORT_TYPE
-result[9] <= result_node[9].DB_MAX_OUTPUT_PORT_TYPE
-result[10] <= result_node[10].DB_MAX_OUTPUT_PORT_TYPE
-result[11] <= result_node[11].DB_MAX_OUTPUT_PORT_TYPE
-result[12] <= result_node[12].DB_MAX_OUTPUT_PORT_TYPE
-result[13] <= result_node[13].DB_MAX_OUTPUT_PORT_TYPE
-result[14] <= result_node[14].DB_MAX_OUTPUT_PORT_TYPE
-result[15] <= result_node[15].DB_MAX_OUTPUT_PORT_TYPE
 sel[0] => result_node[15].IN0
 sel[0] => _.IN0
 sel[0] => result_node[14].IN0
@@ -1402,22 +984,6 @@ Clock => output[12]~reg0.CLK
 Clock => output[13]~reg0.CLK
 Clock => output[14]~reg0.CLK
 Clock => output[15]~reg0.CLK
-output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[7] <= output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[8] <= output[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[9] <= output[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[10] <= output[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[11] <= output[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[12] <= output[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[13] <= output[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[14] <= output[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[15] <= output[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9
@@ -1491,26 +1057,6 @@ a_inv => inv.IN0
 a_inv => bit16multi2to1:multa.s
 b_inv => inv.IN1
 b_inv => bit16multi2to1:multb.s
-alu_out[0] <= bit16multi4to1:multfin.f[0]
-alu_out[1] <= bit16multi4to1:multfin.f[1]
-alu_out[2] <= bit16multi4to1:multfin.f[2]
-alu_out[3] <= bit16multi4to1:multfin.f[3]
-alu_out[4] <= bit16multi4to1:multfin.f[4]
-alu_out[5] <= bit16multi4to1:multfin.f[5]
-alu_out[6] <= bit16multi4to1:multfin.f[6]
-alu_out[7] <= bit16multi4to1:multfin.f[7]
-alu_out[8] <= bit16multi4to1:multfin.f[8]
-alu_out[9] <= bit16multi4to1:multfin.f[9]
-alu_out[10] <= bit16multi4to1:multfin.f[10]
-alu_out[11] <= bit16multi4to1:multfin.f[11]
-alu_out[12] <= bit16multi4to1:multfin.f[12]
-alu_out[13] <= bit16multi4to1:multfin.f[13]
-alu_out[14] <= bit16multi4to1:multfin.f[14]
-alu_out[15] <= bit16multi4to1:multfin.f[15]
-n <= variousLogic:flags.outN
-z <= variousLogic:flags.outZ
-v <= variousLogic:flags.outV
-c <= variousLogic:flags.outC
 
 
 |project|alu:inst9|bit16multi2to1:multa
@@ -1562,134 +1108,102 @@ s => multi2to1:mult12.s
 s => multi2to1:mult13.s
 s => multi2to1:mult14.s
 s => multi2to1:mult15.s
-f[0] <= multi2to1:mult0.f
-f[1] <= multi2to1:mult1.f
-f[2] <= multi2to1:mult2.f
-f[3] <= multi2to1:mult3.f
-f[4] <= multi2to1:mult4.f
-f[5] <= multi2to1:mult5.f
-f[6] <= multi2to1:mult6.f
-f[7] <= multi2to1:mult7.f
-f[8] <= multi2to1:mult8.f
-f[9] <= multi2to1:mult9.f
-f[10] <= multi2to1:mult10.f
-f[11] <= multi2to1:mult11.f
-f[12] <= multi2to1:mult12.f
-f[13] <= multi2to1:mult13.f
-f[14] <= multi2to1:mult14.f
-f[15] <= multi2to1:mult15.f
 
 
 |project|alu:inst9|bit16multi2to1:multa|multi2to1:mult0
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multa|multi2to1:mult1
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multa|multi2to1:mult2
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multa|multi2to1:mult3
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multa|multi2to1:mult4
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multa|multi2to1:mult5
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multa|multi2to1:mult6
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multa|multi2to1:mult7
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multa|multi2to1:mult8
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multa|multi2to1:mult9
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multa|multi2to1:mult10
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multa|multi2to1:mult11
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multa|multi2to1:mult12
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multa|multi2to1:mult13
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multa|multi2to1:mult14
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multa|multi2to1:mult15
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multb
@@ -1741,134 +1255,102 @@ s => multi2to1:mult12.s
 s => multi2to1:mult13.s
 s => multi2to1:mult14.s
 s => multi2to1:mult15.s
-f[0] <= multi2to1:mult0.f
-f[1] <= multi2to1:mult1.f
-f[2] <= multi2to1:mult2.f
-f[3] <= multi2to1:mult3.f
-f[4] <= multi2to1:mult4.f
-f[5] <= multi2to1:mult5.f
-f[6] <= multi2to1:mult6.f
-f[7] <= multi2to1:mult7.f
-f[8] <= multi2to1:mult8.f
-f[9] <= multi2to1:mult9.f
-f[10] <= multi2to1:mult10.f
-f[11] <= multi2to1:mult11.f
-f[12] <= multi2to1:mult12.f
-f[13] <= multi2to1:mult13.f
-f[14] <= multi2to1:mult14.f
-f[15] <= multi2to1:mult15.f
 
 
 |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult0
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult1
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult2
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult3
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult4
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult5
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult6
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult7
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult8
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult9
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult10
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult11
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult12
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult13
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult14
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult15
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16add:FA
@@ -1905,24 +1387,6 @@ b[12] => bitAdder:add12.b
 b[13] => bitAdder:add13.b
 b[14] => bitAdder:add14.b
 b[15] => bitAdder:add15.b
-s[0] <= bitAdder:add0.s
-s[1] <= bitAdder:add1.s
-s[2] <= bitAdder:add2.s
-s[3] <= bitAdder:add3.s
-s[4] <= bitAdder:add4.s
-s[5] <= bitAdder:add5.s
-s[6] <= bitAdder:add6.s
-s[7] <= bitAdder:add7.s
-s[8] <= bitAdder:add8.s
-s[9] <= bitAdder:add9.s
-s[10] <= bitAdder:add10.s
-s[11] <= bitAdder:add11.s
-s[12] <= bitAdder:add12.s
-s[13] <= bitAdder:add13.s
-s[14] <= bitAdder:add14.s
-s[15] <= bitAdder:add15.s
-Carry15 <= bitAdder:add15.cout
-Carry14 <= bitAdder:add14.cout
 
 
 |project|alu:inst9|bit16add:FA|bitAdder:add0
@@ -1932,8 +1396,6 @@ b => xor1.IN1
 b => and2.IN1
 cin => and1.IN1
 cin => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16add:FA|bitAdder:add1
@@ -1943,8 +1405,6 @@ b => xor1.IN1
 b => and2.IN1
 cin => and1.IN1
 cin => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16add:FA|bitAdder:add2
@@ -1954,8 +1414,6 @@ b => xor1.IN1
 b => and2.IN1
 cin => and1.IN1
 cin => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16add:FA|bitAdder:add3
@@ -1965,8 +1423,6 @@ b => xor1.IN1
 b => and2.IN1
 cin => and1.IN1
 cin => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16add:FA|bitAdder:add4
@@ -1976,8 +1432,6 @@ b => xor1.IN1
 b => and2.IN1
 cin => and1.IN1
 cin => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16add:FA|bitAdder:add5
@@ -1987,8 +1441,6 @@ b => xor1.IN1
 b => and2.IN1
 cin => and1.IN1
 cin => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16add:FA|bitAdder:add6
@@ -1998,8 +1450,6 @@ b => xor1.IN1
 b => and2.IN1
 cin => and1.IN1
 cin => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16add:FA|bitAdder:add7
@@ -2009,8 +1459,6 @@ b => xor1.IN1
 b => and2.IN1
 cin => and1.IN1
 cin => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16add:FA|bitAdder:add8
@@ -2020,8 +1468,6 @@ b => xor1.IN1
 b => and2.IN1
 cin => and1.IN1
 cin => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16add:FA|bitAdder:add9
@@ -2031,8 +1477,6 @@ b => xor1.IN1
 b => and2.IN1
 cin => and1.IN1
 cin => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16add:FA|bitAdder:add10
@@ -2042,8 +1486,6 @@ b => xor1.IN1
 b => and2.IN1
 cin => and1.IN1
 cin => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16add:FA|bitAdder:add11
@@ -2053,8 +1495,6 @@ b => xor1.IN1
 b => and2.IN1
 cin => and1.IN1
 cin => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16add:FA|bitAdder:add12
@@ -2064,8 +1504,6 @@ b => xor1.IN1
 b => and2.IN1
 cin => and1.IN1
 cin => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16add:FA|bitAdder:add13
@@ -2075,8 +1513,6 @@ b => xor1.IN1
 b => and2.IN1
 cin => and1.IN1
 cin => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16add:FA|bitAdder:add14
@@ -2086,8 +1522,6 @@ b => xor1.IN1
 b => and2.IN1
 cin => and1.IN1
 cin => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16add:FA|bitAdder:add15
@@ -2097,8 +1531,6 @@ b => xor1.IN1
 b => and2.IN1
 cin => and1.IN1
 cin => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|variousLogic:flags
@@ -2122,10 +1554,6 @@ s[15] => outN.DATAIN
 in15carryout => outV.IN0
 in15carryout => outC.DATAIN
 in14carryout => outV.IN1
-outN <= s[15].DB_MAX_OUTPUT_PORT_TYPE
-outZ <= x.DB_MAX_OUTPUT_PORT_TYPE
-outV <= outV.DB_MAX_OUTPUT_PORT_TYPE
-outC <= in15carryout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16and:and1
@@ -2161,22 +1589,6 @@ b[12] => o.IN1
 b[13] => o.IN1
 b[14] => o.IN1
 b[15] => o.IN1
-o[0] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[1] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[2] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[3] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[4] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[5] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[6] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[7] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[8] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[9] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[10] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[11] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[12] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[13] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[14] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[15] <= o.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16or:or1
@@ -2212,22 +1624,6 @@ b[12] => o.IN1
 b[13] => o.IN1
 b[14] => o.IN1
 b[15] => o.IN1
-o[0] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[1] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[2] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[3] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[4] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[5] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[6] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[7] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[8] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[9] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[10] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[11] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[12] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[13] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[14] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[15] <= o.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16xor:xor1
@@ -2263,22 +1659,6 @@ b[12] => o.IN1
 b[13] => o.IN1
 b[14] => o.IN1
 b[15] => o.IN1
-o[0] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[1] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[2] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[3] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[4] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[5] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[6] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[7] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[8] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[9] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[10] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[11] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[12] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[13] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[14] <= o.DB_MAX_OUTPUT_PORT_TYPE
-o[15] <= o.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi4to1:multfin
@@ -2378,22 +1758,6 @@ s[1] => multi4to1:mult12.s[1]
 s[1] => multi4to1:mult13.s[1]
 s[1] => multi4to1:mult14.s[1]
 s[1] => multi4to1:mult15.s[1]
-f[0] <= multi4to1:mult0.f
-f[1] <= multi4to1:mult1.f
-f[2] <= multi4to1:mult2.f
-f[3] <= multi4to1:mult3.f
-f[4] <= multi4to1:mult4.f
-f[5] <= multi4to1:mult5.f
-f[6] <= multi4to1:mult6.f
-f[7] <= multi4to1:mult7.f
-f[8] <= multi4to1:mult8.f
-f[9] <= multi4to1:mult9.f
-f[10] <= multi4to1:mult10.f
-f[11] <= multi4to1:mult11.f
-f[12] <= multi4to1:mult12.f
-f[13] <= multi4to1:mult13.f
-f[14] <= multi4to1:mult14.f
-f[15] <= multi4to1:mult15.f
 
 
 |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult0
@@ -2403,7 +1767,6 @@ in2 => Mux0.IN2
 in3 => Mux0.IN3
 s[0] => Mux0.IN5
 s[1] => Mux0.IN4
-f <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult1
@@ -2413,7 +1776,6 @@ in2 => Mux0.IN2
 in3 => Mux0.IN3
 s[0] => Mux0.IN5
 s[1] => Mux0.IN4
-f <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult2
@@ -2423,7 +1785,6 @@ in2 => Mux0.IN2
 in3 => Mux0.IN3
 s[0] => Mux0.IN5
 s[1] => Mux0.IN4
-f <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult3
@@ -2433,7 +1794,6 @@ in2 => Mux0.IN2
 in3 => Mux0.IN3
 s[0] => Mux0.IN5
 s[1] => Mux0.IN4
-f <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult4
@@ -2443,7 +1803,6 @@ in2 => Mux0.IN2
 in3 => Mux0.IN3
 s[0] => Mux0.IN5
 s[1] => Mux0.IN4
-f <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult5
@@ -2453,7 +1812,6 @@ in2 => Mux0.IN2
 in3 => Mux0.IN3
 s[0] => Mux0.IN5
 s[1] => Mux0.IN4
-f <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult6
@@ -2463,7 +1821,6 @@ in2 => Mux0.IN2
 in3 => Mux0.IN3
 s[0] => Mux0.IN5
 s[1] => Mux0.IN4
-f <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult7
@@ -2473,7 +1830,6 @@ in2 => Mux0.IN2
 in3 => Mux0.IN3
 s[0] => Mux0.IN5
 s[1] => Mux0.IN4
-f <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult8
@@ -2483,7 +1839,6 @@ in2 => Mux0.IN2
 in3 => Mux0.IN3
 s[0] => Mux0.IN5
 s[1] => Mux0.IN4
-f <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult9
@@ -2493,7 +1848,6 @@ in2 => Mux0.IN2
 in3 => Mux0.IN3
 s[0] => Mux0.IN5
 s[1] => Mux0.IN4
-f <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult10
@@ -2503,7 +1857,6 @@ in2 => Mux0.IN2
 in3 => Mux0.IN3
 s[0] => Mux0.IN5
 s[1] => Mux0.IN4
-f <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult11
@@ -2513,7 +1866,6 @@ in2 => Mux0.IN2
 in3 => Mux0.IN3
 s[0] => Mux0.IN5
 s[1] => Mux0.IN4
-f <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult12
@@ -2523,7 +1875,6 @@ in2 => Mux0.IN2
 in3 => Mux0.IN3
 s[0] => Mux0.IN5
 s[1] => Mux0.IN4
-f <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult13
@@ -2533,7 +1884,6 @@ in2 => Mux0.IN2
 in3 => Mux0.IN3
 s[0] => Mux0.IN5
 s[1] => Mux0.IN4
-f <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult14
@@ -2543,7 +1893,6 @@ in2 => Mux0.IN2
 in3 => Mux0.IN3
 s[0] => Mux0.IN5
 s[1] => Mux0.IN4
-f <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult15
@@ -2553,7 +1902,6 @@ in2 => Mux0.IN2
 in3 => Mux0.IN3
 s[0] => Mux0.IN5
 s[1] => Mux0.IN4
-f <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|BuffReg16:RA
@@ -2605,22 +1953,6 @@ Clock => output[12]~reg0.CLK
 Clock => output[13]~reg0.CLK
 Clock => output[14]~reg0.CLK
 Clock => output[15]~reg0.CLK
-output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[7] <= output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[8] <= output[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[9] <= output[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[10] <= output[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[11] <= output[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[12] <= output[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[13] <= output[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[14] <= output[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[15] <= output[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|registerFile:inst8
@@ -2921,38 +2253,6 @@ Reset => Reg16:reg12.reset
 Reset => Reg16:reg13.reset
 Reset => Reg16:reg14.reset
 Reset => Reg16:reg15.reset
-DataS[0] <= mux16:mux1.f[0]
-DataS[1] <= mux16:mux1.f[1]
-DataS[2] <= mux16:mux1.f[2]
-DataS[3] <= mux16:mux1.f[3]
-DataS[4] <= mux16:mux1.f[4]
-DataS[5] <= mux16:mux1.f[5]
-DataS[6] <= mux16:mux1.f[6]
-DataS[7] <= mux16:mux1.f[7]
-DataS[8] <= mux16:mux1.f[8]
-DataS[9] <= mux16:mux1.f[9]
-DataS[10] <= mux16:mux1.f[10]
-DataS[11] <= mux16:mux1.f[11]
-DataS[12] <= mux16:mux1.f[12]
-DataS[13] <= mux16:mux1.f[13]
-DataS[14] <= mux16:mux1.f[14]
-DataS[15] <= mux16:mux1.f[15]
-DataT[0] <= mux16:mux2.f[0]
-DataT[1] <= mux16:mux2.f[1]
-DataT[2] <= mux16:mux2.f[2]
-DataT[3] <= mux16:mux2.f[3]
-DataT[4] <= mux16:mux2.f[4]
-DataT[5] <= mux16:mux2.f[5]
-DataT[6] <= mux16:mux2.f[6]
-DataT[7] <= mux16:mux2.f[7]
-DataT[8] <= mux16:mux2.f[8]
-DataT[9] <= mux16:mux2.f[9]
-DataT[10] <= mux16:mux2.f[10]
-DataT[11] <= mux16:mux2.f[11]
-DataT[12] <= mux16:mux2.f[12]
-DataT[13] <= mux16:mux2.f[13]
-DataT[14] <= mux16:mux2.f[14]
-DataT[15] <= mux16:mux2.f[15]
 
 
 |project|registerFile:inst8|decoder16:decode
@@ -3020,22 +2320,6 @@ Sel[3] => Mux12.IN16
 Sel[3] => Mux13.IN16
 Sel[3] => Mux14.IN16
 Sel[3] => Mux15.IN16
-Output[0] <= Mux15.DB_MAX_OUTPUT_PORT_TYPE
-Output[1] <= Mux14.DB_MAX_OUTPUT_PORT_TYPE
-Output[2] <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
-Output[3] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
-Output[4] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
-Output[5] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
-Output[6] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
-Output[7] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
-Output[8] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
-Output[9] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
-Output[10] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
-Output[11] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
-Output[12] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-Output[13] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-Output[14] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-Output[15] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|registerFile:inst8|Reg16:reg1
@@ -3103,22 +2387,6 @@ Clock => output[12]~reg0.CLK
 Clock => output[13]~reg0.CLK
 Clock => output[14]~reg0.CLK
 Clock => output[15]~reg0.CLK
-output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[7] <= output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[8] <= output[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[9] <= output[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[10] <= output[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[11] <= output[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[12] <= output[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[13] <= output[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[14] <= output[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[15] <= output[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|registerFile:inst8|Reg16:reg2
@@ -3186,22 +2454,6 @@ Clock => output[12]~reg0.CLK
 Clock => output[13]~reg0.CLK
 Clock => output[14]~reg0.CLK
 Clock => output[15]~reg0.CLK
-output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[7] <= output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[8] <= output[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[9] <= output[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[10] <= output[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[11] <= output[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[12] <= output[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[13] <= output[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[14] <= output[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[15] <= output[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|registerFile:inst8|Reg16:reg3
@@ -3269,22 +2521,6 @@ Clock => output[12]~reg0.CLK
 Clock => output[13]~reg0.CLK
 Clock => output[14]~reg0.CLK
 Clock => output[15]~reg0.CLK
-output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[7] <= output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[8] <= output[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[9] <= output[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[10] <= output[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[11] <= output[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[12] <= output[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[13] <= output[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[14] <= output[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[15] <= output[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|registerFile:inst8|Reg16:reg4
@@ -3352,22 +2588,6 @@ Clock => output[12]~reg0.CLK
 Clock => output[13]~reg0.CLK
 Clock => output[14]~reg0.CLK
 Clock => output[15]~reg0.CLK
-output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[7] <= output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[8] <= output[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[9] <= output[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[10] <= output[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[11] <= output[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[12] <= output[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[13] <= output[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[14] <= output[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[15] <= output[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|registerFile:inst8|Reg16:reg5
@@ -3435,22 +2655,6 @@ Clock => output[12]~reg0.CLK
 Clock => output[13]~reg0.CLK
 Clock => output[14]~reg0.CLK
 Clock => output[15]~reg0.CLK
-output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[7] <= output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[8] <= output[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[9] <= output[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[10] <= output[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[11] <= output[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[12] <= output[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[13] <= output[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[14] <= output[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[15] <= output[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|registerFile:inst8|Reg16:reg6
@@ -3518,22 +2722,6 @@ Clock => output[12]~reg0.CLK
 Clock => output[13]~reg0.CLK
 Clock => output[14]~reg0.CLK
 Clock => output[15]~reg0.CLK
-output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[7] <= output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[8] <= output[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[9] <= output[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[10] <= output[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[11] <= output[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[12] <= output[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[13] <= output[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[14] <= output[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[15] <= output[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|registerFile:inst8|Reg16:reg7
@@ -3601,22 +2789,6 @@ Clock => output[12]~reg0.CLK
 Clock => output[13]~reg0.CLK
 Clock => output[14]~reg0.CLK
 Clock => output[15]~reg0.CLK
-output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[7] <= output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[8] <= output[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[9] <= output[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[10] <= output[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[11] <= output[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[12] <= output[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[13] <= output[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[14] <= output[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[15] <= output[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|registerFile:inst8|Reg16:reg8
@@ -3684,22 +2856,6 @@ Clock => output[12]~reg0.CLK
 Clock => output[13]~reg0.CLK
 Clock => output[14]~reg0.CLK
 Clock => output[15]~reg0.CLK
-output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[7] <= output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[8] <= output[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[9] <= output[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[10] <= output[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[11] <= output[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[12] <= output[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[13] <= output[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[14] <= output[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[15] <= output[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|registerFile:inst8|Reg16:reg9
@@ -3767,22 +2923,6 @@ Clock => output[12]~reg0.CLK
 Clock => output[13]~reg0.CLK
 Clock => output[14]~reg0.CLK
 Clock => output[15]~reg0.CLK
-output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[7] <= output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[8] <= output[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[9] <= output[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[10] <= output[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[11] <= output[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[12] <= output[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[13] <= output[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[14] <= output[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[15] <= output[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|registerFile:inst8|Reg16:reg10
@@ -3850,22 +2990,6 @@ Clock => output[12]~reg0.CLK
 Clock => output[13]~reg0.CLK
 Clock => output[14]~reg0.CLK
 Clock => output[15]~reg0.CLK
-output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[7] <= output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[8] <= output[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[9] <= output[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[10] <= output[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[11] <= output[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[12] <= output[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[13] <= output[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[14] <= output[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[15] <= output[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|registerFile:inst8|Reg16:reg11
@@ -3933,22 +3057,6 @@ Clock => output[12]~reg0.CLK
 Clock => output[13]~reg0.CLK
 Clock => output[14]~reg0.CLK
 Clock => output[15]~reg0.CLK
-output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[7] <= output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[8] <= output[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[9] <= output[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[10] <= output[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[11] <= output[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[12] <= output[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[13] <= output[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[14] <= output[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[15] <= output[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|registerFile:inst8|Reg16:reg12
@@ -4016,22 +3124,6 @@ Clock => output[12]~reg0.CLK
 Clock => output[13]~reg0.CLK
 Clock => output[14]~reg0.CLK
 Clock => output[15]~reg0.CLK
-output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[7] <= output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[8] <= output[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[9] <= output[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[10] <= output[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[11] <= output[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[12] <= output[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[13] <= output[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[14] <= output[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[15] <= output[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|registerFile:inst8|Reg16:reg13
@@ -4099,22 +3191,6 @@ Clock => output[12]~reg0.CLK
 Clock => output[13]~reg0.CLK
 Clock => output[14]~reg0.CLK
 Clock => output[15]~reg0.CLK
-output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[7] <= output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[8] <= output[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[9] <= output[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[10] <= output[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[11] <= output[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[12] <= output[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[13] <= output[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[14] <= output[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[15] <= output[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|registerFile:inst8|Reg16:reg14
@@ -4182,22 +3258,6 @@ Clock => output[12]~reg0.CLK
 Clock => output[13]~reg0.CLK
 Clock => output[14]~reg0.CLK
 Clock => output[15]~reg0.CLK
-output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[7] <= output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[8] <= output[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[9] <= output[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[10] <= output[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[11] <= output[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[12] <= output[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[13] <= output[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[14] <= output[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[15] <= output[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|registerFile:inst8|Reg16:reg15
@@ -4265,22 +3325,6 @@ Clock => output[12]~reg0.CLK
 Clock => output[13]~reg0.CLK
 Clock => output[14]~reg0.CLK
 Clock => output[15]~reg0.CLK
-output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[7] <= output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[8] <= output[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[9] <= output[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[10] <= output[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[11] <= output[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[12] <= output[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[13] <= output[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[14] <= output[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[15] <= output[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|registerFile:inst8|mux16:mux1
@@ -4604,22 +3648,6 @@ sel[3] => Mux12.IN16
 sel[3] => Mux13.IN16
 sel[3] => Mux14.IN16
 sel[3] => Mux15.IN16
-f[0] <= Mux15.DB_MAX_OUTPUT_PORT_TYPE
-f[1] <= Mux14.DB_MAX_OUTPUT_PORT_TYPE
-f[2] <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
-f[3] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
-f[4] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
-f[5] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
-f[6] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
-f[7] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
-f[8] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
-f[9] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
-f[10] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
-f[11] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
-f[12] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-f[13] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-f[14] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-f[15] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|registerFile:inst8|mux16:mux2
@@ -4943,22 +3971,6 @@ sel[3] => Mux12.IN16
 sel[3] => Mux13.IN16
 sel[3] => Mux14.IN16
 sel[3] => Mux15.IN16
-f[0] <= Mux15.DB_MAX_OUTPUT_PORT_TYPE
-f[1] <= Mux14.DB_MAX_OUTPUT_PORT_TYPE
-f[2] <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
-f[3] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
-f[4] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
-f[5] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
-f[6] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
-f[7] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
-f[8] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
-f[9] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
-f[10] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
-f[11] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
-f[12] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-f[13] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-f[14] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-f[15] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|BuffReg16:RY
@@ -5010,22 +4022,6 @@ Clock => output[12]~reg0.CLK
 Clock => output[13]~reg0.CLK
 Clock => output[14]~reg0.CLK
 Clock => output[15]~reg0.CLK
-output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[7] <= output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[8] <= output[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[9] <= output[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[10] <= output[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[11] <= output[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[12] <= output[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[13] <= output[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[14] <= output[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[15] <= output[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|muxy:inst
@@ -5079,22 +4075,6 @@ data2x[14] => LPM_MUX:LPM_MUX_component.DATA[2][14]
 data2x[15] => LPM_MUX:LPM_MUX_component.DATA[2][15]
 sel[0] => LPM_MUX:LPM_MUX_component.SEL[0]
 sel[1] => LPM_MUX:LPM_MUX_component.SEL[1]
-result[0] <= LPM_MUX:LPM_MUX_component.RESULT[0]
-result[1] <= LPM_MUX:LPM_MUX_component.RESULT[1]
-result[2] <= LPM_MUX:LPM_MUX_component.RESULT[2]
-result[3] <= LPM_MUX:LPM_MUX_component.RESULT[3]
-result[4] <= LPM_MUX:LPM_MUX_component.RESULT[4]
-result[5] <= LPM_MUX:LPM_MUX_component.RESULT[5]
-result[6] <= LPM_MUX:LPM_MUX_component.RESULT[6]
-result[7] <= LPM_MUX:LPM_MUX_component.RESULT[7]
-result[8] <= LPM_MUX:LPM_MUX_component.RESULT[8]
-result[9] <= LPM_MUX:LPM_MUX_component.RESULT[9]
-result[10] <= LPM_MUX:LPM_MUX_component.RESULT[10]
-result[11] <= LPM_MUX:LPM_MUX_component.RESULT[11]
-result[12] <= LPM_MUX:LPM_MUX_component.RESULT[12]
-result[13] <= LPM_MUX:LPM_MUX_component.RESULT[13]
-result[14] <= LPM_MUX:LPM_MUX_component.RESULT[14]
-result[15] <= LPM_MUX:LPM_MUX_component.RESULT[15]
 
 
 |project|muxy:inst|LPM_MUX:LPM_MUX_component
@@ -5151,22 +4131,6 @@ sel[1] => mux_o4e:auto_generated.sel[1]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_o4e:auto_generated.result[0]
-result[1] <= mux_o4e:auto_generated.result[1]
-result[2] <= mux_o4e:auto_generated.result[2]
-result[3] <= mux_o4e:auto_generated.result[3]
-result[4] <= mux_o4e:auto_generated.result[4]
-result[5] <= mux_o4e:auto_generated.result[5]
-result[6] <= mux_o4e:auto_generated.result[6]
-result[7] <= mux_o4e:auto_generated.result[7]
-result[8] <= mux_o4e:auto_generated.result[8]
-result[9] <= mux_o4e:auto_generated.result[9]
-result[10] <= mux_o4e:auto_generated.result[10]
-result[11] <= mux_o4e:auto_generated.result[11]
-result[12] <= mux_o4e:auto_generated.result[12]
-result[13] <= mux_o4e:auto_generated.result[13]
-result[14] <= mux_o4e:auto_generated.result[14]
-result[15] <= mux_o4e:auto_generated.result[15]
 
 
 |project|muxy:inst|LPM_MUX:LPM_MUX_component|mux_o4e:auto_generated
@@ -5218,22 +4182,6 @@ data[44] => data2_wire[12].IN0
 data[45] => data2_wire[13].IN0
 data[46] => data2_wire[14].IN0
 data[47] => data2_wire[15].IN0
-result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
-result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
-result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
-result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
-result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
-result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
-result[8] <= result_node[8].DB_MAX_OUTPUT_PORT_TYPE
-result[9] <= result_node[9].DB_MAX_OUTPUT_PORT_TYPE
-result[10] <= result_node[10].DB_MAX_OUTPUT_PORT_TYPE
-result[11] <= result_node[11].DB_MAX_OUTPUT_PORT_TYPE
-result[12] <= result_node[12].DB_MAX_OUTPUT_PORT_TYPE
-result[13] <= result_node[13].DB_MAX_OUTPUT_PORT_TYPE
-result[14] <= result_node[14].DB_MAX_OUTPUT_PORT_TYPE
-result[15] <= result_node[15].DB_MAX_OUTPUT_PORT_TYPE
 sel[0] => data0_wire[15].IN0
 sel[0] => data1_wire[15].IN1
 sel[0] => data1_wire[14].IN1
@@ -5304,22 +4252,6 @@ data1x[13] => LPM_MUX:lpm_mux_component.DATA[1][13]
 data1x[14] => LPM_MUX:lpm_mux_component.DATA[1][14]
 data1x[15] => LPM_MUX:lpm_mux_component.DATA[1][15]
 sel => LPM_MUX:lpm_mux_component.SEL[0]
-result[0] <= LPM_MUX:lpm_mux_component.RESULT[0]
-result[1] <= LPM_MUX:lpm_mux_component.RESULT[1]
-result[2] <= LPM_MUX:lpm_mux_component.RESULT[2]
-result[3] <= LPM_MUX:lpm_mux_component.RESULT[3]
-result[4] <= LPM_MUX:lpm_mux_component.RESULT[4]
-result[5] <= LPM_MUX:lpm_mux_component.RESULT[5]
-result[6] <= LPM_MUX:lpm_mux_component.RESULT[6]
-result[7] <= LPM_MUX:lpm_mux_component.RESULT[7]
-result[8] <= LPM_MUX:lpm_mux_component.RESULT[8]
-result[9] <= LPM_MUX:lpm_mux_component.RESULT[9]
-result[10] <= LPM_MUX:lpm_mux_component.RESULT[10]
-result[11] <= LPM_MUX:lpm_mux_component.RESULT[11]
-result[12] <= LPM_MUX:lpm_mux_component.RESULT[12]
-result[13] <= LPM_MUX:lpm_mux_component.RESULT[13]
-result[14] <= LPM_MUX:lpm_mux_component.RESULT[14]
-result[15] <= LPM_MUX:lpm_mux_component.RESULT[15]
 
 
 |project|MUX2_1:inst15|LPM_MUX:lpm_mux_component
@@ -5359,22 +4291,6 @@ sel[0] => mux_m4e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_m4e:auto_generated.result[0]
-result[1] <= mux_m4e:auto_generated.result[1]
-result[2] <= mux_m4e:auto_generated.result[2]
-result[3] <= mux_m4e:auto_generated.result[3]
-result[4] <= mux_m4e:auto_generated.result[4]
-result[5] <= mux_m4e:auto_generated.result[5]
-result[6] <= mux_m4e:auto_generated.result[6]
-result[7] <= mux_m4e:auto_generated.result[7]
-result[8] <= mux_m4e:auto_generated.result[8]
-result[9] <= mux_m4e:auto_generated.result[9]
-result[10] <= mux_m4e:auto_generated.result[10]
-result[11] <= mux_m4e:auto_generated.result[11]
-result[12] <= mux_m4e:auto_generated.result[12]
-result[13] <= mux_m4e:auto_generated.result[13]
-result[14] <= mux_m4e:auto_generated.result[14]
-result[15] <= mux_m4e:auto_generated.result[15]
 
 
 |project|MUX2_1:inst15|LPM_MUX:lpm_mux_component|mux_m4e:auto_generated
@@ -5410,22 +4326,6 @@ data[28] => result_node[12].IN1
 data[29] => result_node[13].IN1
 data[30] => result_node[14].IN1
 data[31] => result_node[15].IN1
-result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
-result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
-result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
-result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
-result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
-result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
-result[8] <= result_node[8].DB_MAX_OUTPUT_PORT_TYPE
-result[9] <= result_node[9].DB_MAX_OUTPUT_PORT_TYPE
-result[10] <= result_node[10].DB_MAX_OUTPUT_PORT_TYPE
-result[11] <= result_node[11].DB_MAX_OUTPUT_PORT_TYPE
-result[12] <= result_node[12].DB_MAX_OUTPUT_PORT_TYPE
-result[13] <= result_node[13].DB_MAX_OUTPUT_PORT_TYPE
-result[14] <= result_node[14].DB_MAX_OUTPUT_PORT_TYPE
-result[15] <= result_node[15].DB_MAX_OUTPUT_PORT_TYPE
 sel[0] => result_node[15].IN0
 sel[0] => _.IN0
 sel[0] => result_node[14].IN0
@@ -5461,22 +4361,6 @@ sel[0] => _.IN0
 
 
 |project|IO_MemoryInterface:inst12
-data_out[0] <= MUX2_1:inst.result[0]
-data_out[1] <= MUX2_1:inst.result[1]
-data_out[2] <= MUX2_1:inst.result[2]
-data_out[3] <= MUX2_1:inst.result[3]
-data_out[4] <= MUX2_1:inst.result[4]
-data_out[5] <= MUX2_1:inst.result[5]
-data_out[6] <= MUX2_1:inst.result[6]
-data_out[7] <= MUX2_1:inst.result[7]
-data_out[8] <= MUX2_1:inst.result[8]
-data_out[9] <= MUX2_1:inst.result[9]
-data_out[10] <= MUX2_1:inst.result[10]
-data_out[11] <= MUX2_1:inst.result[11]
-data_out[12] <= MUX2_1:inst.result[12]
-data_out[13] <= MUX2_1:inst.result[13]
-data_out[14] <= MUX2_1:inst.result[14]
-data_out[15] <= MUX2_1:inst.result[15]
 mem_addr[0] => inst6.IN2
 mem_addr[1] => inst7.IN2
 mem_addr[2] => ~NO_FANOUT~
@@ -5496,13 +4380,6 @@ SW[6] => Reg_16:SWITCHES.data[6]
 SW[7] => Reg_16:SWITCHES.data[7]
 SW[8] => Reg_16:SWITCHES.data[8]
 SW[9] => Reg_16:SWITCHES.data[9]
-HEX0[0] <= hex_data[0].DB_MAX_OUTPUT_PORT_TYPE
-HEX0[1] <= hex_data[1].DB_MAX_OUTPUT_PORT_TYPE
-HEX0[2] <= hex_data[2].DB_MAX_OUTPUT_PORT_TYPE
-HEX0[3] <= hex_data[3].DB_MAX_OUTPUT_PORT_TYPE
-HEX0[4] <= hex_data[4].DB_MAX_OUTPUT_PORT_TYPE
-HEX0[5] <= hex_data[5].DB_MAX_OUTPUT_PORT_TYPE
-HEX0[6] <= hex_data[6].DB_MAX_OUTPUT_PORT_TYPE
 mem_write => inst7.IN1
 mem_write => inst6.IN1
 mem_data[0] => Reg_16:HEX_DISPLAY.data[0]
@@ -5537,14 +4414,6 @@ mem_data[14] => Reg_16:HEX_DISPLAY.data[14]
 mem_data[14] => Reg_16:LED.data[14]
 mem_data[15] => Reg_16:HEX_DISPLAY.data[15]
 mem_data[15] => Reg_16:LED.data[15]
-LEDG[0] <= led_data[0].DB_MAX_OUTPUT_PORT_TYPE
-LEDG[1] <= led_data[1].DB_MAX_OUTPUT_PORT_TYPE
-LEDG[2] <= led_data[2].DB_MAX_OUTPUT_PORT_TYPE
-LEDG[3] <= led_data[3].DB_MAX_OUTPUT_PORT_TYPE
-LEDG[4] <= led_data[4].DB_MAX_OUTPUT_PORT_TYPE
-LEDG[5] <= led_data[5].DB_MAX_OUTPUT_PORT_TYPE
-LEDG[6] <= led_data[6].DB_MAX_OUTPUT_PORT_TYPE
-LEDG[7] <= led_data[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|IO_MemoryInterface:inst12|MUX2_1:inst
@@ -5581,22 +4450,6 @@ data1x[13] => LPM_MUX:lpm_mux_component.DATA[1][13]
 data1x[14] => LPM_MUX:lpm_mux_component.DATA[1][14]
 data1x[15] => LPM_MUX:lpm_mux_component.DATA[1][15]
 sel => LPM_MUX:lpm_mux_component.SEL[0]
-result[0] <= LPM_MUX:lpm_mux_component.RESULT[0]
-result[1] <= LPM_MUX:lpm_mux_component.RESULT[1]
-result[2] <= LPM_MUX:lpm_mux_component.RESULT[2]
-result[3] <= LPM_MUX:lpm_mux_component.RESULT[3]
-result[4] <= LPM_MUX:lpm_mux_component.RESULT[4]
-result[5] <= LPM_MUX:lpm_mux_component.RESULT[5]
-result[6] <= LPM_MUX:lpm_mux_component.RESULT[6]
-result[7] <= LPM_MUX:lpm_mux_component.RESULT[7]
-result[8] <= LPM_MUX:lpm_mux_component.RESULT[8]
-result[9] <= LPM_MUX:lpm_mux_component.RESULT[9]
-result[10] <= LPM_MUX:lpm_mux_component.RESULT[10]
-result[11] <= LPM_MUX:lpm_mux_component.RESULT[11]
-result[12] <= LPM_MUX:lpm_mux_component.RESULT[12]
-result[13] <= LPM_MUX:lpm_mux_component.RESULT[13]
-result[14] <= LPM_MUX:lpm_mux_component.RESULT[14]
-result[15] <= LPM_MUX:lpm_mux_component.RESULT[15]
 
 
 |project|IO_MemoryInterface:inst12|MUX2_1:inst|LPM_MUX:lpm_mux_component
@@ -5636,22 +4489,6 @@ sel[0] => mux_m4e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_m4e:auto_generated.result[0]
-result[1] <= mux_m4e:auto_generated.result[1]
-result[2] <= mux_m4e:auto_generated.result[2]
-result[3] <= mux_m4e:auto_generated.result[3]
-result[4] <= mux_m4e:auto_generated.result[4]
-result[5] <= mux_m4e:auto_generated.result[5]
-result[6] <= mux_m4e:auto_generated.result[6]
-result[7] <= mux_m4e:auto_generated.result[7]
-result[8] <= mux_m4e:auto_generated.result[8]
-result[9] <= mux_m4e:auto_generated.result[9]
-result[10] <= mux_m4e:auto_generated.result[10]
-result[11] <= mux_m4e:auto_generated.result[11]
-result[12] <= mux_m4e:auto_generated.result[12]
-result[13] <= mux_m4e:auto_generated.result[13]
-result[14] <= mux_m4e:auto_generated.result[14]
-result[15] <= mux_m4e:auto_generated.result[15]
 
 
 |project|IO_MemoryInterface:inst12|MUX2_1:inst|LPM_MUX:lpm_mux_component|mux_m4e:auto_generated
@@ -5687,22 +4524,6 @@ data[28] => result_node[12].IN1
 data[29] => result_node[13].IN1
 data[30] => result_node[14].IN1
 data[31] => result_node[15].IN1
-result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
-result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
-result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
-result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
-result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
-result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
-result[8] <= result_node[8].DB_MAX_OUTPUT_PORT_TYPE
-result[9] <= result_node[9].DB_MAX_OUTPUT_PORT_TYPE
-result[10] <= result_node[10].DB_MAX_OUTPUT_PORT_TYPE
-result[11] <= result_node[11].DB_MAX_OUTPUT_PORT_TYPE
-result[12] <= result_node[12].DB_MAX_OUTPUT_PORT_TYPE
-result[13] <= result_node[13].DB_MAX_OUTPUT_PORT_TYPE
-result[14] <= result_node[14].DB_MAX_OUTPUT_PORT_TYPE
-result[15] <= result_node[15].DB_MAX_OUTPUT_PORT_TYPE
 sel[0] => result_node[15].IN0
 sel[0] => _.IN0
 sel[0] => result_node[14].IN0
@@ -5755,22 +4576,6 @@ data[12] => lpm_ff:lpm_ff_component.data[12]
 data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
-q[0] <= lpm_ff:lpm_ff_component.q[0]
-q[1] <= lpm_ff:lpm_ff_component.q[1]
-q[2] <= lpm_ff:lpm_ff_component.q[2]
-q[3] <= lpm_ff:lpm_ff_component.q[3]
-q[4] <= lpm_ff:lpm_ff_component.q[4]
-q[5] <= lpm_ff:lpm_ff_component.q[5]
-q[6] <= lpm_ff:lpm_ff_component.q[6]
-q[7] <= lpm_ff:lpm_ff_component.q[7]
-q[8] <= lpm_ff:lpm_ff_component.q[8]
-q[9] <= lpm_ff:lpm_ff_component.q[9]
-q[10] <= lpm_ff:lpm_ff_component.q[10]
-q[11] <= lpm_ff:lpm_ff_component.q[11]
-q[12] <= lpm_ff:lpm_ff_component.q[12]
-q[13] <= lpm_ff:lpm_ff_component.q[13]
-q[14] <= lpm_ff:lpm_ff_component.q[14]
-q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |project|IO_MemoryInterface:inst12|Reg_16:PUSH_BUTTON|lpm_ff:lpm_ff_component
@@ -5828,22 +4633,6 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
-q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
-q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
-q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
-q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
-q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
-q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
-q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
-q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
-q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
-q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
-q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
-q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
-q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|IO_MemoryInterface:inst12|Reg_16:SWITCHES
@@ -5864,22 +4653,6 @@ data[12] => lpm_ff:lpm_ff_component.data[12]
 data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
-q[0] <= lpm_ff:lpm_ff_component.q[0]
-q[1] <= lpm_ff:lpm_ff_component.q[1]
-q[2] <= lpm_ff:lpm_ff_component.q[2]
-q[3] <= lpm_ff:lpm_ff_component.q[3]
-q[4] <= lpm_ff:lpm_ff_component.q[4]
-q[5] <= lpm_ff:lpm_ff_component.q[5]
-q[6] <= lpm_ff:lpm_ff_component.q[6]
-q[7] <= lpm_ff:lpm_ff_component.q[7]
-q[8] <= lpm_ff:lpm_ff_component.q[8]
-q[9] <= lpm_ff:lpm_ff_component.q[9]
-q[10] <= lpm_ff:lpm_ff_component.q[10]
-q[11] <= lpm_ff:lpm_ff_component.q[11]
-q[12] <= lpm_ff:lpm_ff_component.q[12]
-q[13] <= lpm_ff:lpm_ff_component.q[13]
-q[14] <= lpm_ff:lpm_ff_component.q[14]
-q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |project|IO_MemoryInterface:inst12|Reg_16:SWITCHES|lpm_ff:lpm_ff_component
@@ -5937,22 +4710,6 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
-q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
-q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
-q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
-q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
-q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
-q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
-q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
-q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
-q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
-q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
-q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
-q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
-q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|IO_MemoryInterface:inst12|Reg_16:HEX_DISPLAY
@@ -5973,22 +4730,6 @@ data[12] => lpm_ff:lpm_ff_component.data[12]
 data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
-q[0] <= lpm_ff:lpm_ff_component.q[0]
-q[1] <= lpm_ff:lpm_ff_component.q[1]
-q[2] <= lpm_ff:lpm_ff_component.q[2]
-q[3] <= lpm_ff:lpm_ff_component.q[3]
-q[4] <= lpm_ff:lpm_ff_component.q[4]
-q[5] <= lpm_ff:lpm_ff_component.q[5]
-q[6] <= lpm_ff:lpm_ff_component.q[6]
-q[7] <= lpm_ff:lpm_ff_component.q[7]
-q[8] <= lpm_ff:lpm_ff_component.q[8]
-q[9] <= lpm_ff:lpm_ff_component.q[9]
-q[10] <= lpm_ff:lpm_ff_component.q[10]
-q[11] <= lpm_ff:lpm_ff_component.q[11]
-q[12] <= lpm_ff:lpm_ff_component.q[12]
-q[13] <= lpm_ff:lpm_ff_component.q[13]
-q[14] <= lpm_ff:lpm_ff_component.q[14]
-q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |project|IO_MemoryInterface:inst12|Reg_16:HEX_DISPLAY|lpm_ff:lpm_ff_component
@@ -6046,22 +4787,6 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
-q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
-q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
-q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
-q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
-q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
-q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
-q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
-q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
-q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
-q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
-q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
-q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
-q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|IO_MemoryInterface:inst12|Reg_16:LED
@@ -6082,22 +4807,6 @@ data[12] => lpm_ff:lpm_ff_component.data[12]
 data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
-q[0] <= lpm_ff:lpm_ff_component.q[0]
-q[1] <= lpm_ff:lpm_ff_component.q[1]
-q[2] <= lpm_ff:lpm_ff_component.q[2]
-q[3] <= lpm_ff:lpm_ff_component.q[3]
-q[4] <= lpm_ff:lpm_ff_component.q[4]
-q[5] <= lpm_ff:lpm_ff_component.q[5]
-q[6] <= lpm_ff:lpm_ff_component.q[6]
-q[7] <= lpm_ff:lpm_ff_component.q[7]
-q[8] <= lpm_ff:lpm_ff_component.q[8]
-q[9] <= lpm_ff:lpm_ff_component.q[9]
-q[10] <= lpm_ff:lpm_ff_component.q[10]
-q[11] <= lpm_ff:lpm_ff_component.q[11]
-q[12] <= lpm_ff:lpm_ff_component.q[12]
-q[13] <= lpm_ff:lpm_ff_component.q[13]
-q[14] <= lpm_ff:lpm_ff_component.q[14]
-q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |project|IO_MemoryInterface:inst12|Reg_16:LED|lpm_ff:lpm_ff_component
@@ -6155,22 +4864,6 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
-q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
-q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
-q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
-q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
-q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
-q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
-q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
-q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
-q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
-q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
-q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
-q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
-q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|BuffReg16:RM
@@ -6222,22 +4915,6 @@ Clock => output[12]~reg0.CLK
 Clock => output[13]~reg0.CLK
 Clock => output[14]~reg0.CLK
 Clock => output[15]~reg0.CLK
-output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[7] <= output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[8] <= output[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[9] <= output[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[10] <= output[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[11] <= output[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[12] <= output[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[13] <= output[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[14] <= output[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[15] <= output[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|BuffReg16:RB_inst
@@ -6289,41 +4966,9 @@ Clock => output[12]~reg0.CLK
 Clock => output[13]~reg0.CLK
 Clock => output[14]~reg0.CLK
 Clock => output[15]~reg0.CLK
-output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[7] <= output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[8] <= output[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[9] <= output[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[10] <= output[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[11] <= output[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[12] <= output[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[13] <= output[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[14] <= output[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[15] <= output[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|InstructionAddressGenerator:inst1
-Address[0] <= PC:inst2.q[0]
-Address[1] <= PC:inst2.q[1]
-Address[2] <= PC:inst2.q[2]
-Address[3] <= PC:inst2.q[3]
-Address[4] <= PC:inst2.q[4]
-Address[5] <= PC:inst2.q[5]
-Address[6] <= PC:inst2.q[6]
-Address[7] <= PC:inst2.q[7]
-Address[8] <= PC:inst2.q[8]
-Address[9] <= PC:inst2.q[9]
-Address[10] <= PC:inst2.q[10]
-Address[11] <= PC:inst2.q[11]
-Address[12] <= PC:inst2.q[12]
-Address[13] <= PC:inst2.q[13]
-Address[14] <= PC:inst2.q[14]
-Address[15] <= PC:inst2.q[15]
 clock => PC:inst2.clock
 clock => PC_Temp:inst4.clock
 PC_enable => PC:inst2.enable
@@ -6363,22 +5008,6 @@ Immediate[12] => MuxINC:inst.data1x[12]
 Immediate[13] => MuxINC:inst.data1x[13]
 Immediate[14] => MuxINC:inst.data1x[14]
 Immediate[15] => MuxINC:inst.data1x[15]
-MuxY[0] <= PC_Temp:inst4.q[0]
-MuxY[1] <= PC_Temp:inst4.q[1]
-MuxY[2] <= PC_Temp:inst4.q[2]
-MuxY[3] <= PC_Temp:inst4.q[3]
-MuxY[4] <= PC_Temp:inst4.q[4]
-MuxY[5] <= PC_Temp:inst4.q[5]
-MuxY[6] <= PC_Temp:inst4.q[6]
-MuxY[7] <= PC_Temp:inst4.q[7]
-MuxY[8] <= PC_Temp:inst4.q[8]
-MuxY[9] <= PC_Temp:inst4.q[9]
-MuxY[10] <= PC_Temp:inst4.q[10]
-MuxY[11] <= PC_Temp:inst4.q[11]
-MuxY[12] <= PC_Temp:inst4.q[12]
-MuxY[13] <= PC_Temp:inst4.q[13]
-MuxY[14] <= PC_Temp:inst4.q[14]
-MuxY[15] <= PC_Temp:inst4.q[15]
 
 
 |project|InstructionAddressGenerator:inst1|PC:inst2
@@ -6401,22 +5030,6 @@ data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
 enable => lpm_ff:lpm_ff_component.enable
-q[0] <= lpm_ff:lpm_ff_component.q[0]
-q[1] <= lpm_ff:lpm_ff_component.q[1]
-q[2] <= lpm_ff:lpm_ff_component.q[2]
-q[3] <= lpm_ff:lpm_ff_component.q[3]
-q[4] <= lpm_ff:lpm_ff_component.q[4]
-q[5] <= lpm_ff:lpm_ff_component.q[5]
-q[6] <= lpm_ff:lpm_ff_component.q[6]
-q[7] <= lpm_ff:lpm_ff_component.q[7]
-q[8] <= lpm_ff:lpm_ff_component.q[8]
-q[9] <= lpm_ff:lpm_ff_component.q[9]
-q[10] <= lpm_ff:lpm_ff_component.q[10]
-q[11] <= lpm_ff:lpm_ff_component.q[11]
-q[12] <= lpm_ff:lpm_ff_component.q[12]
-q[13] <= lpm_ff:lpm_ff_component.q[13]
-q[14] <= lpm_ff:lpm_ff_component.q[14]
-q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |project|InstructionAddressGenerator:inst1|PC:inst2|lpm_ff:lpm_ff_component
@@ -6474,22 +5087,6 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
-q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
-q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
-q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
-q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
-q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
-q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
-q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
-q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
-q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
-q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
-q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
-q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
-q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|InstructionAddressGenerator:inst1|MuxPC:inst3
@@ -6526,22 +5123,6 @@ data1x[13] => LPM_MUX:lpm_mux_component.DATA[1][13]
 data1x[14] => LPM_MUX:lpm_mux_component.DATA[1][14]
 data1x[15] => LPM_MUX:lpm_mux_component.DATA[1][15]
 sel => LPM_MUX:lpm_mux_component.SEL[0]
-result[0] <= LPM_MUX:lpm_mux_component.RESULT[0]
-result[1] <= LPM_MUX:lpm_mux_component.RESULT[1]
-result[2] <= LPM_MUX:lpm_mux_component.RESULT[2]
-result[3] <= LPM_MUX:lpm_mux_component.RESULT[3]
-result[4] <= LPM_MUX:lpm_mux_component.RESULT[4]
-result[5] <= LPM_MUX:lpm_mux_component.RESULT[5]
-result[6] <= LPM_MUX:lpm_mux_component.RESULT[6]
-result[7] <= LPM_MUX:lpm_mux_component.RESULT[7]
-result[8] <= LPM_MUX:lpm_mux_component.RESULT[8]
-result[9] <= LPM_MUX:lpm_mux_component.RESULT[9]
-result[10] <= LPM_MUX:lpm_mux_component.RESULT[10]
-result[11] <= LPM_MUX:lpm_mux_component.RESULT[11]
-result[12] <= LPM_MUX:lpm_mux_component.RESULT[12]
-result[13] <= LPM_MUX:lpm_mux_component.RESULT[13]
-result[14] <= LPM_MUX:lpm_mux_component.RESULT[14]
-result[15] <= LPM_MUX:lpm_mux_component.RESULT[15]
 
 
 |project|InstructionAddressGenerator:inst1|MuxPC:inst3|LPM_MUX:lpm_mux_component
@@ -6581,22 +5162,6 @@ sel[0] => mux_m4e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_m4e:auto_generated.result[0]
-result[1] <= mux_m4e:auto_generated.result[1]
-result[2] <= mux_m4e:auto_generated.result[2]
-result[3] <= mux_m4e:auto_generated.result[3]
-result[4] <= mux_m4e:auto_generated.result[4]
-result[5] <= mux_m4e:auto_generated.result[5]
-result[6] <= mux_m4e:auto_generated.result[6]
-result[7] <= mux_m4e:auto_generated.result[7]
-result[8] <= mux_m4e:auto_generated.result[8]
-result[9] <= mux_m4e:auto_generated.result[9]
-result[10] <= mux_m4e:auto_generated.result[10]
-result[11] <= mux_m4e:auto_generated.result[11]
-result[12] <= mux_m4e:auto_generated.result[12]
-result[13] <= mux_m4e:auto_generated.result[13]
-result[14] <= mux_m4e:auto_generated.result[14]
-result[15] <= mux_m4e:auto_generated.result[15]
 
 
 |project|InstructionAddressGenerator:inst1|MuxPC:inst3|LPM_MUX:lpm_mux_component|mux_m4e:auto_generated
@@ -6632,22 +5197,6 @@ data[28] => result_node[12].IN1
 data[29] => result_node[13].IN1
 data[30] => result_node[14].IN1
 data[31] => result_node[15].IN1
-result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
-result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
-result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
-result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
-result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
-result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
-result[8] <= result_node[8].DB_MAX_OUTPUT_PORT_TYPE
-result[9] <= result_node[9].DB_MAX_OUTPUT_PORT_TYPE
-result[10] <= result_node[10].DB_MAX_OUTPUT_PORT_TYPE
-result[11] <= result_node[11].DB_MAX_OUTPUT_PORT_TYPE
-result[12] <= result_node[12].DB_MAX_OUTPUT_PORT_TYPE
-result[13] <= result_node[13].DB_MAX_OUTPUT_PORT_TYPE
-result[14] <= result_node[14].DB_MAX_OUTPUT_PORT_TYPE
-result[15] <= result_node[15].DB_MAX_OUTPUT_PORT_TYPE
 sel[0] => result_node[15].IN0
 sel[0] => _.IN0
 sel[0] => result_node[14].IN0
@@ -6715,22 +5264,6 @@ datab[12] => lpm_add_sub:lpm_add_sub_component.datab[12]
 datab[13] => lpm_add_sub:lpm_add_sub_component.datab[13]
 datab[14] => lpm_add_sub:lpm_add_sub_component.datab[14]
 datab[15] => lpm_add_sub:lpm_add_sub_component.datab[15]
-result[0] <= lpm_add_sub:lpm_add_sub_component.result[0]
-result[1] <= lpm_add_sub:lpm_add_sub_component.result[1]
-result[2] <= lpm_add_sub:lpm_add_sub_component.result[2]
-result[3] <= lpm_add_sub:lpm_add_sub_component.result[3]
-result[4] <= lpm_add_sub:lpm_add_sub_component.result[4]
-result[5] <= lpm_add_sub:lpm_add_sub_component.result[5]
-result[6] <= lpm_add_sub:lpm_add_sub_component.result[6]
-result[7] <= lpm_add_sub:lpm_add_sub_component.result[7]
-result[8] <= lpm_add_sub:lpm_add_sub_component.result[8]
-result[9] <= lpm_add_sub:lpm_add_sub_component.result[9]
-result[10] <= lpm_add_sub:lpm_add_sub_component.result[10]
-result[11] <= lpm_add_sub:lpm_add_sub_component.result[11]
-result[12] <= lpm_add_sub:lpm_add_sub_component.result[12]
-result[13] <= lpm_add_sub:lpm_add_sub_component.result[13]
-result[14] <= lpm_add_sub:lpm_add_sub_component.result[14]
-result[15] <= lpm_add_sub:lpm_add_sub_component.result[15]
 
 
 |project|InstructionAddressGenerator:inst1|Adder:inst1|lpm_add_sub:lpm_add_sub_component
@@ -6771,24 +5304,6 @@ add_sub => ~NO_FANOUT~
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= add_sub_rlh:auto_generated.result[0]
-result[1] <= add_sub_rlh:auto_generated.result[1]
-result[2] <= add_sub_rlh:auto_generated.result[2]
-result[3] <= add_sub_rlh:auto_generated.result[3]
-result[4] <= add_sub_rlh:auto_generated.result[4]
-result[5] <= add_sub_rlh:auto_generated.result[5]
-result[6] <= add_sub_rlh:auto_generated.result[6]
-result[7] <= add_sub_rlh:auto_generated.result[7]
-result[8] <= add_sub_rlh:auto_generated.result[8]
-result[9] <= add_sub_rlh:auto_generated.result[9]
-result[10] <= add_sub_rlh:auto_generated.result[10]
-result[11] <= add_sub_rlh:auto_generated.result[11]
-result[12] <= add_sub_rlh:auto_generated.result[12]
-result[13] <= add_sub_rlh:auto_generated.result[13]
-result[14] <= add_sub_rlh:auto_generated.result[14]
-result[15] <= add_sub_rlh:auto_generated.result[15]
-cout <= <GND>
-overflow <= <GND>
 
 
 |project|InstructionAddressGenerator:inst1|Adder:inst1|lpm_add_sub:lpm_add_sub_component|add_sub_rlh:auto_generated
@@ -6824,22 +5339,6 @@ datab[12] => op_1.IN7
 datab[13] => op_1.IN5
 datab[14] => op_1.IN3
 datab[15] => op_1.IN1
-result[0] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[3] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[4] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[5] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[6] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[7] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[8] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[9] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[10] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[11] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[12] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[13] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[14] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[15] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|InstructionAddressGenerator:inst1|MuxINC:inst
@@ -6876,22 +5375,6 @@ data1x[13] => LPM_MUX:lpm_mux_component.DATA[1][13]
 data1x[14] => LPM_MUX:lpm_mux_component.DATA[1][14]
 data1x[15] => LPM_MUX:lpm_mux_component.DATA[1][15]
 sel => LPM_MUX:lpm_mux_component.SEL[0]
-result[0] <= LPM_MUX:lpm_mux_component.RESULT[0]
-result[1] <= LPM_MUX:lpm_mux_component.RESULT[1]
-result[2] <= LPM_MUX:lpm_mux_component.RESULT[2]
-result[3] <= LPM_MUX:lpm_mux_component.RESULT[3]
-result[4] <= LPM_MUX:lpm_mux_component.RESULT[4]
-result[5] <= LPM_MUX:lpm_mux_component.RESULT[5]
-result[6] <= LPM_MUX:lpm_mux_component.RESULT[6]
-result[7] <= LPM_MUX:lpm_mux_component.RESULT[7]
-result[8] <= LPM_MUX:lpm_mux_component.RESULT[8]
-result[9] <= LPM_MUX:lpm_mux_component.RESULT[9]
-result[10] <= LPM_MUX:lpm_mux_component.RESULT[10]
-result[11] <= LPM_MUX:lpm_mux_component.RESULT[11]
-result[12] <= LPM_MUX:lpm_mux_component.RESULT[12]
-result[13] <= LPM_MUX:lpm_mux_component.RESULT[13]
-result[14] <= LPM_MUX:lpm_mux_component.RESULT[14]
-result[15] <= LPM_MUX:lpm_mux_component.RESULT[15]
 
 
 |project|InstructionAddressGenerator:inst1|MuxINC:inst|LPM_MUX:lpm_mux_component
@@ -6931,22 +5414,6 @@ sel[0] => mux_m4e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_m4e:auto_generated.result[0]
-result[1] <= mux_m4e:auto_generated.result[1]
-result[2] <= mux_m4e:auto_generated.result[2]
-result[3] <= mux_m4e:auto_generated.result[3]
-result[4] <= mux_m4e:auto_generated.result[4]
-result[5] <= mux_m4e:auto_generated.result[5]
-result[6] <= mux_m4e:auto_generated.result[6]
-result[7] <= mux_m4e:auto_generated.result[7]
-result[8] <= mux_m4e:auto_generated.result[8]
-result[9] <= mux_m4e:auto_generated.result[9]
-result[10] <= mux_m4e:auto_generated.result[10]
-result[11] <= mux_m4e:auto_generated.result[11]
-result[12] <= mux_m4e:auto_generated.result[12]
-result[13] <= mux_m4e:auto_generated.result[13]
-result[14] <= mux_m4e:auto_generated.result[14]
-result[15] <= mux_m4e:auto_generated.result[15]
 
 
 |project|InstructionAddressGenerator:inst1|MuxINC:inst|LPM_MUX:lpm_mux_component|mux_m4e:auto_generated
@@ -6982,22 +5449,6 @@ data[28] => result_node[12].IN1
 data[29] => result_node[13].IN1
 data[30] => result_node[14].IN1
 data[31] => result_node[15].IN1
-result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
-result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
-result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
-result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
-result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
-result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
-result[8] <= result_node[8].DB_MAX_OUTPUT_PORT_TYPE
-result[9] <= result_node[9].DB_MAX_OUTPUT_PORT_TYPE
-result[10] <= result_node[10].DB_MAX_OUTPUT_PORT_TYPE
-result[11] <= result_node[11].DB_MAX_OUTPUT_PORT_TYPE
-result[12] <= result_node[12].DB_MAX_OUTPUT_PORT_TYPE
-result[13] <= result_node[13].DB_MAX_OUTPUT_PORT_TYPE
-result[14] <= result_node[14].DB_MAX_OUTPUT_PORT_TYPE
-result[15] <= result_node[15].DB_MAX_OUTPUT_PORT_TYPE
 sel[0] => result_node[15].IN0
 sel[0] => _.IN0
 sel[0] => result_node[14].IN0
@@ -7033,41 +5484,9 @@ sel[0] => _.IN0
 
 
 |project|InstructionAddressGenerator:inst1|Const:inst5
-result[0] <= lpm_constant:lpm_constant_component.result[0]
-result[1] <= lpm_constant:lpm_constant_component.result[1]
-result[2] <= lpm_constant:lpm_constant_component.result[2]
-result[3] <= lpm_constant:lpm_constant_component.result[3]
-result[4] <= lpm_constant:lpm_constant_component.result[4]
-result[5] <= lpm_constant:lpm_constant_component.result[5]
-result[6] <= lpm_constant:lpm_constant_component.result[6]
-result[7] <= lpm_constant:lpm_constant_component.result[7]
-result[8] <= lpm_constant:lpm_constant_component.result[8]
-result[9] <= lpm_constant:lpm_constant_component.result[9]
-result[10] <= lpm_constant:lpm_constant_component.result[10]
-result[11] <= lpm_constant:lpm_constant_component.result[11]
-result[12] <= lpm_constant:lpm_constant_component.result[12]
-result[13] <= lpm_constant:lpm_constant_component.result[13]
-result[14] <= lpm_constant:lpm_constant_component.result[14]
-result[15] <= lpm_constant:lpm_constant_component.result[15]
 
 
 |project|InstructionAddressGenerator:inst1|Const:inst5|lpm_constant:lpm_constant_component
-result[0] <= <VCC>
-result[1] <= <GND>
-result[2] <= <GND>
-result[3] <= <GND>
-result[4] <= <GND>
-result[5] <= <GND>
-result[6] <= <GND>
-result[7] <= <GND>
-result[8] <= <GND>
-result[9] <= <GND>
-result[10] <= <GND>
-result[11] <= <GND>
-result[12] <= <GND>
-result[13] <= <GND>
-result[14] <= <GND>
-result[15] <= <GND>
 
 
 |project|InstructionAddressGenerator:inst1|PC_Temp:inst4
@@ -7089,22 +5508,6 @@ data[12] => lpm_ff:lpm_ff_component.data[12]
 data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
-q[0] <= lpm_ff:lpm_ff_component.q[0]
-q[1] <= lpm_ff:lpm_ff_component.q[1]
-q[2] <= lpm_ff:lpm_ff_component.q[2]
-q[3] <= lpm_ff:lpm_ff_component.q[3]
-q[4] <= lpm_ff:lpm_ff_component.q[4]
-q[5] <= lpm_ff:lpm_ff_component.q[5]
-q[6] <= lpm_ff:lpm_ff_component.q[6]
-q[7] <= lpm_ff:lpm_ff_component.q[7]
-q[8] <= lpm_ff:lpm_ff_component.q[8]
-q[9] <= lpm_ff:lpm_ff_component.q[9]
-q[10] <= lpm_ff:lpm_ff_component.q[10]
-q[11] <= lpm_ff:lpm_ff_component.q[11]
-q[12] <= lpm_ff:lpm_ff_component.q[12]
-q[13] <= lpm_ff:lpm_ff_component.q[13]
-q[14] <= lpm_ff:lpm_ff_component.q[14]
-q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |project|InstructionAddressGenerator:inst1|PC_Temp:inst4|lpm_ff:lpm_ff_component
@@ -7162,22 +5565,6 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
-q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
-q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
-q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
-q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
-q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
-q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
-q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
-q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
-q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
-q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
-q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
-q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
-q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|muxc:inst10
@@ -7195,10 +5582,6 @@ data2x[2] => LPM_MUX:LPM_MUX_component.DATA[2][2]
 data2x[3] => LPM_MUX:LPM_MUX_component.DATA[2][3]
 sel[0] => LPM_MUX:LPM_MUX_component.SEL[0]
 sel[1] => LPM_MUX:LPM_MUX_component.SEL[1]
-result[0] <= LPM_MUX:LPM_MUX_component.RESULT[0]
-result[1] <= LPM_MUX:LPM_MUX_component.RESULT[1]
-result[2] <= LPM_MUX:LPM_MUX_component.RESULT[2]
-result[3] <= LPM_MUX:LPM_MUX_component.RESULT[3]
 
 
 |project|muxc:inst10|LPM_MUX:LPM_MUX_component
@@ -7219,10 +5602,6 @@ sel[1] => mux_53e:auto_generated.sel[1]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_53e:auto_generated.result[0]
-result[1] <= mux_53e:auto_generated.result[1]
-result[2] <= mux_53e:auto_generated.result[2]
-result[3] <= mux_53e:auto_generated.result[3]
 
 
 |project|muxc:inst10|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
@@ -7238,10 +5617,6 @@ data[8] => data2_wire[0].IN0
 data[9] => data2_wire[1].IN0
 data[10] => data2_wire[2].IN0
 data[11] => data2_wire[3].IN0
-result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
-result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
 sel[0] => data0_wire[3].IN0
 sel[0] => data1_wire[3].IN1
 sel[0] => data1_wire[2].IN1
@@ -7255,17 +5630,9 @@ sel[1] => _.IN0
 
 
 |project|const15:inst11
-result[0] <= lpm_constant:LPM_CONSTANT_component.result[0]
-result[1] <= lpm_constant:LPM_CONSTANT_component.result[1]
-result[2] <= lpm_constant:LPM_CONSTANT_component.result[2]
-result[3] <= lpm_constant:LPM_CONSTANT_component.result[3]
 
 
 |project|const15:inst11|lpm_constant:LPM_CONSTANT_component
-result[0] <= <VCC>
-result[1] <= <VCC>
-result[2] <= <VCC>
-result[3] <= <VCC>
 
 
 |project|bit16multi2to1:MuxB
@@ -7317,134 +5684,102 @@ s => multi2to1:mult12.s
 s => multi2to1:mult13.s
 s => multi2to1:mult14.s
 s => multi2to1:mult15.s
-f[0] <= multi2to1:mult0.f
-f[1] <= multi2to1:mult1.f
-f[2] <= multi2to1:mult2.f
-f[3] <= multi2to1:mult3.f
-f[4] <= multi2to1:mult4.f
-f[5] <= multi2to1:mult5.f
-f[6] <= multi2to1:mult6.f
-f[7] <= multi2to1:mult7.f
-f[8] <= multi2to1:mult8.f
-f[9] <= multi2to1:mult9.f
-f[10] <= multi2to1:mult10.f
-f[11] <= multi2to1:mult11.f
-f[12] <= multi2to1:mult12.f
-f[13] <= multi2to1:mult13.f
-f[14] <= multi2to1:mult14.f
-f[15] <= multi2to1:mult15.f
 
 
 |project|bit16multi2to1:MuxB|multi2to1:mult0
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|bit16multi2to1:MuxB|multi2to1:mult1
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|bit16multi2to1:MuxB|multi2to1:mult2
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|bit16multi2to1:MuxB|multi2to1:mult3
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|bit16multi2to1:MuxB|multi2to1:mult4
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|bit16multi2to1:MuxB|multi2to1:mult5
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|bit16multi2to1:MuxB|multi2to1:mult6
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|bit16multi2to1:MuxB|multi2to1:mult7
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|bit16multi2to1:MuxB|multi2to1:mult8
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|bit16multi2to1:MuxB|multi2to1:mult9
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|bit16multi2to1:MuxB|multi2to1:mult10
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|bit16multi2to1:MuxB|multi2to1:mult11
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|bit16multi2to1:MuxB|multi2to1:mult12
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|bit16multi2to1:MuxB|multi2to1:mult13
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|bit16multi2to1:MuxB|multi2to1:mult14
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|bit16multi2to1:MuxB|multi2to1:mult15
 a => f.DATAB
 b => f.DATAA
 s => f.OUTPUTSELECT
-f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|immediate:inst7
@@ -7466,22 +5801,6 @@ immed[6] => immedEx.DATAA
 immed[6] => immedEx[6].DATAIN
 extend[0] => Equal0.IN1
 extend[1] => Equal0.IN0
-immedEx[0] <= immed[0].DB_MAX_OUTPUT_PORT_TYPE
-immedEx[1] <= immed[1].DB_MAX_OUTPUT_PORT_TYPE
-immedEx[2] <= immed[2].DB_MAX_OUTPUT_PORT_TYPE
-immedEx[3] <= immed[3].DB_MAX_OUTPUT_PORT_TYPE
-immedEx[4] <= immed[4].DB_MAX_OUTPUT_PORT_TYPE
-immedEx[5] <= immed[5].DB_MAX_OUTPUT_PORT_TYPE
-immedEx[6] <= immed[6].DB_MAX_OUTPUT_PORT_TYPE
-immedEx[7] <= immedEx.DB_MAX_OUTPUT_PORT_TYPE
-immedEx[8] <= immedEx.DB_MAX_OUTPUT_PORT_TYPE
-immedEx[9] <= immedEx.DB_MAX_OUTPUT_PORT_TYPE
-immedEx[10] <= immedEx.DB_MAX_OUTPUT_PORT_TYPE
-immedEx[11] <= immedEx.DB_MAX_OUTPUT_PORT_TYPE
-immedEx[12] <= immedEx.DB_MAX_OUTPUT_PORT_TYPE
-immedEx[13] <= immedEx.DB_MAX_OUTPUT_PORT_TYPE
-immedEx[14] <= immedEx.DB_MAX_OUTPUT_PORT_TYPE
-immedEx[15] <= immedEx.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|Reg16:PS
@@ -7549,22 +5868,6 @@ Clock => output[12]~reg0.CLK
 Clock => output[13]~reg0.CLK
 Clock => output[14]~reg0.CLK
 Clock => output[15]~reg0.CLK
-output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[7] <= output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[8] <= output[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[9] <= output[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[10] <= output[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[11] <= output[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[12] <= output[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[13] <= output[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[14] <= output[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[15] <= output[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |project|Reg16:inst4
@@ -7632,21 +5935,5 @@ Clock => output[12]~reg0.CLK
 Clock => output[13]~reg0.CLK
 Clock => output[14]~reg0.CLK
 Clock => output[15]~reg0.CLK
-output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[7] <= output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[8] <= output[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[9] <= output[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[10] <= output[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[11] <= output[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[12] <= output[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[13] <= output[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[14] <= output[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-output[15] <= output[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

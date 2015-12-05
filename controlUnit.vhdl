@@ -48,9 +48,7 @@ BEGIN
 			elsif((Cond(3)='0' and Cond(2)='0' and Cond(1)='0' and Cond(0)='1'))then
 				cond_enable <= '0';
 			elsif((Cond(3)='0' and Cond(2)='0' and Cond(1)='1' and Cond(0)='0'))then
-				if(z='1')then
-					cond_enable <= '1';
-				end if;
+				cond_enable <=z;
 			elsif((Cond(3)='0' and Cond(2)='0' and Cond(1)='1' and Cond(0)='1'))then
 				if(z='0')then
 					cond_enable <= '1';
@@ -91,10 +89,9 @@ BEGIN
 				if((z='0' and (n='1' and v ='1')) or (z='0' and v='0'))then
 					cond_enable <= '1';
 				end if;
-			elsif((Cond(3)='1' and Cond(2)='1' and Cond(1)='0' and Cond(0)='1'))then
-				if((n='1' and v='0') or (z='0' and v='1'))then
-					cond_enable <= '1';
-				end if;
+			elsif((Cond(3)='1' and Cond(2)='1' and Cond(1)='0' and Cond(0)='1'))then			
+					cond_enable <= ((n and not v) or (not z and v));
+				
 			elsif((Cond(3)='1' and Cond(2)='1' and Cond(1)='1' and Cond(0)='0'))then
 				if((n='1' and v='0') or (n='0' and v='0'))then
 					cond_enable <= '1';
@@ -134,12 +131,16 @@ BEGIN
 				ir_enable <= '0';
 				mem_read <= '0';
 				pc_enable <= '0';
-			elsif(cond_enable <= '1')then
+			elsif(cond_enable = '1')then
 				IF(stage = 3)THEN
 					IF((opCode(3) = '0' AND opCode(2) = '0'))THEN
 							IF((opCode(1) = '0') AND (opCode(0) = '1'))THEN
 								pc_select <= '0';
 								pc_enable <= '1';
+							elsif((opCode(1)='1') and(opCode(0)='0'))then
+									s_out<=s;
+									alu_op <= "11";
+									b_inv <= '1';
 							ELSIF(( opCode(1) = '0' AND opCode (0) = '0'))THEN
 								s_out <= s;
 								IF(opx = "111" ) THEN
@@ -189,6 +190,8 @@ BEGIN
 						y_select <= "00";
 					elsif((opCode(3)='0' and opCode(2)='0' and opCode(1)='0' and opCode(0)='0'))then
 						s_out <= '0';
+					elsif((opCode(3)='0' and opCode(2)='0' and opCode(1)='1' and opCode(0)='0'))then
+						s_out <= '0';
 					elsif((opCode(3)='0' and opCode(2)='1' and opCode(1)='0' and opCode(0)='0'))then
 						s_out <= '0';
 						ma_select <= '0';
@@ -206,6 +209,7 @@ BEGIN
 						s_out <= '0';
 						pc_enable <= '0';
 					end if;
+					
 				elsif(stage = 5)then				
 					if((opCode(3)='1' and opCode(2)='0' and opCode(1)='1' and opCode(0)='0'))then
 						c_select <= "01";
@@ -218,7 +222,7 @@ BEGIN
 					elsif((opCode(3)='0' and opCode(2)='1' and opCode(1)='0' and opCode(0)='1'))then
 						mem_write <= '0';
 						c_select <= "01";
-						rf_write <= '1';
+						rf_write <= '0';
 					elsif((opCode(3)='1' and opCode(2)='0' and opCode(1)='0' and opCode(0)='1'))then
 						c_select <= "10";
 						rf_write <= '1';
