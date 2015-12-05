@@ -58,7 +58,51 @@ BEGIN
 			elsif((Cond(3)='0' and Cond(2)='1' and Cond(1)='0' and Cond(0)='0'))then
 				if(v='1')then
 					cond_enable <= '1';
+				end if;
+			elsif((Cond(3)='0' and Cond(2)='1' and Cond(1)='0' and Cond(0)='1'))then
+				if(v='0')then
+					cond_enable <= '1';
 				end if;	
+			elsif((Cond(3)='0' and Cond(2)='1' and Cond(1)='1' and Cond(0)='0'))then
+				if(n='1')then
+					cond_enable <= '1';
+				end if;	
+			elsif((Cond(3)='0' and Cond(2)='1' and Cond(1)='1' and Cond(0)='1'))then
+				if(n='0')then
+					cond_enable <= '1';
+				end if;
+			elsif((Cond(3)='1' and Cond(2)='0' and Cond(1)='0' and Cond(0)='0'))then
+				if(c='1')then
+					cond_enable <= '1';
+				end if;
+			elsif((Cond(3)='1' and Cond(2)='0' and Cond(1)='0' and Cond(0)='1'))then
+				if(c='0')then
+					cond_enable <= '1';
+				end if;
+			elsif((Cond(3)='1' and Cond(2)='0' and Cond(1)='1' and Cond(0)='0'))then
+				if(c='1' and z='0')then
+					cond_enable <= '1';
+				end if;	
+			elsif((Cond(3)='1' and Cond(2)='0' and Cond(1)='1' and Cond(0)='1'))then
+				if(c='0' or z='1')then
+					cond_enable <= '1';
+				end if;
+			elsif((Cond(3)='1' and Cond(2)='1' and Cond(1)='0' and Cond(0)='0'))then
+				if((z='0' and (n='1' and v ='1')) or (z='0' and v='0'))then
+					cond_enable <= '1';
+				end if;
+			elsif((Cond(3)='1' and Cond(2)='1' and Cond(1)='0' and Cond(0)='1'))then
+				if((n='1' and v='0') or (z='0' and v='1'))then
+					cond_enable <= '1';
+				end if;
+			elsif((Cond(3)='1' and Cond(2)='1' and Cond(1)='1' and Cond(0)='0'))then
+				if((n='1' and v='0') or (n='0' and v='0'))then
+					cond_enable <= '1';
+				end if;
+			elsif((Cond(3)='1' and Cond(2)='1' and Cond(1)='1' and Cond(0)='1'))then
+				if(z='1' or (n='1' and v='0') or (z='0' and v='1'))then
+					cond_enable <= '1';
+				end if;			
 			end if;
 		end if;
 	   IF(rising_edge(clock))THEN

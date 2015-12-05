@@ -1,5 +1,5 @@
 Analysis & Synthesis report for project
-Fri Dec 04 02:48:33 2015
+Fri Dec 04 18:18:55 2015
 Quartus II 32-bit Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
 
 
@@ -69,16 +69,16 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Dec 04 02:48:33 2015         ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec 04 18:18:55 2015         ;
 ; Quartus II 32-bit Version          ; 12.0 Build 263 08/02/2012 SP 2 SJ Web Edition ;
 ; Revision Name                      ; project                                       ;
 ; Top-level Entity Name              ; project                                       ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; 2,718                                         ;
-;     Total combinational functions  ; 2,393                                         ;
+; Total logic elements               ; 2,746                                         ;
+;     Total combinational functions  ; 2,421                                         ;
 ;     Dedicated logic registers      ; 452                                           ;
 ; Total registers                    ; 452                                           ;
-; Total pins                         ; 228                                           ;
+; Total pins                         ; 261                                           ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 24,576                                        ;
 ; Embedded Multiplier 9-bit elements ; 0                                             ;
@@ -265,27 +265,27 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 2,718 ;
+; Estimated Total logic elements              ; 2,746 ;
 ;                                             ;       ;
-; Total combinational functions               ; 2393  ;
+; Total combinational functions               ; 2421  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 931   ;
-;     -- 3 input functions                    ; 702   ;
-;     -- <=2 input functions                  ; 760   ;
+;     -- 4 input functions                    ; 974   ;
+;     -- 3 input functions                    ; 694   ;
+;     -- <=2 input functions                  ; 753   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 1699  ;
+;     -- normal mode                          ; 1727  ;
 ;     -- arithmetic mode                      ; 694   ;
 ;                                             ;       ;
 ; Total registers                             ; 452   ;
 ;     -- Dedicated logic registers            ; 452   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 228   ;
+; I/O pins                                    ; 261   ;
 ; Total memory bits                           ; 24576 ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 463   ;
-; Total fan-out                               ; 9451  ;
+; Total fan-out                               ; 9641  ;
 ; Average fan-out                             ; 3.05  ;
 +---------------------------------------------+-------+
 
@@ -295,11 +295,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                     ; Library Name ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+--------------+
-; |project                                     ; 2393 (2)          ; 452 (0)      ; 24576       ; 0            ; 0       ; 0         ; 228  ; 0            ; |project                                                                                                                ;              ;
+; |project                                     ; 2421 (2)          ; 452 (0)      ; 24576       ; 0            ; 0       ; 0         ; 261  ; 0            ; |project                                                                                                                ;              ;
 ;    |BuffReg16:RA|                            ; 19 (19)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|BuffReg16:RA                                                                                                   ;              ;
 ;    |BuffReg16:RB_inst|                       ; 19 (19)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|BuffReg16:RB_inst                                                                                              ;              ;
 ;    |BuffReg16:RM|                            ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|BuffReg16:RM                                                                                                   ;              ;
-;    |BuffReg16:RY|                            ; 10 (10)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|BuffReg16:RY                                                                                                   ;              ;
+;    |BuffReg16:RY|                            ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|BuffReg16:RY                                                                                                   ;              ;
 ;    |BuffReg16:RZ|                            ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|BuffReg16:RZ                                                                                                   ;              ;
 ;    |ControlUnit:inst2|                       ; 1902 (200)        ; 47 (47)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|ControlUnit:inst2                                                                                              ;              ;
 ;       |lpm_divide:Mod0|                      ; 1702 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|ControlUnit:inst2|lpm_divide:Mod0                                                                              ;              ;
@@ -328,43 +328,45 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |lpm_ff:lpm_ff_component|           ; 16 (16)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|InstructionAddressGenerator:inst1|PC:inst2|lpm_ff:lpm_ff_component                                             ;              ;
 ;       |PC_Temp:inst4|                        ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|InstructionAddressGenerator:inst1|PC_Temp:inst4                                                                ;              ;
 ;          |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|InstructionAddressGenerator:inst1|PC_Temp:inst4|lpm_ff:lpm_ff_component                                        ;              ;
-;    |MUX2_1:inst15|                           ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|MUX2_1:inst15                                                                                                  ;              ;
-;       |lpm_mux:lpm_mux_component|            ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|MUX2_1:inst15|lpm_mux:lpm_mux_component                                                                        ;              ;
-;          |mux_m4e:auto_generated|            ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|MUX2_1:inst15|lpm_mux:lpm_mux_component|mux_m4e:auto_generated                                                 ;              ;
 ;    |MemoryInterface:no|                      ; 0 (0)             ; 0 (0)        ; 24576       ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|MemoryInterface:no                                                                                             ;              ;
 ;       |MainMemory:inst|                      ; 0 (0)             ; 0 (0)        ; 24576       ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|MemoryInterface:no|MainMemory:inst                                                                             ;              ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 24576       ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|MemoryInterface:no|MainMemory:inst|altsyncram:altsyncram_component                                             ;              ;
 ;             |altsyncram_efg1:auto_generated| ; 0 (0)             ; 0 (0)        ; 24576       ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|MemoryInterface:no|MainMemory:inst|altsyncram:altsyncram_component|altsyncram_efg1:auto_generated              ;              ;
-;    |alu:inst9|                               ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9                                                                                                      ;              ;
-;       |bit16add:FA|                          ; 15 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA                                                                                          ;              ;
-;          |bitAdder:add0|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add0                                                                            ;              ;
-;          |bitAdder:add10|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add10                                                                           ;              ;
+;    |alu:inst9|                               ; 92 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9                                                                                                      ;              ;
+;       |bit16add:FA|                          ; 28 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA                                                                                          ;              ;
+;          |bitAdder:add0|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add0                                                                            ;              ;
+;          |bitAdder:add10|                    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add10                                                                           ;              ;
 ;          |bitAdder:add11|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add11                                                                           ;              ;
-;          |bitAdder:add12|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add12                                                                           ;              ;
-;          |bitAdder:add13|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add13                                                                           ;              ;
-;          |bitAdder:add14|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add14                                                                           ;              ;
-;          |bitAdder:add1|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add1                                                                            ;              ;
-;          |bitAdder:add2|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add2                                                                            ;              ;
-;          |bitAdder:add3|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add3                                                                            ;              ;
-;          |bitAdder:add4|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add4                                                                            ;              ;
-;          |bitAdder:add5|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add5                                                                            ;              ;
-;          |bitAdder:add6|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add6                                                                            ;              ;
+;          |bitAdder:add12|                    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add12                                                                           ;              ;
+;          |bitAdder:add13|                    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add13                                                                           ;              ;
+;          |bitAdder:add14|                    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add14                                                                           ;              ;
+;          |bitAdder:add15|                    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add15                                                                           ;              ;
+;          |bitAdder:add1|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add1                                                                            ;              ;
+;          |bitAdder:add2|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add2                                                                            ;              ;
+;          |bitAdder:add3|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add3                                                                            ;              ;
+;          |bitAdder:add4|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add4                                                                            ;              ;
+;          |bitAdder:add5|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add5                                                                            ;              ;
+;          |bitAdder:add6|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add6                                                                            ;              ;
 ;          |bitAdder:add7|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add7                                                                            ;              ;
 ;          |bitAdder:add8|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add8                                                                            ;              ;
 ;          |bitAdder:add9|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16add:FA|bitAdder:add9                                                                            ;              ;
-;       |bit16multi2to1:multb|                 ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi2to1:multb                                                                                 ;              ;
+;       |bit16multi2to1:multb|                 ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi2to1:multb                                                                                 ;              ;
 ;          |multi2to1:mult0|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult0                                                                 ;              ;
-;          |multi2to1:mult15|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult15                                                                ;              ;
+;          |multi2to1:mult11|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult11                                                                ;              ;
+;          |multi2to1:mult15|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult15                                                                ;              ;
 ;          |multi2to1:mult1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult1                                                                 ;              ;
 ;          |multi2to1:mult2|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult2                                                                 ;              ;
 ;          |multi2to1:mult3|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult3                                                                 ;              ;
 ;          |multi2to1:mult4|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult4                                                                 ;              ;
 ;          |multi2to1:mult5|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult5                                                                 ;              ;
 ;          |multi2to1:mult6|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult6                                                                 ;              ;
-;       |bit16multi4to1:multfin|               ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin                                                                               ;              ;
+;          |multi2to1:mult7|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult7                                                                 ;              ;
+;          |multi2to1:mult8|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult8                                                                 ;              ;
+;          |multi2to1:mult9|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult9                                                                 ;              ;
+;       |bit16multi4to1:multfin|               ; 37 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin                                                                               ;              ;
 ;          |multi4to1:mult0|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult0                                                               ;              ;
 ;          |multi4to1:mult10|                  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult10                                                              ;              ;
-;          |multi4to1:mult11|                  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult11                                                              ;              ;
+;          |multi4to1:mult11|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult11                                                              ;              ;
 ;          |multi4to1:mult12|                  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult12                                                              ;              ;
 ;          |multi4to1:mult13|                  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult13                                                              ;              ;
 ;          |multi4to1:mult14|                  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult14                                                              ;              ;
@@ -375,16 +377,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |multi4to1:mult4|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult4                                                               ;              ;
 ;          |multi4to1:mult5|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult5                                                               ;              ;
 ;          |multi4to1:mult6|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult6                                                               ;              ;
-;          |multi4to1:mult7|                   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult7                                                               ;              ;
+;          |multi4to1:mult7|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult7                                                               ;              ;
 ;          |multi4to1:mult8|                   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult8                                                               ;              ;
-;          |multi4to1:mult9|                   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult9                                                               ;              ;
-;       |bit16xor:xor1|                        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16xor:xor1                                                                                        ;              ;
-;    |bit16multi2to1:MuxB|                     ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|bit16multi2to1:MuxB                                                                                            ;              ;
+;          |multi4to1:mult9|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult9                                                               ;              ;
+;       |bit16xor:xor1|                        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|bit16xor:xor1                                                                                        ;              ;
+;       |variousLogic:flags|                   ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|alu:inst9|variousLogic:flags                                                                                   ;              ;
+;    |bit16multi2to1:MuxB|                     ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|bit16multi2to1:MuxB                                                                                            ;              ;
+;       |multi2to1:mult0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|bit16multi2to1:MuxB|multi2to1:mult0                                                                            ;              ;
 ;       |multi2to1:mult10|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|bit16multi2to1:MuxB|multi2to1:mult10                                                                           ;              ;
 ;       |multi2to1:mult11|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|bit16multi2to1:MuxB|multi2to1:mult11                                                                           ;              ;
 ;       |multi2to1:mult12|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|bit16multi2to1:MuxB|multi2to1:mult12                                                                           ;              ;
 ;       |multi2to1:mult13|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|bit16multi2to1:MuxB|multi2to1:mult13                                                                           ;              ;
 ;       |multi2to1:mult14|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|bit16multi2to1:MuxB|multi2to1:mult14                                                                           ;              ;
+;       |multi2to1:mult15|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|bit16multi2to1:MuxB|multi2to1:mult15                                                                           ;              ;
 ;       |multi2to1:mult1|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|bit16multi2to1:MuxB|multi2to1:mult1                                                                            ;              ;
 ;       |multi2to1:mult2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|bit16multi2to1:MuxB|multi2to1:mult2                                                                            ;              ;
 ;       |multi2to1:mult3|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|bit16multi2to1:MuxB|multi2to1:mult3                                                                            ;              ;
@@ -397,9 +402,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |mux_ma:inst6|                            ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|mux_ma:inst6                                                                                                   ;              ;
 ;       |lpm_mux:LPM_MUX_component|            ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|mux_ma:inst6|lpm_mux:LPM_MUX_component                                                                         ;              ;
 ;          |mux_m4e:auto_generated|            ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|mux_ma:inst6|lpm_mux:LPM_MUX_component|mux_m4e:auto_generated                                                  ;              ;
-;    |muxy:inst|                               ; 24 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|muxy:inst                                                                                                      ;              ;
-;       |lpm_mux:LPM_MUX_component|            ; 24 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|muxy:inst|lpm_mux:LPM_MUX_component                                                                            ;              ;
-;          |mux_o4e:auto_generated|            ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|muxy:inst|lpm_mux:LPM_MUX_component|mux_o4e:auto_generated                                                     ;              ;
+;    |muxy:inst|                               ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|muxy:inst                                                                                                      ;              ;
+;       |lpm_mux:LPM_MUX_component|            ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|muxy:inst|lpm_mux:LPM_MUX_component                                                                            ;              ;
+;          |mux_o4e:auto_generated|            ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|muxy:inst|lpm_mux:LPM_MUX_component|mux_o4e:auto_generated                                                     ;              ;
 ;    |registerFile:inst8|                      ; 275 (0)           ; 240 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8                                                                                             ;              ;
 ;       |Reg16:reg10|                          ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg10                                                                                 ;              ;
 ;       |Reg16:reg11|                          ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project|registerFile:inst8|Reg16:reg11                                                                                 ;              ;
@@ -467,7 +472,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; IO_MemoryInterface:inst12|Reg_16:PUSH_BUTTON|lpm_ff:lpm_ff_component|dffs[4..15] ; Stuck at GND due to stuck port data_in    ;
 ; ControlUnit:inst2|a_inv                                                          ; Stuck at GND due to stuck port data_in    ;
 ; ControlUnit:inst2|wmfc                                                           ; Lost fanout                               ;
-; ControlUnit:inst2|ir_enable                                                      ; Merged with ControlUnit:inst2|mem_read    ;
+; ControlUnit:inst2|mem_read                                                       ; Merged with ControlUnit:inst2|ir_enable   ;
 ; ControlUnit:inst2|extend[1]                                                      ; Stuck at GND due to stuck port data_in    ;
 ; ControlUnit:inst2|c_select[0]                                                    ; Merged with ControlUnit:inst2|c_select[1] ;
 ; Total Number of Removed Registers = 23                                           ;                                           ;
@@ -480,8 +485,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 452   ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 54    ;
+; Number of registers using Synchronous Clear  ; 32    ;
+; Number of registers using Synchronous Load   ; 48    ;
 ; Number of registers using Asynchronous Clear ; 376   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 284   ;
@@ -489,22 +494,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+----------------------------------------------------------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                                     ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+----------------------------------------------------------------+----------------------------+
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; |project|BuffReg16:RY|output[10]                               ;                            ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; |project|BuffReg16:RY|output[8]                                ;                            ;
-; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; |project|BuffReg16:RA|output[8]                                ;                            ;
-; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; |project|BuffReg16:RB_inst|output[7]                           ;                            ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; |project|BuffReg16:RY|output[3]                                ;                            ;
-; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; |project|ControlUnit:inst2|y_select[0]                         ;                            ;
-; 21:1               ; 2 bits    ; 28 LEs        ; 4 LEs                ; 24 LEs                 ; |project|ControlUnit:inst2|c_select[1]                         ;                            ;
-; 13:1               ; 2 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; |project|ControlUnit:inst2|alu_op[1]                           ;                            ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult6|Mux0 ;                            ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; |project|alu:inst9|bit16multi2to1:multb|multi2to1:mult0|f      ;                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+----------------------------------------------------------------+----------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+-------------------------------------------------------------------------------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                                                          ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+-------------------------------------------------------------------------------------+----------------------------+
+; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; |project|BuffReg16:RA|output[15]                                                    ;                            ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; |project|BuffReg16:RB_inst|output[1]                                                ;                            ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; |project|ControlUnit:inst2|y_select[0]                                              ;                            ;
+; 21:1               ; 2 bits    ; 28 LEs        ; 4 LEs                ; 24 LEs                 ; |project|ControlUnit:inst2|c_select[0]                                              ;                            ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; |project|ControlUnit:inst2|alu_op[1]                                                ;                            ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; |project|alu:inst9|bit16multi4to1:multfin|multi4to1:mult7|Mux0                      ;                            ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; |project|muxy:inst|lpm_mux:LPM_MUX_component|mux_o4e:auto_generated|result_node[12] ;                            ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; |project|muxy:inst|lpm_mux:LPM_MUX_component|mux_o4e:auto_generated|result_node[8]  ;                            ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; |project|muxy:inst|lpm_mux:LPM_MUX_component|mux_o4e:auto_generated|result_node[1]  ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+-------------------------------------------------------------------------------------+----------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -936,22 +940,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +-----------------------------------------------------------+
 ; Port Connectivity Checks: "registerFile:inst8|mux16:mux2" ;
-+-----------+-------+----------+----------------------------+
-; Port      ; Type  ; Severity ; Details                    ;
-+-----------+-------+----------+----------------------------+
-; d0[1..0]  ; Input ; Info     ; Stuck at VCC               ;
-; d0[15..2] ; Input ; Info     ; Stuck at GND               ;
-+-----------+-------+----------+----------------------------+
++------+-------+----------+---------------------------------+
+; Port ; Type  ; Severity ; Details                         ;
++------+-------+----------+---------------------------------+
+; d0   ; Input ; Info     ; Stuck at GND                    ;
++------+-------+----------+---------------------------------+
 
 
 +-----------------------------------------------------------+
 ; Port Connectivity Checks: "registerFile:inst8|mux16:mux1" ;
-+-----------+-------+----------+----------------------------+
-; Port      ; Type  ; Severity ; Details                    ;
-+-----------+-------+----------+----------------------------+
-; d0[1..0]  ; Input ; Info     ; Stuck at VCC               ;
-; d0[15..2] ; Input ; Info     ; Stuck at GND               ;
-+-----------+-------+----------+----------------------------+
++------+-------+----------+---------------------------------+
+; Port ; Type  ; Severity ; Details                         ;
++------+-------+----------+---------------------------------+
+; d0   ; Input ; Info     ; Stuck at GND                    ;
++------+-------+----------+---------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------+
@@ -968,7 +970,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:08     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -978,7 +980,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Dec 04 02:48:20 2015
+    Info: Processing started: Fri Dec 04 18:18:45 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off project -c project
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file reg_16.vhd
@@ -1088,16 +1090,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file const15
 Info (12127): Elaborating entity "project" for the top level hierarchy
 Warning (275011): Block or symbol "InstructionAddressGenerator" of instance "inst1" overlaps another block or symbol
 Warning (275011): Block or symbol "BuffReg16" of instance "RY" overlaps another block or symbol
-Warning (275085): Found inconsistent dimensions for element "ncvz"
-Warning (275080): Converted elements in bus name "ncvz" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "ncvz[3]" to "ncvz3"
-    Warning (275081): Converted element name(s) from "ncvz[2]" to "ncvz2"
-    Warning (275081): Converted element name(s) from "ncvz[0]" to "ncvz0"
-    Warning (275081): Converted element name(s) from "ncvz[1]" to "ncvz1"
-    Warning (275081): Converted element name(s) from "ncvz[15..0]" to "ncvz15..0"
-Warning (275043): Pin "pin_name1" is missing source
-Warning (275043): Pin "pin_name7" is missing source
-Warning (275043): Pin "ncvz" is missing source
 Warning (275043): Pin "raout[15..0]" is missing source
 Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:inst2"
 Info (12128): Elaborating entity "IR24" for hierarchy "IR24:inst3"
@@ -1269,9 +1261,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_0s9.tdf
     Info (12023): Found entity 1: lpm_abs_0s9
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "pin_name1" is stuck at GND
-    Warning (13410): Pin "pin_name7" is stuck at GND
-    Warning (13410): Pin "ncvz" is stuck at GND
     Warning (13410): Pin "RM_out[23]" is stuck at GND
     Warning (13410): Pin "RM_out[22]" is stuck at GND
     Warning (13410): Pin "RM_out[21]" is stuck at GND
@@ -1299,15 +1288,15 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3018 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3095 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
-    Info (21059): Implemented 212 output pins
-    Info (21061): Implemented 2766 logic cells
+    Info (21059): Implemented 245 output pins
+    Info (21061): Implemented 2810 logic cells
     Info (21064): Implemented 24 RAM segments
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 50 warnings
-    Info: Peak virtual memory: 414 megabytes
-    Info: Processing ended: Fri Dec 04 02:48:33 2015
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:11
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 37 warnings
+    Info: Peak virtual memory: 410 megabytes
+    Info: Processing ended: Fri Dec 04 18:18:55 2015
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:10
 
 
