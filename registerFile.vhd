@@ -42,7 +42,7 @@ signal e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12, e13, e14, e15 :std_log
 begin
 decode: decoder16 port map(regD,out1);
 
-reg0<= "0000000000000011";
+reg0<= "0000000000000000";
 e1<= enable and out1(1);
 e2<= enable and out1(2);
 e3<= enable and out1(3);

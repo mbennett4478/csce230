@@ -23,8 +23,10 @@ add wave pcEnable
 add wave res
 add wave incSelect
 add wave ma_select
+add wave muxyout
+add wave ledG
+add wave muxMA
 
-force clk 0 0, 1 1000 -repeat 2000
 force res 0 0
 
 run 120000

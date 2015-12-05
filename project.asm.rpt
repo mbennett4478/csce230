@@ -1,5 +1,5 @@
 Assembler report for project
-Fri Dec 04 00:10:20 2015
+Fri Dec 04 18:19:22 2015
 Quartus II 32-bit Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Dec 04 00:10:20 2015 ;
+; Assembler Status      ; Successful - Fri Dec 04 18:19:22 2015 ;
 ; Revision Name         ; project                               ;
 ; Top-level Entity Name ; project                               ;
 ; Family                ; Cyclone II                            ;
@@ -95,7 +95,7 @@ applicable agreement for further details.
 +----------------+-------------------------------------------------------------------------------+
 ; Device         ; EP2C20F484C7                                                                  ;
 ; JTAG usercode  ; 0xFFFFFFFF                                                                    ;
-; Checksum       ; 0x003962A8                                                                    ;
+; Checksum       ; 0x003A2D62                                                                    ;
 +----------------+-------------------------------------------------------------------------------+
 
 
@@ -106,7 +106,7 @@ applicable agreement for further details.
 +--------------------+---------------------------------------------------------------------------+
 ; Device             ; EPCS16                                                                    ;
 ; JTAG usercode      ; 0x00000000                                                                ;
-; Checksum           ; 0x1DA4BC74                                                                ;
+; Checksum           ; 0x1DAB96CA                                                                ;
 ; Compression Ratio  ; 2                                                                         ;
 +--------------------+---------------------------------------------------------------------------+
 
@@ -117,13 +117,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Assembler
     Info: Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Dec 04 00:10:18 2015
+    Info: Processing started: Fri Dec 04 18:19:20 2015
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off project -c project
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 32-bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 338 megabytes
-    Info: Processing ended: Fri Dec 04 00:10:20 2015
+    Info: Peak virtual memory: 352 megabytes
+    Info: Processing ended: Fri Dec 04 18:19:22 2015
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
