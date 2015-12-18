@@ -4,7 +4,7 @@ editor if you plan to continue editing the block that represents it in
 the Block Editor! File corruption is VERY likely to occur.
 */
 /*
-Copyright (C) 1991-2011 Altera Corporation
+Copyright (C) 1991-2012 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -326,29 +326,13 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1376 56 1424 72))
+	(annotation_block (location)(rect 1376 56 1496 80))
 )
 (pin
 	(output)
 	(rect 696 -576 872 -560)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "muxyout[15..0]" (rect 90 0 165 12)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
-	)
-)
-(pin
-	(output)
-	(rect 848 -192 1024 -176)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "ncvz[3..0]" (rect 90 0 139 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -439,6 +423,57 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+)
+(pin
+	(output)
+	(rect 1208 112 1384 128)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "hex1[6..0]" (rect 90 0 139 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+	(annotation_block (location)(rect 1384 128 1440 144))
+)
+(pin
+	(output)
+	(rect 1216 144 1392 160)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "hex2[6..0]" (rect 90 0 139 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+	(annotation_block (location)(rect 1392 160 1448 176))
+)
+(pin
+	(output)
+	(rect 1216 176 1392 192)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "hex3[6..0]" (rect 90 0 139 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+	(annotation_block (location)(rect 1392 192 1448 208))
 )
 (symbol
 	(rect 232 -1000 464 -840)
@@ -2061,7 +2096,7 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "ncvz[3]" (rect 584 -216 620 -204)(font "Arial" ))
+	(text "ncvz[3]" (rect 584 -224 620 -212)(font "Arial" ))
 	(pt 576 -200)
 	(pt 616 -200)
 )
@@ -2665,6 +2700,29 @@ applicable agreement for further details.
 	(text "key[3..0]" (rect 929 -744 973 -732)(font "Arial" ))
 	(pt 944 -728)
 	(pt 920 -728)
+	(bus)
+)
+(connector
+	(text "hex1[6..0]" (rect 1176 104 1225 116)(font "Arial" ))
+	(pt 1208 120)
+	(pt 1136 120)
+	(bus)
+)
+(connector
+	(text "hex3[6..0]" (rect 1144 168 1193 180)(font "Arial" ))
+	(pt 1216 184)
+	(pt 1136 184)
+	(bus)
+)
+(connector
+	(pt 1136 152)
+	(pt 1136 144)
+	(bus)
+)
+(connector
+	(text "hex2[6..0]" (rect 1144 136 1193 148)(font "Arial" ))
+	(pt 1216 152)
+	(pt 1136 152)
 	(bus)
 )
 (junction (pt 272 -416))
